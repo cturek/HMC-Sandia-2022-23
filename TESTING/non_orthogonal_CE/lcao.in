@@ -1,0 +1,43 @@
+do setup
+do iters
+setup data
+notes 
+ C6H6 benzene molecule, R(C-C)=2.65 bohr, R(C-H)=2.05 bohr
+ Example: non-orthogonal supercells.
+end_notes
+functional
+ LDA
+dimension of system (0=cluster ... 3=bulk)
+ 0
+primitive lattice vectors 
+  32.00   0.00         0.00
+  16.00  27.71281292   0.00
+   0.00   0.00        20.00
+grid dimensions
+    96     96          64   
+atom types
+   2
+atom file
+ C.atm
+atom file
+ H.atm
+number of atoms in unit cell
+  12
+atom, type, position vector
+   1     C    2.65    0.00         0.20
+   2     C   -2.65    0.00         0.00
+   3     C    1.325   2.29496732   0.00
+   4     C   -1.325   2.29496732   0.00
+   5     C    1.325  -2.29496732   0.00
+   6     C   -1.325  -2.29496732   0.00
+   7     H    4.70    0.00         0.00
+   8     H   -4.70    0.00         0.00
+   9     H    2.35    4.070319398  0.00
+  10     H   -2.35    4.070319398  0.00
+  11     H    2.35   -4.070319398  0.00
+  12     H   -2.35   -4.070319398  0.00
+end setup phase data
+run phase input data
+convergence criterion
+ 0.00050
+end run phase data

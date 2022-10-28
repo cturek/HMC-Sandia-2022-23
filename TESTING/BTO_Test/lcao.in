@@ -1,0 +1,63 @@
+do setup
+do iters
+do force
+do relax
+do cell
+setup data
+title
+title2
+functional
+PBE
+dimension of system (0=cluster ... 3=bulk)
+ 3
+coordinates
+ LATTICE  
+primitive lattice vectors
+             7.5773852070        0.0000000000        0.0000000000
+             0.0000000000        7.5773852070        0.0000000000
+             0.0000000000        0.0000000000        7.8877238101
+grid dimensions
+       36   36  36
+atom types
+ 3
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom file
+ O  = O.atm
+number of atoms in unit cell
+  5
+atom, type, position;  step#     1
+ AT0001       Ba                0.0000000000    0.0000000000    0.0000000000 
+ AT0002       Ti                0.5000000000    0.5000000000    0.5226239423 
+ AT0003       O                 0.0000000000    0.5000000000    0.4805092616 
+ AT0004       O                 0.5000000000    0.0000000000    0.4805092616 
+ AT0005       O                 0.5000000000    0.5000000000   -0.0387852232 
+kgrid
+ 6 6 6
+symops
+  1
+definitions sym ops
+  4  0.0   0.0   1.0      0.0   0.0   0.0
+end setup phase data
+run phase input data
+iterations
+ 55
+blend ratio
+0.500
+convergence criterion
+  0.000500
+cell optimization
+ucmethod
+steepest
+end cell
+geometry relaxation
+gfixed
+1 1
+gmethod
+steepest
+gsteps
+50
+end geometry relaxation
+end run phase data

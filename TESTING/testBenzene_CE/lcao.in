@@ -1,0 +1,43 @@
+do setup
+do iters
+setup data
+notes 
+ C6H6 benzene molecule, R(C-C)=2.65 bohr, R(C-H)=2.05 bohr
+ Example: multiple atoms and atom types.
+end_notes
+functional
+ LDA
+dimension of system (0=cluster ... 3=bulk)
+ 0
+primitive lattice vectors
+  30.00   0.00   0.00
+   0.00  28.50   0.00
+   0.00   0.00  20.00
+grid dimensions
+    96     90     64
+atom types  Add a carbon atom type to the list of atom types:
+   2
+atom file
+ C.atm
+atom file
+ H.atm     
+number of atoms in unit cell   and put the 12 atoms in their places:
+  12
+atom, type, position vector - note that this input is free-format
+   1     1    2.65    0.00         0.00
+   2     1   -2.65    0.00         0.00
+   3     1    1.325   2.29496732   0.00
+   4     1   -1.325   2.29496732   0.00
+   5     1    1.325  -2.29496732   0.00
+   6     1   -1.325  -2.29496732   0.00
+    7     2    4.70    0.00         0.00
+    8     2   -4.70    0.00         0.00
+    9     2    2.35    4.070319398  0.00
+   10     2   -2.35    4.070319398  0.00
+   11     2    2.35   -4.070319398  0.00
+   12     2   -2.35   -4.070319398  0.00 
+end setup phase data
+run phase input data
+convergence criterion
+ 0.00050
+end run phase data
