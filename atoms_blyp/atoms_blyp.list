@@ -1,0 +1,16 @@
+atoms_blyp.sh
+atoms_blyp.list
+O.atm
+O_tmpc.atm
+O_tmsoft.atm
+O_tmpcsoft.atm
+N.atm
+N_tmpc.atm
+C_blyp.atm
+C_pc_blyp.atm
+H_ae_blyp.atm
+H_ps_blyp.atm
+Al.atm
+Al_pc.atm
+Si.atm
+K.atm
