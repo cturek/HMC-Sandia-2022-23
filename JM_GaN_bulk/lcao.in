@@ -1,0 +1,37 @@
+do setup
+do iters
+no force
+no relax
+setup data
+notes 
+ GaN bulk wurzite: a=6.13 bohr, c/a=1.630714474, GaN(Z)=3.755109729
+ Example: hex cell needs special hex Brillouin Zone sample: "kgrid2"
+end_notes
+dimension of system (0=cluster ... 3=bulk)
+ 3
+primitive lattice vectors
+  5.308735725    -3.0650     0.000000000
+  0.000000000     6.1300     0.000000000
+  0.000000000     0.0000     9.996279726
+grid dimensions
+  24  24  36
+atom types
+  2
+atom file
+ N.atm
+atom file
+ Ga_d0.atm
+number of atoms in unit cell
+   4
+atom, type, position vector
+   1    1    3.539157150     0.0000     0.025788046
+   2    2    1.769578575     3.0650     1.268818179
+   3    1    1.769578575     3.0650     5.023927909
+   4    2    3.539157150     0.0000     6.266958042       
+kgrid2                                                    
+ 4 4 2
+end setup phase data
+run phase input data
+convergence criterion
+ 0.000500
+end run phase data
