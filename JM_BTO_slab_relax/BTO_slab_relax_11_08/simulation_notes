@@ -1,0 +1,12 @@
+simulation ran for 55 iterations over 5 hours but did not converge
+got all the usual output files excpet for lcao.out
+lcao.hist file only contained 10 iterations even though it ran for 55?
+
+3x3 slab with H interacting on end
+center barium fixed
+
+changes for next version of simulation: 
+adjust H to hopefully already be in line with the row of O (where we expect it to bind)
+freeze multiple atoms (hopefully the ones on the opposite side as the H)
+increase number of possible iterations from 55 to 100
+
