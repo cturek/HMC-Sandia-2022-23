@@ -1,0 +1,43 @@
+c
+c * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+c             Dimension parameters for SEQQUEST code
+c * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+c
+c  The parameters in this file can be changed, limited only by the
+c  memory available on the machine.  The first two determine the
+c  size of the executable and should be tailored to the RAM available.
+c  The rest of the parameters have only a minor impact on the total
+c  memory, and they are set to roughly what is possible in 1GB.
+c  They can be increased at need (the code will request more if needed)
+c
+c maxwkd= max mem for big arrays: orb matrices and wave fcns on grid
+c  - For 256MB, use ~30M; for 500MB, 60M; for 1GB, 110M.
+      PARAMETER  (maxwkd= 30 000 000)
+c inrec= usable bits in int - 1; nrecd= max int entries for atom-in-box
+c  - nrecd may need to be as big as 2M for very large problems
+      PARAMETER  (inrec=30, nrecd=   200 000)
+c
+c nimgd=max number active NEB images
+      PARAMETER  (nimgd=12)
+c natmd=max atoms;  ntypd=max atom types;  norbd=max total orbitals
+      PARAMETER  (natmd= 900, ntypd= 7, norbd=3000)
+c noad=max orbs/atom;  nshld=max shells/atom;  nald=max gauss/orb
+      PARAMETER  (noad=20, nshld=7, nald=6)
+c nrd=max radial mesh pts/local pot
+      PARAMETER  (nrd=120)
+c maxr1d=max linear dimension of total regular grid
+      PARAMETER  (maxr1d= 400)
+c nkd=max k-points; nsymd=max number of symmetries
+c nlatd=max number of unit cells interacting with central cell
+c neqlatd=max number of equivalent lattice vectors (nlocmat)
+      PARAMETER  (nkd=2000, nsymd=48, nlatd=2000, neqlatd=72)
+c
+c   ----------- DO NOT CHANGE ANYTHING BELOW THIS LINE ---------
+c nalfxcd=max alphas for xc fits;  nfitd=max atom types for xc fits
+      PARAMETER  (nalfxcd=1, nfitd=1)
+      PARAMETER  (neq3d=14)
+c
+      PARAMETER  (naldsq=nald**2)
+c
+c * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+c
