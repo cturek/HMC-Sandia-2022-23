@@ -19,7 +19,7 @@ primitive lattice vectors
   0.0000000000      5.0000000000      0.0000000000
   0.0000000000      0.0000000000      160.00000000
 grid dimensions
-  200 200 600
+  100 100 600
 atom types
  4
 atom file
@@ -64,7 +64,7 @@ iterations
 blend ratio
 0.200
 convergence criterion
-  0.000500
+  0.00500
 geometry relaxation
 gmethod
 asd
