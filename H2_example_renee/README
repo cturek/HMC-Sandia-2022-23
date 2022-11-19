@@ -1,0 +1,18 @@
+ This set of files and directories:
+Inputs to run an H2 molecule optimization.  
+The initial H2 coordinates were taken from the phosphonic acid molecule (run elsewhere). 
+I deleted everything but 2 H atoms, and then let it optimize to find and H2 molecule. 
+The top directory contains .jmol file, which you can use to watch the optimization steps.  
+The file "files-list" is a list of all the output files that were generated.
+I deleted all the larger binary and various grid files because they are quite large, and we do not need them for this demo. 
+The "inputs" directory containes only the original input files, which you can run to duplicate the original results.
+This full optimization took about 10 minutes to run on my workstation. It starts a bit far from the minimum.
+The "inputs-optimized" directory contains a new input file with the optimized H2 coordinates.
+Running this took about 30 seconds, for an energy and one force calculation (which was identified as converged, and the calculation exited). 
+I would use this input to run tests of your own on, such as changing offsets, coordinates, .atm files, and so on. 
+
+
+You will notice that one of the H atoms is fixed, which makes the optimization easier.  
+Some of the input parameters, such as the placement of the atoms in space, the scaling factors, and the displacement vector, were taken from a slab+molecule simulation I ran earlier. 
+Doing this can be convenient for placing moelcule or atoms on a surface later.To look at a molecule, feel free to change any of this about.
+When we get to placing items on a slab, these parameters will be changed to match whatever slab we ar choosing to work with.
