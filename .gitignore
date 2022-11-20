@@ -21,7 +21,6 @@
 *.emat
 *.dmd_geom*.grd
 *.grd0
-*.h0
 *.h0*
 *.set0
 *.stat
