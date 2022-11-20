@@ -1,0 +1,27 @@
+# Ignored file types for GitHub
+#
+# Cedar Turek cturek@hmc.edu 20 Nov 2022
+#########################
+# Compiled Source Files #
+#########################
+*.o
+*.s
+*.params
+*.x
+
+###############################################
+# Strange SeqQuest Intermediate Binary Files  #
+###############################################
+
+*.broy0_elec
+*.data
+*.dh
+*.dmat
+*.dmd_geom
+*.emat
+*.dmd_geom*.grd
+*.grd0
+*.h0*
+*.set0
+*.stat
+*.vec
