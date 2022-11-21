@@ -7,7 +7,9 @@ setup data
 title
 title2
 functional
-PBE
+PBE-SP
+spin polarization
+1.0
 dimension of system (0=cluster ... 3=bulk)
  2
 coordinates
@@ -33,7 +35,7 @@ atom file
 number of atoms in unit cell
   9
 atom, type, position;  step#      4
- AT0H01       H                 0.0000000000    0.5000000000   -2.2500000000
+ AT0H01       H                 0.0000000000    0.5000000000   -2.5000000000
  AT0m09       Ti                0.5000000000    0.5000000000   -1.9717926421 
  AT0m08       O                 0.0000000000    0.5000000000   -1.9990491885 
  AT0m07       O                 0.5000000000    0.0000000000   -1.9990491885 
@@ -57,7 +59,7 @@ convergence criterion
   0.000500
 geometry relaxation
 gfixed
-2 9 
+5 9 
 gmethod
 asd
 gsteps
