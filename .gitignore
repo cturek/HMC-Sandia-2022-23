@@ -1,12 +1,12 @@
 # Ignored file types for GitHub
 #
 # Cedar Turek cturek@hmc.edu 20 Nov 2022
+
 #########################
 # Compiled Source Files #
 #########################
 *.o
 *.s
-*.params
 *.x
 
 ###############################################
