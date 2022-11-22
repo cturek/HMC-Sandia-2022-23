@@ -19,7 +19,8 @@
 *.dmat
 *.dmd_geom
 *.emat
-*.dmd_geom*.grd
+*.dmd_geom
+*.grd
 *.grd0
 *.h0*
 *.set0
