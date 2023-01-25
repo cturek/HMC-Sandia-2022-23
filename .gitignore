@@ -18,6 +18,8 @@
 *.dh
 *.dmat
 *.dmd_geom
+*.drh0
+*.drho
 *.emat
 *.dmd_geom
 *.grd
