@@ -7,7 +7,6 @@
 #########################
 *.o
 *.s
-*.x
 
 ###############################################
 # Strange SeqQuest Intermediate Binary Files  #
