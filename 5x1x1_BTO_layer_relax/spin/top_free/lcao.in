@@ -34,7 +34,7 @@ atom file
  H = H.atm
 number of atoms in unit cell
   14
-atom, type, position;  step#     0
+atom, type, position;  step#     31
  ATOm00       H                 0.0000015954    0.4999998561   -2.2414275147 
  AT0m09       Ti                0.5000013005    0.5000000000   -1.9648125221 
  AT0m08       O                -0.0000010848    0.5000001524   -2.0023350738 
@@ -68,6 +68,6 @@ gfixed
 gmethod
 asd
 gsteps
-30
+60
 end geometry relaxation
 end run phase data
