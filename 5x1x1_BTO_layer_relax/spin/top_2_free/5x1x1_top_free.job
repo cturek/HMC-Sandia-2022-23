@@ -1,0 +1,3 @@
+#!/bin/bash
+# use the bash shell
+../../../bin/lcao.x -> outputFile
