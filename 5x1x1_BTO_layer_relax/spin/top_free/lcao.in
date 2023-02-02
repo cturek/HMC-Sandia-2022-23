@@ -34,11 +34,11 @@ atom file
  H = H.atm
 number of atoms in unit cell
   14
-atom, type, position;  step#      0
- ATOm00       H                 0.0000005571    0.5000000000   -2.2414774992 
- AT0m09       Ti                0.5000000000    0.5000000000   -1.9704972452 
- AT0m08       O                 0.0000000000    0.5000000000   -1.9971379537 
- AT0m07       O                 0.5000000000    0.0000000000   -1.9971379537 
+atom, type, position;  step#     31
+ ATOm00       H                -0.0000823238    0.4999976008   -2.2804709112 
+ AT0m09       Ti                0.4999726996    0.4999902540   -1.9710801044 
+ AT0m08       O                -0.0000101645    0.5000049451   -2.0374511353 
+ AT0m07       O                 0.5000056080    0.0000192889   -2.0323763435 
  AT0m05       Ba                0.0000000000    0.0000000000   -1.5261388694 
  AT0m04       Ti                0.5000000000    0.5000000000   -0.9945756786 
  AT0m03       O                 0.0000000000    0.5000000000   -0.9987995952 
@@ -49,7 +49,6 @@ atom, type, position;  step#      0
  AT0002       O                 0.0000000000    0.5000000000    0.0000002457 
  AT0003       O                 0.5000000000    0.0000000000    0.0000002457 
  AT0004       O                 0.5000000000    0.5000000000   -0.5005608276 
-
 origin offset 
 0.0 0.0 0.0
 kgrid
@@ -58,7 +57,7 @@ end setup phase data
 run phase input data
 no ges
 iterations
- 55
+ 250
 blend ratio
 0.200
 convergence criterion
@@ -69,6 +68,6 @@ gfixed
 gmethod
 asd
 gsteps
-30
+60
 end geometry relaxation
 end run phase data
