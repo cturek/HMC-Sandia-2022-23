@@ -1,0 +1,112 @@
+do setup
+do iters
+do force
+do relax
+do post
+setup data
+title
+title2
+functional
+PBE-SP
+spin polarization
+1.0
+dimension of system (0=cluster ... 3=bulk)
+ 2
+coordinates
+CARTESIAN
+scale
+7.62074
+primitive lattice vectors
+  2.0000000000      0.0000000000      0.0000000000
+  0.0000000000      2.0000000000      0.0000000000
+  0.0000000000      0.0000000000     80.0000000000
+grid dimensions
+       72   72  400
+atom types
+ 4
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom file
+ O  = O.atm
+atom file
+ H = H.atm
+number of atoms in unit cell
+  53
+atom, type, position;  step#     14
+ATOm_H       H            0.0000000    0.50000000     -2.3100000000
+AT1            O            0.5            0            -1.997137954
+AT2            O            0            0.5            -1.997137954
+AT3            O            0            -0.5            -1.997137954
+AT4            O            -0.5            0            -1.997137954
+AT5            O            1            0.5            -1.997137954
+AT6            O            0.5            1            -1.997137954
+AT7            O            1            -0.5            -1.997137954
+AT8            O            -0.5            1            -1.997137954
+AT9            Ti            0.5            0.5            -1.970497245
+AT10            Ti            0.5            -0.5            -1.970497245
+AT11            Ti            -0.5            0.5            -1.970497245
+AT12            Ti            -0.5            -0.5            -1.970497245
+AT13            Ba            0            0            -1.526138869
+AT14            Ba            1            0            -1.526138869
+AT15            Ba            0            1            -1.526138869
+AT16            Ba            1            1            -1.526138869
+AT17            O            0.5            0.5            -1.504100528
+AT18            O            0.5            -0.5            -1.504100528
+AT19            O            -0.5            0.5            -1.504100528
+AT20            O            -0.5            -0.5            -1.504100528
+AT21            O            0.5            0            -0.9987995952
+AT22            O            0            0.5            -0.9987995952
+AT23            O            0            -0.5            -0.9987995952
+AT24            O            -0.5            0            -0.9987995952
+AT25            O            1            0.5            -0.9987995952
+AT26            O            0.5            1            -0.9987995952
+AT27            O            1            -0.5            -0.9987995952
+AT28            O            -0.5            1            -0.9987995952
+AT29            Ti            0.5            0.5            -0.9945756786
+AT30            Ti            0.5            -0.5            -0.9945756786
+AT31            Ti            -0.5            0.5            -0.9945756786
+AT32            Ti            -0.5            -0.5            -0.9945756786
+AT33            Ba            0            0            -0.5037462655
+AT34            Ba            1            0            -0.5037462655
+AT35            Ba            0            1            -0.5037462655
+AT36            Ba            1            1            -0.5037462655
+AT37            O            0.5            0.5            -0.5005608276
+AT38            O            0.5            -0.5            -0.5005608276
+AT39            O            -0.5            0.5            -0.5005608276
+AT40            O            -0.5            -0.5            -0.5005608276
+AT41            Ti            0.5            0.5            0
+AT42            Ti            0.5            -0.5            0
+AT43            Ti            -0.5            0.5            0
+AT44            Ti            -0.5            -0.5            0
+AT45            O            0.5            0            0.0000002457
+AT46            O            0            0.5            0.0000002457
+AT47            O            0            -0.5            0.0000002457
+AT48            O            -0.5            0            0.0000002457
+AT49            O            1            0.5            0.0000002457
+AT50            O            0.5            1            0.0000002457
+AT51            O            1            -0.5            0.0000002457
+AT52            O            -0.5            1            0.0000002457
+origin offset 
+0.0 0.0 0.0
+kgrid
+ 6 6 0
+end setup phase data
+run phase input data
+no ges
+iterations
+ 55
+blend ratio
+0.200
+convergence criterion
+  0.000500
+geometry relaxation
+gfixed
+2 12
+gmethod
+asd
+gsteps
+30
+end geometry relaxation
+end run phase data
