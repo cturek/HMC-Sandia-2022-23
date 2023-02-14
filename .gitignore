@@ -16,13 +16,17 @@
 *.data
 *.dh
 *.dmat
+*.dmats
 *.dmd_geom
 *.drh0
 *.drho
+*.drhs
 *.emat
+*.emats
 *.dmd_geom
 *.grd
 *.grd0
+*.grho
 *.h0*
 *.set0
 *.stat
