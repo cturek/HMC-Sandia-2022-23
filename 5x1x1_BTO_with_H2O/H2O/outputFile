@@ -59,10 +59,10 @@ CARTESIAN
  scalez factor: scale z-direction
    1.00000000
 primitive lattice vectors
-  18.00000000  0.00000000  0.00000000
+  30.00000000  0.00000000  0.00000000
    0.00000000 30.00000000  0.00000000
-   0.00000000  0.00000000 18.00000000
- > Input Cell volume{bohr^3)=     9720.000000
+   0.00000000  0.00000000 30.00000000
+ > Input Cell volume{bohr^3)=    27000.000000
 grid dimensions
    60  90  60
  nearby option: 0=0,1=pt,2=wt
@@ -285,43 +285,42 @@ end atom file
  charge state for system
    0.00000000
 number of atoms in unit cell
-    2
+    3
 atom, type, position vector
- ATmeH1       H                 0.0000000000    -1.0000000000   0.0000000000    
- ATmeH2       O                 0.0000000000     1.000000000    0.0000000000    
+ ATmeH1       H                1.44    -1.13    0.00                            
+ ATmeH2       O                0.00     0.00    0.00                            
+ ATmeH3       H               -1.44    -1.13    0.00                            
 origin offset
    0.00000000  0.00000000  0.00000000
  symmetry center
    0.00000000  0.00000000  0.00000000
 end setup phase data
- >>>> Total number of electrons=               7.0000000000
+ >>>> Total number of electrons=               8.0000000000
  >>>> Minimum number of occupied states=           4
- >>>> Number of basis functions, norb=          19
+ >>>> Number of basis functions, norb=          25
  ************** VERSION 2.65 CHANGE: ***************
  **** grid range default changed from 2.d-7 to 2.d-8
  **** This will cause numerical changes in results
  **** To recover pre-2.65, use input cutgrd/2.d-7
  ***************************************************
 run phase input data
-history
-    8
 iterations
   125
 blend ratio
    0.05000000
 convergence criterion
-   0.00100000
+   0.00005000
 geometry relaxation
 gmethod
 asd
 gfixed
-    1    1 => fixed atom sequence
+    2    2 => fixed atom sequence
 gsteps
   450
 end geometry relaxation
 
  >>>> Relax params (gstop,gblend,gconv,atoms-relaxd):
- >>>>    450  1.5000000  0.000800000000      1
+ >>>>    450  1.5000000  0.000800000000      2
 
 end run phase data
 cutXXX for code (grd,slo,ii,1c)
@@ -343,34 +342,18 @@ cutall for code (s,t,nl,loc;frc)
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1087875-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      550125-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    543938 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215567150 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    275063 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215835584 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -381,380 +364,568 @@ cutall for code (s,t,nl,loc;frc)
  NLOCMAT: Max neqilat=           1
 
  After mat0set    +    0.01 =       0.0 seconds used (    0.01 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0044057067   core=  0.0000000000
+     vxc(afsw):   -0.82154851  -0.79619649  -0.02535202   0.00006167
+     exc(afsw):   -0.63790426  -0.61570861  -0.02219565   0.00005196
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0044057067   core=  0.0000000000
+     vxc(afsw):   -0.82154851  -0.79619649  -0.02535202   0.00006167
+     exc(afsw):   -0.63790426  -0.61570861  -0.02219565   0.00005196
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.12 =       0.1 seconds used (    0.10 usr    0.02 sys)
+ AFTER SETUP PHASE+    0.10 =       0.1 seconds used (    0.07 usr    0.03 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       0.1 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.01 =       0.1 seconds used (    0.00 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004301053
- Harris Fcnal XC piece=        2.2587103537
+ grid-integrated valence-density total =        7.9922873259
+ Harris Fcnal XC piece=        2.5603658006
   
   
 
- After 0 iteration+    0.03 =       0.2 seconds used (    0.03 usr    0.00 sys)
+ After 0 iteration+    0.02 =       0.1 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.507711 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.270762 Ry,   gap(0K)= 0.635118 Ry = 8.641 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.677216  2.0000
-    2    -0.734097  2.0000
-    3    -0.511007  1.5000
-    4    -0.511007  1.5000
-    5     0.069764  0.0000
-    6     0.622509  0.0000
-    7     0.652035  0.0000
-    8     0.652035  0.0000
-    9     0.760204  0.0000
-   10     1.703561  0.0000
-   11     1.703561  0.0000
-   12     1.825749  0.0000
+    1    -1.864222  2.0000
+    2    -0.937563  2.0000
+    3    -0.738955  2.0000
+    4    -0.588321  2.0000
+    5     0.046797  0.0000
+    6     0.167174  0.0000
+    7     0.555342  0.0000
+    8     0.603077  0.0000
+    9     0.646148  0.0000
+   10     0.897433  0.0000
+   11     0.941486  0.0000
+   12     1.601525  0.0000
              ...      ...
-   14     1.853357  0.0000
+   14     1.696122  0.0000
   
- delta movement in electrons =        0.7569812878
+ delta movement in electrons =        1.1791332680
 
- one-center local charge defect =        -0.00017876
+ one-center local charge defect =         0.01526101
 
- LMCC local dipole, |dip|=        0.9050059094
+ LMCC local dipole, |dip|=        1.0860345357
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000022119       -0.0000300946
- LMCC esns total grid integral=        0.0648710160
+ LMCC chemical potential shift(Ry,eV)=       -0.0000014909       -0.0000202853
+ LMCC esns total grid integral=        0.1517909004
   
- grid-integrated valence-density total =        7.0002160782
+ grid-integrated valence-density total =        7.9861236909
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.1712078532
-    Spherical-atom-Vxc trace ENERGY =            11.3746319932
-    non-spherical es ENERGY =                     0.0648278549
-    Total Exc ENERGY =                           -7.3493332094
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.1070879950
+    Spherical-atom-Vxc trace ENERGY =            15.9750296688
+    non-spherical es ENERGY =                     0.1517584719
+    Total Exc ENERGY =                           -8.6730286885
 
-    total kinetic trace ENERGY =           23.4150042104
-    non-local ps-pot trace ENERGY =         3.8533071565
-    total electrostatic ENERGY =          -52.8828576491
-    Total Vxc ENERGY =                     -9.5088642953
+    total kinetic trace ENERGY =           27.0666919356
+    non-local ps-pot trace ENERGY =         3.7129834646
+    total electrostatic ENERGY =          -56.4841821427
+    Total Vxc ENERGY =                    -11.1670911913
 
-    TOTAL ENERGY (Rydberg) =                    -32.9638794916
+    TOTAL ENERGY (Rydberg) =                    -34.3775354310
 
  ################################################################
   
- rms,max scfchange=  4.5449D-02  3.3134D-01 for component#         1
+ rms,max scfchange=  3.4773D-02  3.2316D-01 for component#       157
  electronic meth_bl(BROYDEN)=           1
  EBROYDDJ: in-core history
 >>>>> Broyden: first step (elec) simple blend ratio= 0.050000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       0.3 seconds used (    0.12 usr    0.06 sys)
+ After blending   +    0.15 =       0.3 seconds used (    0.14 usr    0.01 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.512363 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.265326 Ry,   gap(0K)= 0.622006 Ry = 8.463 eV
   
- delta movement in electrons =        0.7449799221
+ delta movement in electrons =        1.1527161742
 
- one-center local charge defect =        -0.00018162
+ one-center local charge defect =         0.01495570
 
- LMCC local dipole, |dip|=        0.8878598296
+ LMCC local dipole, |dip|=        1.0534968382
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000022161       -0.0000301511
- LMCC esns total grid integral=        0.0624090809
+ LMCC chemical potential shift(Ry,eV)=       -0.0000014527       -0.0000197647
+ LMCC esns total grid integral=        0.1377892204
   
- grid-integrated valence-density total =        7.0002192434
+ grid-integrated valence-density total =        7.9864355962
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.1740933012
-    Spherical-atom-Vxc trace ENERGY =            11.3806552007
-    non-spherical es ENERGY =                     0.0623672586
-    Total Exc ENERGY =                           -7.3517591721
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0972300576
+    Spherical-atom-Vxc trace ENERGY =            15.9340600927
+    non-spherical es ENERGY =                     0.1376927227
+    Total Exc ENERGY =                           -8.6395786738
 
-    total kinetic trace ENERGY =           23.4234214882
-    non-local ps-pot trace ENERGY =         3.8572684272
-    total electrostatic ENERGY =          -52.8945590343
-    Total Vxc ENERGY =                     -9.5120060561
+    total kinetic trace ENERGY =           26.8752749028
+    non-local ps-pot trace ENERGY =         3.7002353136
+    total electrostatic ENERGY =          -56.3251943468
+    Total Vxc ENERGY =                    -11.1237252661
 
-    TOTAL ENERGY (Rydberg) =                    -32.9656282910
+    TOTAL ENERGY (Rydberg) =                    -34.3892628041
 
  ################################################################
   
- rms,max scfchange=  4.2292D-02  3.0812D-01 for component#         1
+ rms,max scfchange=  3.0774D-02  2.7635D-01 for component#       157
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.18 =       0.5 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       0.4 seconds used (    0.13 usr    0.03 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.576065 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.236565 Ry,   gap(0K)= 0.547375 Ry = 7.447 eV
   
- delta movement in electrons =        0.5892705991
+ delta movement in electrons =        1.0372238114
 
- one-center local charge defect =        -0.00022344
+ one-center local charge defect =         0.01313253
 
- LMCC local dipole, |dip|=        0.6536014527
+ LMCC local dipole, |dip|=        0.8522763975
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000021562       -0.0000293371
- LMCC esns total grid integral=        0.0354184189
+ LMCC chemical potential shift(Ry,eV)=       -0.0000012017       -0.0000163500
+ LMCC esns total grid integral=        0.0785408086
   
- grid-integrated valence-density total =        7.0002641889
+ grid-integrated valence-density total =        7.9882959618
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.2033209446
-    Spherical-atom-Vxc trace ENERGY =            11.4568504923
-    non-spherical es ENERGY =                     0.0353932354
-    Total Exc ENERGY =                           -7.3817449750
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0249809691
+    Spherical-atom-Vxc trace ENERGY =            15.6888282983
+    non-spherical es ENERGY =                     0.0782066166
+    Total Exc ENERGY =                           -8.4437332115
 
-    total kinetic trace ENERGY =           23.5180935682
-    non-local ps-pot trace ENERGY =         3.9143141674
-    total electrostatic ENERGY =          -53.0262832296
-    Total Vxc ENERGY =                     -9.5520153910
+    total kinetic trace ENERGY =           25.7534567714
+    non-local ps-pot trace ENERGY =         3.6274910608
+    total electrostatic ENERGY =          -55.3631007745
+    Total Vxc ENERGY =                    -10.8694186875
 
-    TOTAL ENERGY (Rydberg) =                    -32.9756204690
+    TOTAL ENERGY (Rydberg) =                    -34.4258861539
 
  ################################################################
   
- rms,max scfchange=  3.4201D-03  2.0406D-02 for component#       161
+ rms,max scfchange=  1.5673D-02  1.2204D-01 for component#         1
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.18 =       0.7 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       0.6 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   4 begins here  *************************
 
 
-         fermi level =   -0.575939 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.269085 Ry,   gap(0K)= 0.557837 Ry = 7.590 eV
   
- delta movement in electrons =        0.5892138180
+ delta movement in electrons =        1.0486771177
 
- one-center local charge defect =        -0.00022347
+ one-center local charge defect =         0.01359450
 
- LMCC local dipole, |dip|=        0.6532612904
+ LMCC local dipole, |dip|=        0.8595481332
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000021539       -0.0000293062
- LMCC esns total grid integral=        0.0354076382
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011799       -0.0000160536
+ LMCC esns total grid integral=        0.0858711122
   
- grid-integrated valence-density total =        7.0002642731
+ grid-integrated valence-density total =        7.9878692338
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.2033062311
-    Spherical-atom-Vxc trace ENERGY =            11.4566650460
-    non-spherical es ENERGY =                     0.0353824655
-    Total Exc ENERGY =                           -7.3815576976
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0718705554
+    Spherical-atom-Vxc trace ENERGY =            15.8164191353
+    non-spherical es ENERGY =                     0.0856653372
+    Total Exc ENERGY =                           -8.5290291276
 
-    total kinetic trace ENERGY =           23.5169823418
-    non-local ps-pot trace ENERGY =         3.9142772159
-    total electrostatic ENERGY =          -53.0253165543
-    Total Vxc ENERGY =                     -9.5517778524
+    total kinetic trace ENERGY =           26.2360969244
+    non-local ps-pot trace ENERGY =         3.6491681683
+    total electrostatic ENERGY =          -55.7792580637
+    Total Vxc ENERGY =                    -10.9792221313
 
-    TOTAL ENERGY (Rydberg) =                    -32.9756146942
+    TOTAL ENERGY (Rydberg) =                    -34.4230220986
 
  ################################################################
   
- rms,max scfchange=  3.4651D-03  2.0725D-02 for component#       161
+ rms,max scfchange=  1.1366D-02  1.1898D-01 for component#       157
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     4
 
- After blending   +    0.18 =       0.9 seconds used (    0.16 usr    0.02 sys)
+ After blending   +    0.15 =       0.7 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   5 begins here  *************************
 
 
-         fermi level =   -0.584021 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.260424 Ry,   gap(0K)= 0.524842 Ry = 7.141 eV
   
- delta movement in electrons =        0.5960402935
+ delta movement in electrons =        1.0043174415
 
- one-center local charge defect =        -0.00022100
+ one-center local charge defect =         0.01277667
 
- LMCC local dipole, |dip|=        0.6798789878
+ LMCC local dipole, |dip|=        0.7640740526
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000022994       -0.0000312852
- LMCC esns total grid integral=        0.0365834053
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010492       -0.0000142756
+ LMCC esns total grid integral=        0.0667687410
   
- grid-integrated valence-density total =        7.0002616435
+ grid-integrated valence-density total =        7.9887078407
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.2039055023
-    Spherical-atom-Vxc trace ENERGY =            11.4682938848
-    non-spherical es ENERGY =                     0.0365573005
-    Total Exc ENERGY =                           -7.3939872191
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0377895553
+    Spherical-atom-Vxc trace ENERGY =            15.7151754100
+    non-spherical es ENERGY =                     0.0665012863
+    Total Exc ENERGY =                           -8.4477181957
 
-    total kinetic trace ENERGY =           23.5918791019
-    non-local ps-pot trace ENERGY =         3.9159833477
-    total electrostatic ENERGY =          -53.0897150437
-    Total Vxc ENERGY =                     -9.5675253742
+    total kinetic trace ENERGY =           25.7687421989
+    non-local ps-pot trace ENERGY =         3.6182731938
+    total electrostatic ENERGY =          -55.3673351397
+    Total Vxc ENERGY =                    -10.8735126036
 
-    TOTAL ENERGY (Rydberg) =                    -32.9758398132
+    TOTAL ENERGY (Rydberg) =                    -34.4280379428
 
  ################################################################
   
- rms,max scfchange=  7.3626D-04  5.5721D-03 for component#       261
+ rms,max scfchange=  8.5382D-04  6.6050D-03 for component#       183
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     5
 
- After blending   +    0.18 =       1.1 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.16 =       0.9 seconds used (    0.14 usr    0.02 sys)
   
  *************************  iteration   6 begins here  *************************
 
 
-         fermi level =   -0.585345 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261097 Ry,   gap(0K)= 0.525554 Ry = 7.151 eV
   
- delta movement in electrons =        0.5997210885
+ delta movement in electrons =        1.0056665999
 
- one-center local charge defect =        -0.00022185
+ one-center local charge defect =         0.01280546
 
- LMCC local dipole, |dip|=        0.6824733145
+ LMCC local dipole, |dip|=        0.7685046001
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000022632       -0.0000307920
- LMCC esns total grid integral=        0.0369825268
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010562       -0.0000143708
+ LMCC esns total grid integral=        0.0673586730
   
- grid-integrated valence-density total =        7.0002624499
+ grid-integrated valence-density total =        7.9886795609
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.2031226927
-    Spherical-atom-Vxc trace ENERGY =            11.4645891150
-    non-spherical es ENERGY =                     0.0369564106
-    Total Exc ENERGY =                           -7.3914769892
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0392907701
+    Spherical-atom-Vxc trace ENERGY =            15.7195055160
+    non-spherical es ENERGY =                     0.0670935283
+    Total Exc ENERGY =                           -8.4511250752
 
-    total kinetic trace ENERGY =           23.5782925002
-    non-local ps-pot trace ENERGY =         3.9144966950
-    total electrostatic ENERGY =          -53.0771646395
-    Total Vxc ENERGY =                     -9.5640986372
+    total kinetic trace ENERGY =           25.7895530156
+    non-local ps-pot trace ENERGY =         3.6183977358
+    total electrostatic ENERGY =          -55.3848493654
+    Total Vxc ENERGY =                    -10.8778512557
 
-    TOTAL ENERGY (Rydberg) =                    -32.9758524334
+    TOTAL ENERGY (Rydberg) =                    -34.4280236891
 
  ################################################################
   
- rms,max scfchange=  1.7440D-04  1.6296D-03 for component#       221
+ rms,max scfchange=  8.2027D-04  8.0047D-03 for component#       157
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
 <<<<< Broyden step complete, scf step=     6
 
- After blending   +    0.18 =       1.3 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.16 =       1.1 seconds used (    0.12 usr    0.04 sys)
   
  *************************  iteration   7 begins here  *************************
 
 
-         fermi level =   -0.585604 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.260913 Ry,   gap(0K)= 0.521808 Ry = 7.100 eV
   
- delta movement in electrons =        0.6003594068
+ delta movement in electrons =        1.0053973116
 
- one-center local charge defect =        -0.00022213
+ one-center local charge defect =         0.01276473
 
- LMCC local dipole, |dip|=        0.6824671746
+ LMCC local dipole, |dip|=        0.7741543566
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000022522       -0.0000306426
- LMCC esns total grid integral=        0.0370399918
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010712       -0.0000145749
+ LMCC esns total grid integral=        0.0672805429
   
- grid-integrated valence-density total =        7.0002629394
+ grid-integrated valence-density total =        7.9887259909
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.8827982771
-    Full spherical atom trace ENERGY =           -8.2029429281
-    Spherical-atom-Vxc trace ENERGY =            11.4635526660
-    non-spherical es ENERGY =                     0.0370139004
-    Total Exc ENERGY =                           -7.3906772092
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0366898386
+    Spherical-atom-Vxc trace ENERGY =            15.7135512517
+    non-spherical es ENERGY =                     0.0670123966
+    Total Exc ENERGY =                           -8.4474846647
 
-    total kinetic trace ENERGY =           23.5737892894
-    non-local ps-pot trace ENERGY =         3.9141602286
-    total electrostatic ENERGY =          -53.0731241567
-    Total Vxc ENERGY =                     -9.5630303662
+    total kinetic trace ENERGY =           25.7773408272
+    non-local ps-pot trace ENERGY =         3.6102958697
+    total electrostatic ENERGY =          -55.3679697753
+    Total Vxc ENERGY =                    -10.8728399691
 
-    TOTAL ENERGY (Rydberg) =                    -32.9758518480
+    TOTAL ENERGY (Rydberg) =                    -34.4278177431
 
  ################################################################
   
- rms,max scfchange=  8.3536D-05  7.4666D-04 for component#       221
+ rms,max scfchange=  9.5836D-05  1.0256D-03 for component#       235
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=     7
 
- After blending   +    0.18 =       1.4 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       1.2 seconds used (    0.13 usr    0.02 sys)
   
- >>>>> self-consistency achieved, iteration   7
+ *************************  iteration   8 begins here  *************************
 
 
- Final GAP(eV)=  0.0000
+         fermi level =   -0.261006 Ry,   gap(0K)= 0.521860 Ry = 7.100 eV
+  
+ delta movement in electrons =        1.0055272116
 
-         fermi level =   -0.585604 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+ one-center local charge defect =         0.01276759
+
+ LMCC local dipole, |dip|=        0.7745446326
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010719       -0.0000145836
+ LMCC esns total grid integral=        0.0673327163
+  
+ grid-integrated valence-density total =        7.9887235484
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0368432802
+    Spherical-atom-Vxc trace ENERGY =            15.7139871509
+    non-spherical es ENERGY =                     0.0670648229
+    Total Exc ENERGY =                           -8.4478157497
+
+    total kinetic trace ENERGY =           25.7794543285
+    non-local ps-pot trace ENERGY =         3.6102443411
+    total electrostatic ENERGY =          -55.3696968642
+    Total Vxc ENERGY =                    -10.8732606350
+
+    TOTAL ENERGY (Rydberg) =                    -34.4278139443
+
+ ################################################################
+  
+ rms,max scfchange=  7.5812D-05  7.4792D-04 for component#       157
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=     8
+
+ After blending   +    0.15 =       1.4 seconds used (    0.12 usr    0.04 sys)
+  
+ *************************  iteration   9 begins here  *************************
+
+
+         fermi level =   -0.261263 Ry,   gap(0K)= 0.521825 Ry = 7.100 eV
+  
+ delta movement in electrons =        1.0059294406
+
+ one-center local charge defect =         0.01277395
+
+ LMCC local dipole, |dip|=        0.7752362281
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010731       -0.0000145997
+ LMCC esns total grid integral=        0.0674027164
+  
+ grid-integrated valence-density total =        7.9887179394
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0369517940
+    Spherical-atom-Vxc trace ENERGY =            15.7142243542
+    non-spherical es ENERGY =                     0.0671348058
+    Total Exc ENERGY =                           -8.4479891994
+
+    total kinetic trace ENERGY =           25.7822467739
+    non-local ps-pot trace ENERGY =         3.6091617074
+    total electrostatic ENERGY =          -55.3712080034
+    Total Vxc ENERGY =                    -10.8735098931
+
+    TOTAL ENERGY (Rydberg) =                    -34.4277887215
+
+ ################################################################
+  
+ rms,max scfchange=  1.6722D-05  2.0341D-04 for component#       157
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=     9
+
+ After blending   +    0.16 =       1.5 seconds used (    0.13 usr    0.03 sys)
+  
+ *************************  iteration  10 begins here  *************************
+
+
+         fermi level =   -0.261322 Ry,   gap(0K)= 0.521795 Ry = 7.099 eV
+  
+ delta movement in electrons =        1.0059908393
+
+ one-center local charge defect =         0.01277483
+
+ LMCC local dipole, |dip|=        0.7753083659
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010732       -0.0000146016
+ LMCC esns total grid integral=        0.0674068331
+  
+ grid-integrated valence-density total =        7.9887172642
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0369555904
+    Spherical-atom-Vxc trace ENERGY =            15.7142194404
+    non-spherical es ENERGY =                     0.0671389058
+    Total Exc ENERGY =                           -8.4479787103
+
+    total kinetic trace ENERGY =           25.7825866728
+    non-local ps-pot trace ENERGY =         3.6088997543
+    total electrostatic ENERGY =          -55.3712905594
+    Total Vxc ENERGY =                    -10.8735020500
+
+    TOTAL ENERGY (Rydberg) =                    -34.4277828426
+
+ ################################################################
+  
+ rms,max scfchange=  6.3145D-06  5.3639D-05 for component#       313
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=    10
+
+ After blending   +    0.15 =       1.7 seconds used (    0.12 usr    0.03 sys)
+  
+ *************************  iteration  11 begins here  *************************
+
+
+         fermi level =   -0.261326 Ry,   gap(0K)= 0.521794 Ry = 7.099 eV
+  
+ delta movement in electrons =        1.0059925333
+
+ one-center local charge defect =         0.01277485
+
+ LMCC local dipole, |dip|=        0.7753095215
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010732       -0.0000146013
+ LMCC esns total grid integral=        0.0674071190
+  
+ grid-integrated valence-density total =        7.9887170012
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.7242068882
+    Full spherical atom trace ENERGY =          -13.0369555516
+    Spherical-atom-Vxc trace ENERGY =            15.7142200565
+    non-spherical es ENERGY =                     0.0671391924
+    Total Exc ENERGY =                           -8.4479796002
+
+    total kinetic trace ENERGY =           25.7826035115
+    non-local ps-pot trace ENERGY =         3.6088914542
+    total electrostatic ENERGY =          -55.3712981565
+    Total Vxc ENERGY =                    -10.8735021177
+
+    TOTAL ENERGY (Rydberg) =                    -34.4277827910
+
+ ################################################################
+  
+ rms,max scfchange=  5.8748D-06  4.2349D-05 for component#       313
+
+ After blending   +    0.15 =       1.8 seconds used (    0.13 usr    0.03 sys)
+  
+ >>>>> self-consistency achieved, iteration  11
+
+
+ Final GAP(eV)=  7.0994
+
+         fermi level =   -0.261326 Ry,   gap(0K)= 0.521794 Ry = 7.099 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.778515  2.0000
-    2    -0.820039  2.0000
-    3    -0.588901  1.5001
-    4    -0.588900  1.4999
-    5    -0.028961  0.0000
-    6     0.563587  0.0000
-    7     0.567551  0.0000
-    8     0.567556  0.0000
-    9     0.637662  0.0000
-   10     1.635831  0.0000
-   11     1.635832  0.0000
-   12     1.777129  0.0000
+    1    -1.834334  2.0000
+    2    -0.967952  2.0000
+    3    -0.680358  2.0000
+    4    -0.522224  2.0000
+    5    -0.000429  0.0000
+    6     0.125113  0.0000
+    7     0.539014  0.0000
+    8     0.588311  0.0000
+    9     0.606586  0.0000
+   10     0.838084  0.0000
+   11     0.907851  0.0000
+   12     1.597952  0.0000
              ...      ...
-   14     1.790365  0.0000
+   14     1.720018  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9758518480
- Binding energy =        0.2816431520 Ry =              3.8320 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4277827910
+ Binding energy =       -0.0047327910 Ry =             -0.0644 eV
 
- AFTER ITERATIONS +    0.00 =       1.4 seconds used (    0.00 usr    0.00 sys)
+ AFTER ITERATIONS +    0.00 =       1.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0044057067   core=  0.0000000000
+     vxc(afs ):   -0.82154851  -0.79619649  -0.02535202
+     exc(afs ):   -0.63790426  -0.61570861  -0.02219565
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0044057067   core=  0.0000000000
+     vxc(afs ):   -0.82154851  -0.79619649  -0.02535202
+     exc(afs ):   -0.63790426  -0.61570861  -0.02219565
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1     -0.0000020156     0.1003513342    -0.0000019373
-          2      0.0000020156    -0.0769690259     0.0000019373
-      f-defect        0.0000000000     0.0233823083     0.0000000000
+          1     -0.0130461113    -0.0004881372     0.0000089414
+          2      0.0000018792     0.1366688435     0.0000000000
+          3      0.0130461341    -0.0004874237    -0.0000063087
+      f-defect        0.0000019020     0.1356932827     0.0000026328
 
- AFTER FORCE RTNS +    0.10 =       1.5 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       1.9 seconds used (    0.06 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  7.6969D-02  7.6969D-02 for component#        1
+ rms,max force=  1.3055D-02  1.3055D-02 for component#        1
  dynamics update step #           1
 ASD: min/max mass factors=   1.0000   1.0000
  >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.076969
+ GUPDATE: Largest relax: atom#, dr(au)=     1    0.013055
  <<<<< GUPDATE ends
 
  ###############################################################################
    NEW GEOMETRY for step   2, of   2 total
 atom, type, position;  step#      2
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                 0.0000020156    0.9230309741    0.0000019373 
+ ATmeH1       H                 1.4269538887   -1.1304881372    0.0000089414 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.4269538659   -1.1304874237   -0.0000063087 
  ###############################################################################
 
- After geometry   +    0.00 =       1.5 seconds used (    0.00 usr    0.00 sys)
+ After geometry   +    0.00 =       1.9 seconds used (    0.00 usr    0.00 sys)
   
  LATVEC: nlat1c,nlat2c,nlat =           1           1           1
 
@@ -762,34 +933,18 @@ atom, type, position;  step#      2
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1087750-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549875-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    543875 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215567213 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274938 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215835709 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -799,260 +954,323 @@ atom, type, position;  step#      2
  mat0set: stripe-parallel, KPSTORE= F
  NLOCMAT: Max neqilat=           1
 
- After mat0set    +    0.00 =       1.5 seconds used (    0.00 usr    0.00 sys)
+ After mat0set    +    0.00 =       1.9 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0040242257   core=  0.0000000000
+     vxc(afsw):   -0.82014311  -0.79479037  -0.02535274   0.00005633
+     exc(afsw):   -0.63729164  -0.61509549  -0.02219615   0.00004746
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0040242285   core=  0.0000000000
+     vxc(afsw):   -0.82014311  -0.79479037  -0.02535274   0.00005633
+     exc(afsw):   -0.63729165  -0.61509550  -0.02219615   0.00004746
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.11 =       1.7 seconds used (    0.09 usr    0.02 sys)
+ AFTER SETUP PHASE+    0.08 =       2.0 seconds used (    0.06 usr    0.02 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       1.7 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.00 =       2.0 seconds used (    0.00 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004587565
- Harris Fcnal XC piece=        2.2480857886
+ grid-integrated valence-density total =        7.9915243667
+ Harris Fcnal XC piece=        2.5609467615
   
   
 
- After 0 iteration+    0.04 =       1.7 seconds used (    0.04 usr   -0.00 sys)
+ After 0 iteration+    0.02 =       2.0 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.592223 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261567 Ry,   gap(0K)= 0.525614 Ry = 7.151 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.800768  2.0000
-    2    -0.833496  2.0000
-    3    -0.595520  1.5001
-    4    -0.595519  1.4999
-    5    -0.015201  0.0000
-    6     0.555825  0.0000
-    7     0.565848  0.0000
-    8     0.565853  0.0000
-    9     0.669972  0.0000
-   10     1.634941  0.0000
-   11     1.634941  0.0000
-   12     1.773958  0.0000
+    1    -1.841205  2.0000
+    2    -0.971624  2.0000
+    3    -0.683646  2.0000
+    4    -0.524374  2.0000
+    5     0.001240  0.0000
+    6     0.125988  0.0000
+    7     0.537384  0.0000
+    8     0.587617  0.0000
+    9     0.606235  0.0000
+   10     0.847668  0.0000
+   11     0.911748  0.0000
+   12     1.595374  0.0000
              ...      ...
-   14     1.809333  0.0000
+   14     1.718550  0.0000
   
- delta movement in electrons =        0.5937988305
+ delta movement in electrons =        1.0020328234
 
- one-center local charge defect =        -0.00027361
+ one-center local charge defect =         0.01322539
 
- LMCC local dipole, |dip|=        0.6725086229
+ LMCC local dipole, |dip|=        0.7782428803
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000023447       -0.0000319021
- LMCC esns total grid integral=        0.0345986432
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010747       -0.0000146221
+ LMCC esns total grid integral=        0.0668154853
   
- grid-integrated valence-density total =        7.0003206741
+ grid-integrated valence-density total =        7.9881143049
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.7981764987
-    Full spherical atom trace ENERGY =           -8.4331413607
-    Spherical-atom-Vxc trace ENERGY =            11.6443757605
-    non-spherical es ENERGY =                     0.0345753568
-    Total Exc ENERGY =                           -7.4295312526
+    Spherical-atom es ENERGY correction =       -28.6939343492
+    Full spherical atom trace ENERGY =          -13.1148822343
+    Spherical-atom-Vxc trace ENERGY =            15.7754199598
+    non-spherical es ENERGY =                     0.0665843706
+    Total Exc ENERGY =                           -8.4610142707
 
-    total kinetic trace ENERGY =           23.7387682636
-    non-local ps-pot trace ENERGY =         3.9078685935
-    total electrostatic ENERGY =          -53.1990035992
-    Total Vxc ENERGY =                     -9.6313087971
+    total kinetic trace ENERGY =           25.8402771309
+    non-local ps-pot trace ENERGY =         3.6079107606
+    total electrostatic ENERGY =          -55.4150001445
+    Total Vxc ENERGY =                    -10.8905263244
 
-    TOTAL ENERGY (Rydberg) =                    -32.9818979948
+    TOTAL ENERGY (Rydberg) =                    -34.4278265238
 
  ################################################################
   
- rms,max scfchange=  1.5211D-03  1.1390D-02 for component#       161
+ rms,max scfchange=  6.3850D-04  4.2764D-03 for component#       183
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden: first step (elec) simple blend ratio= 0.300000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       1.9 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       2.2 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.590225 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261049 Ry,   gap(0K)= 0.524961 Ry = 7.143 eV
   
- delta movement in electrons =        0.5947276197
+ delta movement in electrons =        1.0014766691
 
- one-center local charge defect =        -0.00027471
+ one-center local charge defect =         0.01321599
 
- LMCC local dipole, |dip|=        0.6698603593
+ LMCC local dipole, |dip|=        0.7772131410
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000023216       -0.0000315878
- LMCC esns total grid integral=        0.0346107723
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010737       -0.0000146089
+ LMCC esns total grid integral=        0.0666038550
   
- grid-integrated valence-density total =        7.0003215570
+ grid-integrated valence-density total =        7.9881239752
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.7981764987
-    Full spherical atom trace ENERGY =           -8.4325650390
-    Spherical-atom-Vxc trace ENERGY =            11.6399275494
-    non-spherical es ENERGY =                     0.0345876630
-    Total Exc ENERGY =                           -7.4257114816
+    Spherical-atom es ENERGY correction =       -28.6939343492
+    Full spherical atom trace ENERGY =          -13.1137377481
+    Spherical-atom-Vxc trace ENERGY =            15.7723040522
+    non-spherical es ENERGY =                     0.0663705428
+    Total Exc ENERGY =                           -8.4588296170
 
-    total kinetic trace ENERGY =           23.7146459706
-    non-local ps-pot trace ENERGY =         3.9084908523
-    total electrostatic ENERGY =          -53.1793631482
-    Total Vxc ENERGY =                     -9.6263610213
+    total kinetic trace ENERGY =           25.8280147566
+    non-local ps-pot trace ENERGY =         3.6073737356
+    total electrostatic ENERGY =          -55.4043859944
+    Total Vxc ENERGY =                    -10.8877615470
 
-    TOTAL ENERGY (Rydberg) =                    -32.9819378068
+    TOTAL ENERGY (Rydberg) =                    -34.4278271192
 
  ################################################################
   
- rms,max scfchange=  9.2054D-04  5.7473D-03 for component#        81
+ rms,max scfchange=  2.5876D-04  2.0121D-03 for component#         1
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.20 =       2.1 seconds used (    0.17 usr    0.02 sys)
+ After blending   +    0.15 =       2.3 seconds used (    0.13 usr    0.03 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.589339 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.260945 Ry,   gap(0K)= 0.524701 Ry = 7.139 eV
   
- delta movement in electrons =        0.5957302744
+ delta movement in electrons =        1.0013238189
 
- one-center local charge defect =        -0.00027552
+ one-center local charge defect =         0.01321887
 
- LMCC local dipole, |dip|=        0.6695054784
+ LMCC local dipole, |dip|=        0.7770867089
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000023213       -0.0000315826
- LMCC esns total grid integral=        0.0346510763
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010737       -0.0000146091
+ LMCC esns total grid integral=        0.0665786023
   
- grid-integrated valence-density total =        7.0003226404
+ grid-integrated valence-density total =        7.9881216183
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.7981764987
-    Full spherical atom trace ENERGY =           -8.4323491565
-    Spherical-atom-Vxc trace ENERGY =            11.6382730863
-    non-spherical es ENERGY =                     0.0346280739
-    Total Exc ENERGY =                           -7.4243319595
+    Spherical-atom es ENERGY correction =       -28.6939343492
+    Full spherical atom trace ENERGY =          -13.1133824710
+    Spherical-atom-Vxc trace ENERGY =            15.7713374836
+    non-spherical es ENERGY =                     0.0663444675
+    Total Exc ENERGY =                           -8.4581942982
 
-    total kinetic trace ENERGY =           23.7043232280
-    non-local ps-pot trace ENERGY =         3.9102827346
-    total electrostatic ENERGY =          -53.1722304576
-    Total Vxc ENERGY =                     -9.6245627768
+    total kinetic trace ENERGY =           25.8245413003
+    non-local ps-pot trace ENERGY =         3.6074090369
+    total electrostatic ENERGY =          -55.4015852063
+    Total Vxc ENERGY =                    -10.8869836004
 
-    TOTAL ENERGY (Rydberg) =                    -32.9819564546
+    TOTAL ENERGY (Rydberg) =                    -34.4278291674
 
  ################################################################
   
- rms,max scfchange=  4.8286D-04  3.5006D-03 for component#       121
+ rms,max scfchange=  9.2534D-05  8.3552D-04 for component#         1
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.18 =       2.3 seconds used (    0.13 usr    0.05 sys)
+ After blending   +    0.15 =       2.5 seconds used (    0.14 usr    0.02 sys)
   
  *************************  iteration   4 begins here  *************************
 
 
-         fermi level =   -0.589289 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261042 Ry,   gap(0K)= 0.524569 Ry = 7.137 eV
   
- delta movement in electrons =        0.5966607711
+ delta movement in electrons =        1.0012828254
 
- one-center local charge defect =        -0.00027607
+ one-center local charge defect =         0.01322545
 
- LMCC local dipole, |dip|=        0.6706730519
+ LMCC local dipole, |dip|=        0.7771607794
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000023375       -0.0000318029
- LMCC esns total grid integral=        0.0346959382
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010738       -0.0000146105
+ LMCC esns total grid integral=        0.0666091720
   
- grid-integrated valence-density total =        7.0003227347
+ grid-integrated valence-density total =        7.9881155643
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.7981764987
-    Full spherical atom trace ENERGY =           -8.4323999313
-    Spherical-atom-Vxc trace ENERGY =            11.6386514924
-    non-spherical es ENERGY =                     0.0346729896
-    Total Exc ENERGY =                           -7.4247105035
+    Spherical-atom es ENERGY correction =       -28.6939343492
+    Full spherical atom trace ENERGY =          -13.1133582902
+    Spherical-atom-Vxc trace ENERGY =            15.7712709134
+    non-spherical es ENERGY =                     0.0663748485
+    Total Exc ENERGY =                           -8.4581867724
 
-    total kinetic trace ENERGY =           23.7040918672
-    non-local ps-pot trace ENERGY =         3.9127677127
-    total electrostatic ENERGY =          -53.1741115278
-    Total Vxc ENERGY =                     -9.6250236249
+    total kinetic trace ENERGY =           25.8245555315
+    non-local ps-pot trace ENERGY =         3.6076810572
+    total electrostatic ENERGY =          -55.4018834663
+    Total Vxc ENERGY =                    -10.8870065159
 
-    TOTAL ENERGY (Rydberg) =                    -32.9819624514
+    TOTAL ENERGY (Rydberg) =                    -34.4278336499
 
  ################################################################
   
- rms,max scfchange=  3.3289D-05  2.1971D-04 for component#       181
+ rms,max scfchange=  1.7504D-05  1.1149D-04 for component#        53
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     4
 
- After blending   +    0.18 =       2.4 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       2.6 seconds used (    0.12 usr    0.03 sys)
   
- >>>>> self-consistency achieved, iteration   4
+ *************************  iteration   5 begins here  *************************
 
 
- Final GAP(eV)=  0.0000
+         fermi level =   -0.261126 Ry,   gap(0K)= 0.524476 Ry = 7.136 eV
+  
+ delta movement in electrons =        1.0011972730
 
-         fermi level =   -0.589289 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+ one-center local charge defect =         0.01322626
+
+ LMCC local dipole, |dip|=        0.7769730002
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010735       -0.0000146056
+ LMCC esns total grid integral=        0.0665964044
+  
+ grid-integrated valence-density total =        7.9881148503
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.6939343492
+    Full spherical atom trace ENERGY =          -13.1133646877
+    Spherical-atom-Vxc trace ENERGY =            15.7712878957
+    non-spherical es ENERGY =                     0.0663621192
+    Total Exc ENERGY =                           -8.4581878077
+
+    total kinetic trace ENERGY =           25.8244764756
+    non-local ps-pot trace ENERGY =         3.6077995701
+    total electrostatic ENERGY =          -55.4019250676
+    Total Vxc ENERGY =                    -10.8870105328
+
+    TOTAL ENERGY (Rydberg) =                    -34.4278368296
+
+ ################################################################
+  
+ rms,max scfchange=  3.1812D-06  3.4438D-05 for component#       313
+
+ After blending   +    0.15 =       2.8 seconds used (    0.13 usr    0.03 sys)
+  
+ >>>>> self-consistency achieved, iteration   5
+
+
+ Final GAP(eV)=  7.1359
+
+         fermi level =   -0.261126 Ry,   gap(0K)= 0.524476 Ry = 7.136 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.804471  2.0000
-    2    -0.829689  2.0000
-    3    -0.592608  1.5029
-    4    -0.592562  1.4971
-    5    -0.008019  0.0000
-    6     0.553274  0.0000
-    7     0.565207  0.0000
-    8     0.565237  0.0000
-    9     0.678839  0.0000
-   10     1.636575  0.0000
-   11     1.636598  0.0000
-   12     1.774160  0.0000
+    1    -1.839516  2.0000
+    2    -0.969584  2.0000
+    3    -0.682946  2.0000
+    4    -0.523364  2.0000
+    5     0.001112  0.0000
+    6     0.127465  0.0000
+    7     0.537083  0.0000
+    8     0.588687  0.0000
+    9     0.606758  0.0000
+   10     0.848803  0.0000
+   11     0.912580  0.0000
+   12     1.595710  0.0000
              ...      ...
-   14     1.809821  0.0000
+   14     1.718819  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9819624514
- Binding energy =        0.2755325486 Ry =              3.7488 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4278368296
+ Binding energy =       -0.0047868296 Ry =             -0.0651 eV
 
- AFTER ITERATIONS +    0.00 =       2.4 seconds used (    0.00 usr    0.00 sys)
+ AFTER ITERATIONS +    0.00 =       2.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0040242257   core=  0.0000000000
+     vxc(afs ):   -0.82014311  -0.79479037  -0.02535274
+     exc(afs ):   -0.63729164  -0.61509549  -0.02219615
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0040242285   core=  0.0000000000
+     vxc(afs ):   -0.82014311  -0.79479037  -0.02535274
+     exc(afs ):   -0.63729165  -0.61509550  -0.02219615
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1      0.0000000000     0.0502252976     0.0000000000
-          2     -0.0000021020    -0.0638305260    -0.0000037479
-      f-defect       -0.0000021020    -0.0136052283    -0.0000037479
+          1     -0.0056624907    -0.0049499856     0.0000112443
+          2      0.0000012189     0.1473421660     0.0000000000
+          3      0.0056640323    -0.0049475772    -0.0000079319
+      f-defect        0.0000027605     0.1374446032     0.0000033124
 
- AFTER FORCE RTNS +    0.10 =       2.5 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       2.9 seconds used (    0.06 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  6.3831D-02  6.3831D-02 for component#        1
+ rms,max force=  7.5208D-03  7.5211D-03 for component#        1
  dynamics update step #           2
 ASD: min/max mass factors=   1.2599   1.2599
  >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.157390
+ GUPDATE: Largest relax: atom#, dr(au)=     3    0.019622
  <<<<< GUPDATE ends
 
  ###############################################################################
    NEW GEOMETRY for step   3, of   3 total
 atom, type, position;  step#      3
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000031675    0.7656405254   -0.0000073040 
+ ATmeH1       H                 1.4121827054   -1.1434006783    0.0000382732 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.4121762409   -1.1433957965   -0.0000270032 
  ###############################################################################
 
- After geometry   +    0.00 =       2.5 seconds used (    0.00 usr    0.00 sys)
+ After geometry   +    0.00 =       2.9 seconds used (    0.00 usr    0.00 sys)
   
  LATVEC: nlat1c,nlat2c,nlat =           1           1           1
 
@@ -1060,34 +1278,18 @@ atom, type, position;  step#      3
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1083375-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549250-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    541688 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215569400 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274625 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215836022 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -1097,300 +1299,323 @@ atom, type, position;  step#      3
  mat0set: stripe-parallel, KPSTORE= F
  NLOCMAT: Max neqilat=           1
 
- After mat0set    +    0.00 =       2.5 seconds used (    0.00 usr    0.00 sys)
+ After mat0set    +    0.00 =       2.9 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0034849327   core=  0.0000000000
+     vxc(afsw):   -0.81817727  -0.79282325  -0.02535402   0.00004876
+     exc(afsw):   -0.63642989  -0.61423299  -0.02219689   0.00004108
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0034847249   core=  0.0000000000
+     vxc(afsw):   -0.81817641  -0.79282239  -0.02535402   0.00004876
+     exc(afsw):   -0.63642955  -0.61423266  -0.02219689   0.00004108
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.11 =       2.6 seconds used (    0.09 usr    0.02 sys)
+ AFTER SETUP PHASE+    0.08 =       3.0 seconds used (    0.06 usr    0.02 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       2.7 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.01 =       3.0 seconds used (    0.01 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004721148
- Harris Fcnal XC piece=        2.2648098329
+ grid-integrated valence-density total =        7.9904455701
+ Harris Fcnal XC piece=        2.5597948593
   
   
 
- After 0 iteration+    0.03 =       2.7 seconds used (    0.03 usr    0.00 sys)
+ After 0 iteration+    0.02 =       3.0 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.605878 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261175 Ry,   gap(0K)= 0.526029 Ry = 7.157 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.861432  2.0000
-    2    -0.860312  2.0000
-    3    -0.609197  1.5029
-    4    -0.609151  1.4971
-    5     0.015532  0.0000
-    6     0.534144  0.0000
-    7     0.561013  0.0000
-    8     0.561043  0.0000
-    9     0.761961  0.0000
-   10     1.637225  0.0000
-   11     1.637248  0.0000
-   12     1.766744  0.0000
+    1    -1.843089  2.0000
+    2    -0.967379  2.0000
+    3    -0.687034  2.0000
+    4    -0.524190  2.0000
+    5     0.001839  0.0000
+    6     0.127466  0.0000
+    7     0.535509  0.0000
+    8     0.588438  0.0000
+    9     0.604355  0.0000
+   10     0.858193  0.0000
+   11     0.913502  0.0000
+   12     1.589969  0.0000
              ...      ...
-   14     1.849676  0.0000
+   14     1.716407  0.0000
   
- delta movement in electrons =        0.5952889832
+ delta movement in electrons =        0.9972056186
 
- one-center local charge defect =        -0.00028122
+ one-center local charge defect =         0.01387489
 
- LMCC local dipole, |dip|=        0.6479707672
+ LMCC local dipole, |dip|=        0.7855876498
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000025375       -0.0000345244
- LMCC esns total grid integral=        0.0299592629
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010923       -0.0000148611
+ LMCC esns total grid integral=        0.0660782188
   
- grid-integrated valence-density total =        7.0003457540
+ grid-integrated valence-density total =        7.9872428749
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.5742990888
-    Full spherical atom trace ENERGY =           -8.9562630521
-    Spherical-atom-Vxc trace ENERGY =            12.0401606854
-    non-spherical es ENERGY =                     0.0299404733
-    Total Exc ENERGY =                           -7.5170277366
+    Spherical-atom es ENERGY correction =       -28.6824449106
+    Full spherical atom trace ENERGY =          -13.1460259783
+    Spherical-atom-Vxc trace ENERGY =            15.7972985347
+    non-spherical es ENERGY =                     0.0658827390
+    Total Exc ENERGY =                           -8.4626361204
 
-    total kinetic trace ENERGY =           24.1252873818
-    non-local ps-pot trace ENERGY =         3.9052188458
-    total electrostatic ENERGY =          -53.4909672097
-    Total Vxc ENERGY =                     -9.7437391255
+    total kinetic trace ENERGY =           25.8389457693
+    non-local ps-pot trace ENERGY =         3.6107143421
+    total electrostatic ENERGY =          -55.4149497266
+    Total Vxc ENERGY =                    -10.8925193699
 
-    TOTAL ENERGY (Rydberg) =                    -32.9774887187
+    TOTAL ENERGY (Rydberg) =                    -34.4279257356
 
  ################################################################
   
- rms,max scfchange=  5.0543D-03  3.0340D-02 for component#       121
+ rms,max scfchange=  2.6584D-04  2.6970D-03 for component#       495
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden: first step (elec) simple blend ratio= 0.300000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       2.9 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.16 =       3.1 seconds used (    0.13 usr    0.03 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.599689 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261197 Ry,   gap(0K)= 0.525798 Ry = 7.154 eV
   
- delta movement in electrons =        0.6004291186
+ delta movement in electrons =        0.9969883216
 
- one-center local charge defect =        -0.00028295
+ one-center local charge defect =         0.01387586
 
- LMCC local dipole, |dip|=        0.6468064925
+ LMCC local dipole, |dip|=        0.7849394879
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024875       -0.0000338450
- LMCC esns total grid integral=        0.0302857553
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010910       -0.0000148443
+ LMCC esns total grid integral=        0.0660266207
   
- grid-integrated valence-density total =        7.0003476350
+ grid-integrated valence-density total =        7.9872414052
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.5742990888
-    Full spherical atom trace ENERGY =           -8.9538125754
-    Spherical-atom-Vxc trace ENERGY =            12.0250755725
-    non-spherical es ENERGY =                     0.0302668774
-    Total Exc ENERGY =                           -7.5049911463
+    Spherical-atom es ENERGY correction =       -28.6824449106
+    Full spherical atom trace ENERGY =          -13.1458010724
+    Spherical-atom-Vxc trace ENERGY =            15.7966260038
+    non-spherical es ENERGY =                     0.0658305084
+    Total Exc ENERGY =                           -8.4621408219
 
-    total kinetic trace ENERGY =           24.0611985369
-    non-local ps-pot trace ENERGY =         3.8959947242
-    total electrostatic ENERGY =          -53.4299624753
-    Total Vxc ENERGY =                     -9.7281531185
+    total kinetic trace ENERGY =           25.8357238493
+    non-local ps-pot trace ENERGY =         3.6108435636
+    total electrostatic ENERGY =          -55.4123568836
+    Total Vxc ENERGY =                    -10.8918731854
 
-    TOTAL ENERGY (Rydberg) =                    -32.9777603605
+    TOTAL ENERGY (Rydberg) =                    -34.4279302927
 
  ################################################################
   
- rms,max scfchange=  2.3813D-03  1.6610D-02 for component#        81
+ rms,max scfchange=  1.7520D-04  1.7844D-03 for component#       495
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.18 =       3.0 seconds used (    0.16 usr    0.02 sys)
+ After blending   +    0.16 =       3.3 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.596639 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261371 Ry,   gap(0K)= 0.525571 Ry = 7.151 eV
   
- delta movement in electrons =        0.6068612159
+ delta movement in electrons =        0.9967779551
 
- one-center local charge defect =        -0.00028407
+ one-center local charge defect =         0.01388115
 
- LMCC local dipole, |dip|=        0.6500625928
+ LMCC local dipole, |dip|=        0.7842605660
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024804       -0.0000337479
- LMCC esns total grid integral=        0.0307875037
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010895       -0.0000148234
+ LMCC esns total grid integral=        0.0660092752
   
- grid-integrated valence-density total =        7.0003485591
+ grid-integrated valence-density total =        7.9872350058
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.5742990888
-    Full spherical atom trace ENERGY =           -8.9524728501
-    Spherical-atom-Vxc trace ENERGY =            12.0173651111
-    non-spherical es ENERGY =                     0.0307685519
-    Total Exc ENERGY =                           -7.4992012153
+    Spherical-atom es ENERGY correction =       -28.6824449106
+    Full spherical atom trace ENERGY =          -13.1457053343
+    Spherical-atom-Vxc trace ENERGY =            15.7962793136
+    non-spherical es ENERGY =                     0.0658126198
+    Total Exc ENERGY =                           -8.4618794674
 
-    total kinetic trace ENERGY =           24.0338586757
-    non-local ps-pot trace ENERGY =         3.8885578622
-    total electrostatic ENERGY =          -53.4010548138
-    Total Vxc ENERGY =                     -9.7206964214
+    total kinetic trace ENERGY =           25.8335789979
+    non-local ps-pot trace ENERGY =         3.6112184812
+    total electrostatic ENERGY =          -55.4108557907
+    Total Vxc ENERGY =                    -10.8915222816
 
-    TOTAL ENERGY (Rydberg) =                    -32.9778394912
+    TOTAL ENERGY (Rydberg) =                    -34.4279377789
 
  ################################################################
   
- rms,max scfchange=  8.0579D-04  5.5950D-03 for component#        81
+ rms,max scfchange=  5.7485D-05  4.7707D-04 for component#       495
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.18 =       3.2 seconds used (    0.16 usr    0.02 sys)
+ After blending   +    0.15 =       3.4 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   4 begins here  *************************
 
 
-         fermi level =   -0.596897 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261504 Ry,   gap(0K)= 0.525497 Ry = 7.150 eV
   
- delta movement in electrons =        0.6204957275
+ delta movement in electrons =        0.9967096574
 
- one-center local charge defect =        -0.00028440
+ one-center local charge defect =         0.01388423
 
- LMCC local dipole, |dip|=        0.6539931817
+ LMCC local dipole, |dip|=        0.7840569882
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024410       -0.0000332114
- LMCC esns total grid integral=        0.0317389797
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010890       -0.0000148161
+ LMCC esns total grid integral=        0.0660178056
   
- grid-integrated valence-density total =        7.0003490470
+ grid-integrated valence-density total =        7.9872314810
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.5742990888
-    Full spherical atom trace ENERGY =           -8.9524936787
-    Spherical-atom-Vxc trace ENERGY =            12.0177045050
-    non-spherical es ENERGY =                     0.0317200101
-    Total Exc ENERGY =                           -7.5001562436
+    Spherical-atom es ENERGY correction =       -28.6824449106
+    Full spherical atom trace ENERGY =          -13.1457319387
+    Spherical-atom-Vxc trace ENERGY =            15.7963218626
+    non-spherical es ENERGY =                     0.0658210429
+    Total Exc ENERGY =                           -8.4619071243
 
-    total kinetic trace ENERGY =           24.0407942302
-    non-local ps-pot trace ENERGY =         3.8857311460
-    total electrostatic ENERGY =          -53.4038936285
-    Total Vxc ENERGY =                     -9.7217935831
+    total kinetic trace ENERGY =           25.8334254549
+    non-local ps-pot trace ENERGY =         3.6114223462
+    total electrostatic ENERGY =          -55.4108817450
+    Total Vxc ENERGY =                    -10.8915504728
 
-    TOTAL ENERGY (Rydberg) =                    -32.9775244959
+    TOTAL ENERGY (Rydberg) =                    -34.4279410682
 
  ################################################################
   
- rms,max scfchange=  7.6606D-04  5.3925D-03 for component#       141
+ rms,max scfchange=  1.2923D-05  1.0588D-04 for component#       287
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     4
 
- After blending   +    0.18 =       3.4 seconds used (    0.13 usr    0.05 sys)
+ After blending   +    0.15 =       3.6 seconds used (    0.12 usr    0.03 sys)
   
  *************************  iteration   5 begins here  *************************
 
 
-         fermi level =   -0.597039 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261553 Ry,   gap(0K)= 0.525458 Ry = 7.149 eV
   
- delta movement in electrons =        0.6083435017
+ delta movement in electrons =        0.9966755436
 
- one-center local charge defect =        -0.00028452
+ one-center local charge defect =         0.01388398
 
- LMCC local dipole, |dip|=        0.6549851567
+ LMCC local dipole, |dip|=        0.7840240117
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000025235       -0.0000343341
- LMCC esns total grid integral=        0.0310028994
+ LMCC chemical potential shift(Ry,eV)=       -0.0000010889       -0.0000148153
+ LMCC esns total grid integral=        0.0660143524
   
- grid-integrated valence-density total =        7.0003493829
+ grid-integrated valence-density total =        7.9872314704
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.5742990888
-    Full spherical atom trace ENERGY =           -8.9525165048
-    Spherical-atom-Vxc trace ENERGY =            12.0178722989
-    non-spherical es ENERGY =                     0.0309839433
-    Total Exc ENERGY =                           -7.4999213616
+    Spherical-atom es ENERGY correction =       -28.6824449106
+    Full spherical atom trace ENERGY =          -13.1457246261
+    Spherical-atom-Vxc trace ENERGY =            15.7963072610
+    non-spherical es ENERGY =                     0.0658175778
+    Total Exc ENERGY =                           -8.4618966880
 
-    total kinetic trace ENERGY =           24.0429843815
-    non-local ps-pot trace ENERGY =         3.8849341908
-    total electrostatic ENERGY =          -53.4058779237
-    Total Vxc ENERGY =                     -9.7217037329
+    total kinetic trace ENERGY =           25.8333055264
+    non-local ps-pot trace ENERGY =         3.6114252285
+    total electrostatic ENERGY =          -55.4107754528
+    Total Vxc ENERGY =                    -10.8915335239
 
-    TOTAL ENERGY (Rydberg) =                    -32.9778807130
+    TOTAL ENERGY (Rydberg) =                    -34.4279413859
 
  ################################################################
   
- rms,max scfchange=  1.1126D-04  5.9589D-04 for component#         9
+ rms,max scfchange=  9.7034D-07  1.5042D-05 for component#       313
 
- After blending   +    0.18 =       3.6 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       3.8 seconds used (    0.13 usr    0.02 sys)
   
  >>>>> self-consistency achieved, iteration   5
 
 
- Final GAP(eV)=  0.0000
+ Final GAP(eV)=  7.1493
 
-         fermi level =   -0.597039 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261553 Ry,   gap(0K)= 0.525458 Ry = 7.149 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.849919  2.0000
-    2    -0.848279  2.0000
-    3    -0.600375  1.5050
-    4    -0.600295  1.4950
-    5     0.030152  0.0000
-    6     0.536008  0.0000
-    7     0.565488  0.0000
-    8     0.565613  0.0000
-    9     0.785340  0.0000
-   10     1.642443  0.0000
-   11     1.642487  0.0000
-   12     1.768464  0.0000
+    1    -1.843066  2.0000
+    2    -0.966403  2.0000
+    3    -0.687595  2.0000
+    4    -0.524282  2.0000
+    5     0.001176  0.0000
+    6     0.127462  0.0000
+    7     0.536875  0.0000
+    8     0.587709  0.0000
+    9     0.603808  0.0000
+   10     0.859144  0.0000
+   11     0.913539  0.0000
+   12     1.589184  0.0000
              ...      ...
-   14     1.857735  0.0000
+   14     1.715964  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9778807130
- Binding energy =        0.2796142870 Ry =              3.8044 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4279413859
+ Binding energy =       -0.0048913859 Ry =             -0.0666 eV
 
- AFTER ITERATIONS +    0.00 =       3.6 seconds used (    0.00 usr    0.00 sys)
+ AFTER ITERATIONS +    0.00 =       3.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0034849327   core=  0.0000000000
+     vxc(afs ):   -0.81817727  -0.79282325  -0.02535402
+     exc(afs ):   -0.63642989  -0.61423299  -0.02219689
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0034847249   core=  0.0000000000
+     vxc(afs ):   -0.81817641  -0.79282239  -0.02535402
+     exc(afs ):   -0.63642955  -0.61423266  -0.02219689
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1      0.0000000000    -0.1107899231     0.0000000000
-          2     -0.0000040736     0.1049157591    -0.0000026234
-      f-defect       -0.0000040736    -0.0058741640    -0.0000026234
+          1     -0.0019663970    -0.0037205854     0.0000195594
+          2      0.0000085422     0.1493107127     0.0000000000
+          3      0.0019612040    -0.0037287158    -0.0000145606
+      f-defect        0.0000033492     0.1418614114     0.0000049988
 
- AFTER FORCE RTNS +    0.10 =       3.7 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       3.8 seconds used (    0.06 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  1.0492D-01  1.0492D-01 for component#        1
+ rms,max force=  4.2107D-03  4.2131D-03 for component#        2
  dynamics update step #           3
-ASD: min/max mass factors=   0.6300   0.6300
+ASD: min/max mass factors=   1.5874   1.5874
  >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.066093
+ GUPDATE: Largest relax: atom#, dr(au)=     1    0.024999
  <<<<< GUPDATE ends
 
  ###############################################################################
    NEW GEOMETRY for step   4, of   4 total
 atom, type, position;  step#      4
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000057337    0.8317333121   -0.0000089567 
+ ATmeH1       H                 1.4005017637   -1.1655019846    0.0001544617 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.4005426118   -1.1655140960   -0.0001133750 
  ###############################################################################
 
- After geometry   +    0.00 =       3.7 seconds used (    0.00 usr    0.00 sys)
+ After geometry   +    0.00 =       3.8 seconds used (    0.00 usr    0.00 sys)
   
  LATVEC: nlat1c,nlat2c,nlat =           1           1           1
 
@@ -1398,34 +1623,18 @@ atom, type, position;  step#      4
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1088250-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549875-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    544125 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215566963 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274938 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215835709 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -1435,340 +1644,323 @@ atom, type, position;  step#      4
  mat0set: stripe-parallel, KPSTORE= F
  NLOCMAT: Max neqilat=           1
 
- After mat0set    +    0.00 =       3.7 seconds used (    0.00 usr    0.00 sys)
+ After mat0set    +    0.00 =       3.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0030326460   core=  0.0000000000
+     vxc(afsw):   -0.81639204  -0.79103705  -0.02535500   0.00004241
+     exc(afsw):   -0.63570831  -0.61351080  -0.02219750   0.00003573
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0030341352   core=  0.0000000000
+     vxc(afsw):   -0.81639817  -0.79104317  -0.02535499   0.00004243
+     exc(afsw):   -0.63571069  -0.61351319  -0.02219750   0.00003575
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.11 =       3.8 seconds used (    0.09 usr    0.02 sys)
+ AFTER SETUP PHASE+    0.08 =       3.9 seconds used (    0.07 usr    0.02 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       3.8 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.00 =       3.9 seconds used (    0.00 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004951809
- Harris Fcnal XC piece=        2.2592664562
+ grid-integrated valence-density total =        7.9895426937
+ Harris Fcnal XC piece=        2.5571073760
   
   
 
- After 0 iteration+    0.03 =       3.8 seconds used (    0.03 usr    0.00 sys)
+ After 0 iteration+    0.02 =       3.9 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.589510 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.261322 Ry,   gap(0K)= 0.523960 Ry = 7.129 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.823862  2.0000
-    2    -0.834990  2.0000
-    3    -0.592846  1.5050
-    4    -0.592766  1.4950
-    5     0.020974  0.0000
-    6     0.543772  0.0000
-    7     0.567374  0.0000
-    8     0.567498  0.0000
-    9     0.746923  0.0000
-   10     1.641788  0.0000
-   11     1.641832  0.0000
-   12     1.771682  0.0000
+    1    -1.841571  2.0000
+    2    -0.958387  2.0000
+    3    -0.691085  2.0000
+    4    -0.523302  2.0000
+    5     0.000658  0.0000
+    6     0.126480  0.0000
+    7     0.535979  0.0000
+    8     0.588077  0.0000
+    9     0.600201  0.0000
+   10     0.864468  0.0000
+   11     0.910897  0.0000
+   12     1.582267  0.0000
              ...      ...
-   14     1.840520  0.0000
+   14     1.713345  0.0000
   
- delta movement in electrons =        0.6094453332
+ delta movement in electrons =        0.9939915934
 
- one-center local charge defect =        -0.00031000
+ one-center local charge defect =         0.01443079
 
- LMCC local dipole, |dip|=        0.6652826783
+ LMCC local dipole, |dip|=        0.7957271032
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024242       -0.0000329829
- LMCC esns total grid integral=        0.0331421634
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011170       -0.0000151976
+ LMCC esns total grid integral=        0.0657875762
   
- grid-integrated valence-density total =        7.0003662003
+ grid-integrated valence-density total =        7.9864849083
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7231728422
-    Spherical-atom-Vxc trace ENERGY =            11.8436833076
-    non-spherical es ENERGY =                     0.0331212904
-    Total Exc ENERGY =                           -7.4586427598
+    Spherical-atom es ENERGY correction =       -28.6964965046
+    Full spherical atom trace ENERGY =          -13.1155990960
+    Spherical-atom-Vxc trace ENERGY =            15.7734389677
+    non-spherical es ENERGY =                     0.0656150497
+    Total Exc ENERGY =                           -8.4549435066
 
-    total kinetic trace ENERGY =           23.8495592477
-    non-local ps-pot trace ENERGY =         3.8877852251
-    total electrostatic ENERGY =          -53.2613986884
-    Total Vxc ENERGY =                     -9.6680265128
+    total kinetic trace ENERGY =           25.7937374238
+    non-local ps-pot trace ENERGY =         3.6174810837
+    total electrostatic ENERGY =          -55.3842600906
+    Total Vxc ENERGY =                    -10.8825011000
 
-    TOTAL ENERGY (Rydberg) =                    -32.9826969753
+    TOTAL ENERGY (Rydberg) =                    -34.4279850897
 
  ################################################################
   
- rms,max scfchange=  2.4367D-03  1.3884D-02 for component#       121
+ rms,max scfchange=  6.5442D-04  3.9985D-03 for component#       209
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden: first step (elec) simple blend ratio= 0.300000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       4.0 seconds used (    0.15 usr    0.03 sys)
+ After blending   +    0.15 =       4.1 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.592495 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.262216 Ry,   gap(0K)= 0.523801 Ry = 7.127 eV
   
- delta movement in electrons =        0.6070605686
+ delta movement in electrons =        0.9940841251
 
- one-center local charge defect =        -0.00030956
+ one-center local charge defect =         0.01444089
 
- LMCC local dipole, |dip|=        0.6652572728
+ LMCC local dipole, |dip|=        0.7953158961
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024494       -0.0000333264
- LMCC esns total grid integral=        0.0328392272
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011151       -0.0000151717
+ LMCC esns total grid integral=        0.0658921865
   
- grid-integrated valence-density total =        7.0003656963
+ grid-integrated valence-density total =        7.9864736870
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7244295684
-    Spherical-atom-Vxc trace ENERGY =            11.8508125344
-    non-spherical es ENERGY =                     0.0328184212
-    Total Exc ENERGY =                           -7.4642526085
+    Spherical-atom es ENERGY correction =       -28.6964965046
+    Full spherical atom trace ENERGY =          -13.1165026729
+    Spherical-atom-Vxc trace ENERGY =            15.7758437882
+    non-spherical es ENERGY =                     0.0657211921
+    Total Exc ENERGY =                           -8.4565695849
 
-    total kinetic trace ENERGY =           23.8794387319
-    non-local ps-pot trace ENERGY =         3.8915543763
-    total electrostatic ENERGY =          -53.2894776924
-    Total Vxc ENERGY =                     -9.6753082633
+    total kinetic trace ENERGY =           25.8020267810
+    non-local ps-pot trace ENERGY =         3.6183467518
+    total electrostatic ENERGY =          -55.3918077300
+    Total Vxc ENERGY =                    -10.8845311817
 
-    TOTAL ENERGY (Rydberg) =                    -32.9827371927
+    TOTAL ENERGY (Rydberg) =                    -34.4280037821
 
  ################################################################
   
- rms,max scfchange=  1.1447D-03  7.7012D-03 for component#        81
+ rms,max scfchange=  3.2454D-04  2.1743D-03 for component#       573
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.20 =       4.2 seconds used (    0.17 usr    0.03 sys)
+ After blending   +    0.16 =       4.3 seconds used (    0.14 usr    0.02 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.594095 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.262982 Ry,   gap(0K)= 0.523150 Ry = 7.118 eV
   
- delta movement in electrons =        0.6088245263
+ delta movement in electrons =        0.9938423264
 
- one-center local charge defect =        -0.00030937
+ one-center local charge defect =         0.01444285
 
- LMCC local dipole, |dip|=        0.6631333553
+ LMCC local dipole, |dip|=        0.7940315675
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024236       -0.0000329746
- LMCC esns total grid integral=        0.0327336848
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011119       -0.0000151283
+ LMCC esns total grid integral=        0.0658638049
   
- grid-integrated valence-density total =        7.0003655054
+ grid-integrated valence-density total =        7.9864707439
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7251437552
-    Spherical-atom-Vxc trace ENERGY =            11.8544858234
-    non-spherical es ENERGY =                     0.0327129705
-    Total Exc ENERGY =                           -7.4670406359
+    Spherical-atom es ENERGY correction =       -28.6964965046
+    Full spherical atom trace ENERGY =          -13.1168464549
+    Spherical-atom-Vxc trace ENERGY =            15.7767211859
+    non-spherical es ENERGY =                     0.0656933497
+    Total Exc ENERGY =                           -8.4570867370
 
-    total kinetic trace ENERGY =           23.8921990038
-    non-local ps-pot trace ENERGY =         3.8944553360
-    total electrostatic ENERGY =          -53.3022852723
-    Total Vxc ENERGY =                     -9.6788282204
+    total kinetic trace ENERGY =           25.8038690688
+    non-local ps-pot trace ENERGY =         3.6188718186
+    total electrostatic ENERGY =          -55.3936693113
+    Total Vxc ENERGY =                    -10.8851010753
 
-    TOTAL ENERGY (Rydberg) =                    -32.9826715684
+    TOTAL ENERGY (Rydberg) =                    -34.4280151609
 
  ################################################################
   
- rms,max scfchange=  4.5689D-04  2.7636D-03 for component#       143
+ rms,max scfchange=  1.0436D-04  7.2489D-04 for component#       573
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.19 =       4.4 seconds used (    0.15 usr    0.04 sys)
+ After blending   +    0.15 =       4.4 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   4 begins here  *************************
 
 
-         fermi level =   -0.594095 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263369 Ry,   gap(0K)= 0.522619 Ry = 7.111 eV
   
- delta movement in electrons =        0.6083598704
+ delta movement in electrons =        0.9936404657
 
- one-center local charge defect =        -0.00030936
+ one-center local charge defect =         0.01444171
 
- LMCC local dipole, |dip|=        0.6623804867
+ LMCC local dipole, |dip|=        0.7931639210
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024188       -0.0000329097
- LMCC esns total grid integral=        0.0326826428
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011099       -0.0000151014
+ LMCC esns total grid integral=        0.0658195552
   
- grid-integrated valence-density total =        7.0003655015
+ grid-integrated valence-density total =        7.9864708429
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7251717713
-    Spherical-atom-Vxc trace ENERGY =            11.8545304607
-    non-spherical es ENERGY =                     0.0326619417
-    Total Exc ENERGY =                           -7.4670091024
+    Spherical-atom es ENERGY correction =       -28.6964965046
+    Full spherical atom trace ENERGY =          -13.1168487667
+    Spherical-atom-Vxc trace ENERGY =            15.7766979043
+    non-spherical es ENERGY =                     0.0656490294
+    Total Exc ENERGY =                           -8.4570194082
 
-    total kinetic trace ENERGY =           23.8914576803
-    non-local ps-pot trace ENERGY =         3.8948504288
-    total electrostatic ENERGY =          -53.3019734494
-    Total Vxc ENERGY =                     -9.6787962304
+    total kinetic trace ENERGY =           25.8028407579
+    non-local ps-pot trace ENERGY =         3.6190141154
+    total electrostatic ENERGY =          -55.3928532110
+    Total Vxc ENERGY =                    -10.8849492906
 
-    TOTAL ENERGY (Rydberg) =                    -32.9826744427
+    TOTAL ENERGY (Rydberg) =                    -34.4280177459
 
  ################################################################
   
- rms,max scfchange=  3.8979D-04  2.8030D-03 for component#       143
+ rms,max scfchange=  1.8703D-05  1.9093D-04 for component#         1
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     4
 
- After blending   +    0.18 =       4.6 seconds used (    0.16 usr    0.02 sys)
+ After blending   +    0.15 =       4.6 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   5 begins here  *************************
 
 
-         fermi level =   -0.594049 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263416 Ry,   gap(0K)= 0.522537 Ry = 7.110 eV
   
- delta movement in electrons =        0.6034850028
+ delta movement in electrons =        0.9936719467
 
- one-center local charge defect =        -0.00030934
+ one-center local charge defect =         0.01444202
 
- LMCC local dipole, |dip|=        0.6610209082
+ LMCC local dipole, |dip|=        0.7932366823
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024358       -0.0000331414
- LMCC esns total grid integral=        0.0324146384
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011101       -0.0000151032
+ LMCC esns total grid integral=        0.0658327895
   
- grid-integrated valence-density total =        7.0003653441
+ grid-integrated valence-density total =        7.9864704097
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7251946021
-    Spherical-atom-Vxc trace ENERGY =            11.8544685925
-    non-spherical es ENERGY =                     0.0323939631
-    Total Exc ENERGY =                           -7.4667398737
+    Spherical-atom es ENERGY correction =       -28.6964965046
+    Full spherical atom trace ENERGY =          -13.1168281070
+    Spherical-atom-Vxc trace ENERGY =            15.7766394879
+    non-spherical es ENERGY =                     0.0656621690
+    Total Exc ENERGY =                           -8.4569924657
 
-    total kinetic trace ENERGY =           23.8894791133
-    non-local ps-pot trace ENERGY =         3.8955388310
-    total electrostatic ENERGY =          -53.3010359621
-    Total Vxc ENERGY =                     -9.6784896524
+    total kinetic trace ENERGY =           25.8026349325
+    non-local ps-pot trace ENERGY =         3.6189541301
+    total electrostatic ENERGY =          -55.3926120173
+    Total Vxc ENERGY =                    -10.8849051683
 
-    TOTAL ENERGY (Rydberg) =                    -32.9827578916
+    TOTAL ENERGY (Rydberg) =                    -34.4280154204
 
  ################################################################
   
- rms,max scfchange=  9.1118D-05  1.1364D-03 for component#        41
- electronic meth_bl(BROYDEN)=           1
->>>>> Broyden blend to get next step - elec
-<<<<< Broyden step complete, scf step=     5
+ rms,max scfchange=  2.3448D-06  2.1164D-05 for component#       157
 
- After blending   +    0.18 =       4.8 seconds used (    0.13 usr    0.05 sys)
+ After blending   +    0.15 =       4.7 seconds used (    0.13 usr    0.03 sys)
   
- *************************  iteration   6 begins here  *************************
+ >>>>> self-consistency achieved, iteration   5
 
 
-         fermi level =   -0.594035 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
-  
- delta movement in electrons =        0.6035369618
+ Final GAP(eV)=  7.1095
 
- one-center local charge defect =        -0.00030931
-
- LMCC local dipole, |dip|=        0.6611196299
- Using LMCC treatment of supercell electrostatics
- DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024360       -0.0000331441
- LMCC esns total grid integral=        0.0324205042
-  
- grid-integrated valence-density total =        7.0003654834
-  
- ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6776859713
-    Full spherical atom trace ENERGY =           -8.7251882263
-    Spherical-atom-Vxc trace ENERGY =            11.8544331484
-    non-spherical es ENERGY =                     0.0323998238
-    Total Exc ENERGY =                           -7.4667176127
-
-    total kinetic trace ENERGY =           23.8892899379
-    non-local ps-pot trace ENERGY =         3.8955529529
-    total electrostatic ENERGY =          -53.3008841161
-    Total Vxc ENERGY =                     -9.6784876077
-
-    TOTAL ENERGY (Rydberg) =                    -32.9827588381
-
- ################################################################
-  
- rms,max scfchange=  7.5081D-05  9.9596D-04 for component#        41
-
- After blending   +    0.18 =       4.9 seconds used (    0.16 usr    0.02 sys)
-  
- >>>>> self-consistency achieved, iteration   6
-
-
- Final GAP(eV)=  0.0000
-
-         fermi level =   -0.594035 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263416 Ry,   gap(0K)= 0.522537 Ry = 7.110 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.829696  2.0000
-    2    -0.840521  2.0000
-    3    -0.597345  1.5018
-    4    -0.597316  1.4982
-    5     0.014157  0.0000
-    6     0.542935  0.0000
-    7     0.564980  0.0000
-    8     0.565034  0.0000
-    9     0.738014  0.0000
-   10     1.639219  0.0000
-   11     1.639235  0.0000
-   12     1.770542  0.0000
+    1    -1.843514  2.0000
+    2    -0.959042  2.0000
+    3    -0.692987  2.0000
+    4    -0.524684  2.0000
+    5    -0.002147  0.0000
+    6     0.124026  0.0000
+    7     0.539434  0.0000
+    8     0.585951  0.0000
+    9     0.599172  0.0000
+   10     0.862672  0.0000
+   11     0.907668  0.0000
+   12     1.580589  0.0000
              ...      ...
-   14     1.836508  0.0000
+   14     1.712154  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9827588381
- Binding energy =        0.2747361619 Ry =              3.7380 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4280154204
+ Binding energy =       -0.0049654204 Ry =             -0.0676 eV
 
- AFTER ITERATIONS +    0.00 =       4.9 seconds used (    0.00 usr    0.00 sys)
+ AFTER ITERATIONS +    0.00 =       4.7 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0030326460   core=  0.0000000000
+     vxc(afs ):   -0.81639204  -0.79103705  -0.02535500
+     exc(afs ):   -0.63570831  -0.61351080  -0.02219750
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0030341352   core=  0.0000000000
+     vxc(afs ):   -0.81639817  -0.79104317  -0.02535499
+     exc(afs ):   -0.63571069  -0.61351319  -0.02219750
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1      0.0000000000    -0.0323807562     0.0000000000
-          2     -0.0000042656     0.0152658264    -0.0000038720
-      f-defect       -0.0000042656    -0.0171149298    -0.0000038720
+          1     -0.0039265161     0.0040697279     0.0000504610
+          2     -0.0000304916     0.1399078339    -0.0000024617
+          3      0.0039632964     0.0040977833    -0.0000379212
+      f-defect        0.0000062888     0.1480753451     0.0000100781
 
- AFTER FORCE RTNS +    0.10 =       5.0 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       4.8 seconds used (    0.06 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  1.5266D-02  1.5266D-02 for component#        1
+ rms,max force=  5.6782D-03  5.7010D-03 for component#        2
  dynamics update step #           4
-ASD: min/max mass factors=   0.6300   0.6300
+ASD: min/max mass factors=   0.7937   0.7937
  >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.009617
+ GUPDATE: Largest relax: atom#, dr(au)=     3    0.004525
  <<<<< GUPDATE ends
 
  ###############################################################################
    NEW GEOMETRY for step   5, of   5 total
 atom, type, position;  step#      5
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000084209    0.8413501801   -0.0000113959 
+ ATmeH1       H                 1.3973852858   -1.1622718395    0.0001945126 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.3973969414   -1.1622616832   -0.0001434730 
  ###############################################################################
 
- After geometry   +    0.00 =       5.0 seconds used (    0.00 usr    0.00 sys)
+ After geometry   +    0.00 =       4.8 seconds used (    0.00 usr    0.00 sys)
   
  LATVEC: nlat1c,nlat2c,nlat =           1           1           1
 
@@ -1776,34 +1968,18 @@ atom, type, position;  step#      5
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1088500-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549875-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    544250 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215566838 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274938 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215835709 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -1813,217 +1989,320 @@ atom, type, position;  step#      5
  mat0set: stripe-parallel, KPSTORE= F
  NLOCMAT: Max neqilat=           1
 
- After mat0set    +    0.00 =       5.0 seconds used (    0.00 usr    0.00 sys)
+ After mat0set    +    0.00 =       4.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029195913   core=  0.0000000000
+     vxc(afsw):   -0.81592579  -0.79057062  -0.02535517   0.00004083
+     exc(afsw):   -0.63552707  -0.61332942  -0.02219765   0.00003440
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029200303   core=  0.0000000000
+     vxc(afsw):   -0.81592759  -0.79057242  -0.02535517   0.00004084
+     exc(afsw):   -0.63552777  -0.61333013  -0.02219764   0.00003440
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.11 =       5.2 seconds used (    0.10 usr    0.01 sys)
+ AFTER SETUP PHASE+    0.08 =       4.9 seconds used (    0.06 usr    0.02 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       5.2 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.00 =       4.9 seconds used (    0.00 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004948249
- Harris Fcnal XC piece=        2.2583557819
+ grid-integrated valence-density total =        7.9893155341
+ Harris Fcnal XC piece=        2.5573649856
   
   
 
- After 0 iteration+    0.04 =       5.2 seconds used (    0.04 usr    0.00 sys)
+ After 0 iteration+    0.02 =       4.9 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.593011 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263567 Ry,   gap(0K)= 0.524158 Ry = 7.132 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.826168  2.0000
-    2    -0.838639  2.0000
-    3    -0.596322  1.5018
-    4    -0.596292  1.4982
-    5     0.012743  0.0000
-    6     0.544119  0.0000
-    7     0.565256  0.0000
-    8     0.565309  0.0000
-    9     0.732733  0.0000
-   10     1.639173  0.0000
-   11     1.639188  0.0000
-   12     1.771004  0.0000
+    1    -1.846371  2.0000
+    2    -0.961554  2.0000
+    3    -0.693708  2.0000
+    4    -0.525646  2.0000
+    5    -0.001488  0.0000
+    6     0.124474  0.0000
+    7     0.538961  0.0000
+    8     0.585641  0.0000
+    9     0.599637  0.0000
+   10     0.865540  0.0000
+   11     0.909494  0.0000
+   12     1.580685  0.0000
              ...      ...
-   14     1.834036  0.0000
+   14     1.712001  0.0000
   
- delta movement in electrons =        0.6037018300
+ delta movement in electrons =        0.9926427062
 
- one-center local charge defect =        -0.00031026
+ one-center local charge defect =         0.01457740
 
- LMCC local dipole, |dip|=        0.6625236572
+ LMCC local dipole, |dip|=        0.7926186508
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024228       -0.0000329643
- LMCC esns total grid integral=        0.0327287244
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011087       -0.0000150844
+ LMCC esns total grid integral=        0.0656682695
   
- grid-integrated valence-density total =        7.0003651287
+ grid-integrated valence-density total =        7.9862981703
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6915305123
-    Full spherical atom trace ENERGY =           -8.6929796111
-    Spherical-atom-Vxc trace ENERGY =            11.8297898937
-    non-spherical es ENERGY =                     0.0327078264
-    Total Exc ENERGY =                           -7.4610328883
+    Spherical-atom es ENERGY correction =       -28.6828614979
+    Full spherical atom trace ENERGY =          -13.1507891725
+    Spherical-atom-Vxc trace ENERGY =            15.8032190464
+    non-spherical es ENERGY =                     0.0655094828
+    Total Exc ENERGY =                           -8.4630011659
 
-    total kinetic trace ENERGY =           23.8632414112
-    non-local ps-pot trace ENERGY =         3.8960781415
-    total electrostatic ENERGY =          -53.2813319560
-    Total Vxc ENERGY =                     -9.6709211166
+    total kinetic trace ENERGY =           25.8307099506
+    non-local ps-pot trace ENERGY =         3.6177112488
+    total electrostatic ENERGY =          -55.4133433406
+    Total Vxc ENERGY =                    -10.8927467932
 
-    TOTAL ENERGY (Rydberg) =                    -32.9830452916
+    TOTAL ENERGY (Rydberg) =                    -34.4279233071
 
  ################################################################
   
- rms,max scfchange=  3.1351D-04  1.9435D-03 for component#        81
+ rms,max scfchange=  3.2958D-04  2.2644D-03 for component#       157
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden: first step (elec) simple blend ratio= 0.300000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       5.4 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.15 =       5.0 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.593382 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263307 Ry,   gap(0K)= 0.523766 Ry = 7.126 eV
   
- delta movement in electrons =        0.6035192815
+ delta movement in electrons =        0.9923972136
 
- one-center local charge defect =        -0.00031013
+ one-center local charge defect =         0.01457157
 
- LMCC local dipole, |dip|=        0.6629044011
+ LMCC local dipole, |dip|=        0.7922202092
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024264       -0.0000330130
- LMCC esns total grid integral=        0.0327118626
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011084       -0.0000150808
+ LMCC esns total grid integral=        0.0655663672
   
- grid-integrated valence-density total =        7.0003650277
+ grid-integrated valence-density total =        7.9863039862
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6915305123
-    Full spherical atom trace ENERGY =           -8.6931333611
-    Spherical-atom-Vxc trace ENERGY =            11.8307139718
-    non-spherical es ENERGY =                     0.0326909569
-    Total Exc ENERGY =                           -7.4617873153
+    Spherical-atom es ENERGY correction =       -28.6828614979
+    Full spherical atom trace ENERGY =          -13.1501252002
+    Spherical-atom-Vxc trace ENERGY =            15.8014207068
+    non-spherical es ENERGY =                     0.0654063411
+    Total Exc ENERGY =                           -8.4617603994
 
-    total kinetic trace ENERGY =           23.8672059214
-    non-local ps-pot trace ENERGY =         3.8966022714
-    total electrostatic ENERGY =          -53.2850671375
-    Total Vxc ENERGY =                     -9.6718972976
+    total kinetic trace ENERGY =           25.8239418142
+    non-local ps-pot trace ENERGY =         3.6173556222
+    total electrostatic ENERGY =          -55.4074570866
+    Total Vxc ENERGY =                    -10.8911614276
 
-    TOTAL ENERGY (Rydberg) =                    -32.9830462600
+    TOTAL ENERGY (Rydberg) =                    -34.4279200496
 
  ################################################################
   
- rms,max scfchange=  1.5909D-04  1.1558D-03 for component#        81
+ rms,max scfchange=  1.2153D-04  1.0016D-03 for component#       495
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.18 =       5.6 seconds used (    0.15 usr    0.03 sys)
+ After blending   +    0.17 =       5.2 seconds used (    0.13 usr    0.04 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.593543 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263262 Ry,   gap(0K)= 0.523642 Ry = 7.125 eV
   
- delta movement in electrons =        0.6035204853
+ delta movement in electrons =        0.9923730302
 
- one-center local charge defect =        -0.00031005
+ one-center local charge defect =         0.01457211
 
- LMCC local dipole, |dip|=        0.6629685543
+ LMCC local dipole, |dip|=        0.7923340651
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024250       -0.0000329943
- LMCC esns total grid integral=        0.0327123416
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011088       -0.0000150864
+ LMCC esns total grid integral=        0.0655668488
   
- grid-integrated valence-density total =        7.0003652624
+ grid-integrated valence-density total =        7.9863039214
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6915305123
-    Full spherical atom trace ENERGY =           -8.6932106361
-    Spherical-atom-Vxc trace ENERGY =            11.8311273152
-    non-spherical es ENERGY =                     0.0326914346
-    Total Exc ENERGY =                           -7.4621168947
+    Spherical-atom es ENERGY correction =       -28.6828614979
+    Full spherical atom trace ENERGY =          -13.1499257715
+    Spherical-atom-Vxc trace ENERGY =            15.8008867632
+    non-spherical es ENERGY =                     0.0654064042
+    Total Exc ENERGY =                           -8.4614258363
 
-    total kinetic trace ENERGY =           23.8686247340
-    non-local ps-pot trace ENERGY =         3.8969920136
-    total electrostatic ENERGY =          -53.2865391462
-    Total Vxc ENERGY =                     -9.6722567827
+    total kinetic trace ENERGY =           25.8222742713
+    non-local ps-pot trace ENERGY =         3.6173195256
+    total electrostatic ENERGY =          -55.4060878989
+    Total Vxc ENERGY =                    -10.8907523541
 
-    TOTAL ENERGY (Rydberg) =                    -32.9830392933
+    TOTAL ENERGY (Rydberg) =                    -34.4279199383
 
  ################################################################
   
- rms,max scfchange=  1.3081D-04  7.4072D-04 for component#       143
+ rms,max scfchange=  4.1496D-05  4.0384D-04 for component#       495
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.18 =       5.7 seconds used (    0.13 usr    0.05 sys)
+ After blending   +    0.16 =       5.4 seconds used (    0.14 usr    0.02 sys)
   
- >>>>> self-consistency achieved, iteration   3
+ *************************  iteration   4 begins here  *************************
 
 
- Final GAP(eV)=  0.0000
+         fermi level =   -0.263307 Ry,   gap(0K)= 0.523596 Ry = 7.124 eV
+  
+ delta movement in electrons =        0.9923865837
 
-         fermi level =   -0.593543 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+ one-center local charge defect =         0.01457420
+
+ LMCC local dipole, |dip|=        0.7924995377
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011091       -0.0000150905
+ LMCC esns total grid integral=        0.0655884992
+  
+ grid-integrated valence-density total =        7.9863013696
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.6828614979
+    Full spherical atom trace ENERGY =          -13.1498905604
+    Spherical-atom-Vxc trace ENERGY =            15.8007957697
+    non-spherical es ENERGY =                     0.0654279416
+    Total Exc ENERGY =                           -8.4613933905
+
+    total kinetic trace ENERGY =           25.8222428431
+    non-local ps-pot trace ENERGY =         3.6174018153
+    total electrostatic ENERGY =          -55.4061730054
+    Total Vxc ENERGY =                    -10.8907306686
+
+    TOTAL ENERGY (Rydberg) =                    -34.4279217376
+
+ ################################################################
+  
+ rms,max scfchange=  1.0459D-05  1.1725D-04 for component#       287
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     4
+
+ After blending   +    0.16 =       5.5 seconds used (    0.14 usr    0.02 sys)
+  
+ *************************  iteration   5 begins here  *************************
+
+
+         fermi level =   -0.263362 Ry,   gap(0K)= 0.523559 Ry = 7.123 eV
+  
+ delta movement in electrons =        0.9923444275
+
+ one-center local charge defect =         0.01457457
+
+ LMCC local dipole, |dip|=        0.7924281046
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011090       -0.0000150891
+ LMCC esns total grid integral=        0.0655834293
+  
+ grid-integrated valence-density total =        7.9863010759
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.6828614979
+    Full spherical atom trace ENERGY =          -13.1498908198
+    Spherical-atom-Vxc trace ENERGY =            15.8007946911
+    non-spherical es ENERGY =                     0.0654228736
+    Total Exc ENERGY =                           -8.4613886175
+
+    total kinetic trace ENERGY =           25.8221991980
+    non-local ps-pot trace ENERGY =         3.6174714720
+    total electrostatic ENERGY =          -55.4062054231
+    Total Vxc ENERGY =                    -10.8907300096
+
+    TOTAL ENERGY (Rydberg) =                    -34.4279233706
+
+ ################################################################
+  
+ rms,max scfchange=  1.1847D-06  1.3067D-05 for component#       313
+
+ After blending   +    0.16 =       5.7 seconds used (    0.13 usr    0.02 sys)
+  
+ >>>>> self-consistency achieved, iteration   5
+
+
+ Final GAP(eV)=  7.1234
+
+         fermi level =   -0.263362 Ry,   gap(0K)= 0.523559 Ry = 7.123 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.826757  2.0000
-    2    -0.839296  2.0000
-    3    -0.596931  1.5114
-    4    -0.596748  1.4886
-    5     0.012752  0.0000
-    6     0.543353  0.0000
-    7     0.564905  0.0000
-    8     0.564998  0.0000
-    9     0.731680  0.0000
-   10     1.638834  0.0000
-   11     1.638928  0.0000
-   12     1.770904  0.0000
+    1    -1.845521  2.0000
+    2    -0.960805  2.0000
+    3    -0.693182  2.0000
+    4    -0.525141  2.0000
+    5    -0.001582  0.0000
+    6     0.124602  0.0000
+    7     0.538623  0.0000
+    8     0.586046  0.0000
+    9     0.599529  0.0000
+   10     0.866321  0.0000
+   11     0.910540  0.0000
+   12     1.580879  0.0000
              ...      ...
-   14     1.833833  0.0000
+   14     1.712241  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9830392933
- Binding energy =        0.2744557067 Ry =              3.7342 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4279233706
+ Binding energy =       -0.0048733706 Ry =             -0.0663 eV
 
  AFTER ITERATIONS +    0.00 =       5.7 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029195913   core=  0.0000000000
+     vxc(afs ):   -0.81592579  -0.79057062  -0.02535517
+     exc(afs ):   -0.63552707  -0.61332942  -0.02219765
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029200303   core=  0.0000000000
+     vxc(afs ):   -0.81592759  -0.79057242  -0.02535517
+     exc(afs ):   -0.63552777  -0.61333013  -0.02219764
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1     -0.0000010100    -0.0220462997     0.0000000000
-          2     -0.0000024623     0.0042833529     0.0000000000
-      f-defect       -0.0000034723    -0.0177629468     0.0000000000
+          1     -0.0001941309     0.0009127803     0.0000609730
+          2      0.0000000000     0.1459292324    -0.0000045468
+          3      0.0002036089     0.0009127326    -0.0000459856
+      f-defect        0.0000094780     0.1477547452     0.0000104405
 
- AFTER FORCE RTNS +    0.10 =       5.8 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       5.8 seconds used (    0.07 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  4.2834D-03  4.2834D-03 for component#        1
+ rms,max force=  9.3574D-04  9.3630D-04 for component#        2
  dynamics update step #           5
-ASD: min/max mass factors=   0.6300   0.6300
+ASD: min/max mass factors=   0.7937   0.7937
  >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.002698
+ GUPDATE: Largest relax: atom#, dr(au)=     3    0.000743
  <<<<< GUPDATE ends
 
  ###############################################################################
    NEW GEOMETRY for step   6, of   6 total
 atom, type, position;  step#      6
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000099721    0.8440485233   -0.0000113959 
+ ATmeH1       H                 1.3972312040   -1.1615473653    0.0002429068 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.3972353369   -1.1615372469   -0.0001799718 
  ###############################################################################
 
  After geometry   +    0.00 =       5.8 seconds used (    0.00 usr    0.00 sys)
@@ -2034,34 +2313,18 @@ atom, type, position;  step#      6
   Type  Shell  Min-alf     range
     1        0.129289   8.279963
     2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
+ Turnover EF->DM npopdm, npop0k=          15           4
  DEV264h/wkmem: perlsolv dist-mem
  DEV/wkmem: KPSTORE= F
  DEV/wkmem: psolv version, input do_psolv= F
 
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1088500-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549875-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
  WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    544250 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215566838 available
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274938 of 216110647 available
+ WKMEM: in-core Broyden! uses      6250 out of 215835709 available
  >>>>> geom/basis data saved to file
   
  Atom type   1  radial valence charge =    5.999995363882
@@ -2072,394 +2335,279 @@ atom, type, position;  step#      6
  NLOCMAT: Max neqilat=           1
 
  After mat0set    +    0.00 =       5.8 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029143625   core=  0.0000000000
+     vxc(afsw):   -0.81590390  -0.79054873  -0.02535518   0.00004076
+     exc(afsw):   -0.63551865  -0.61332100  -0.02219765   0.00003434
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029145272   core=  0.0000000000
+     vxc(afsw):   -0.81590457  -0.79054940  -0.02535517   0.00004076
+     exc(afsw):   -0.63551891  -0.61332126  -0.02219765   0.00003434
+ ***** CAUTION: grid fineness questionable
 
 
- AFTER SETUP PHASE+    0.11 =       6.0 seconds used (    0.08 usr    0.02 sys)
-
-  
- *************************  iteration   0 begins here  *************************
-
-
- Before iterations+    0.01 =       6.0 seconds used (    0.01 usr    0.00 sys)
-  
- grid-integrated valence-density total =        7.0004945342
- Harris Fcnal XC piece=        2.2581003213
-  
-  
-
- After 0 iteration+    0.04 =       6.0 seconds used (    0.03 usr    0.00 sys)
- *************************  iteration   1 begins here  *************************
-
-
-         fermi level =   -0.593261 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
-
- k-vector:       1
-  weight:    1.000000
-            level    occup
-  
-    1    -1.825778  2.0000
-    2    -0.838770  2.0000
-    3    -0.596649  1.5114
-    4    -0.596466  1.4886
-    5     0.012346  0.0000
-    6     0.543687  0.0000
-    7     0.564960  0.0000
-    8     0.565052  0.0000
-    9     0.730213  0.0000
-   10     1.638816  0.0000
-   11     1.638910  0.0000
-   12     1.771030  0.0000
-             ...      ...
-   14     1.833141  0.0000
-  
- delta movement in electrons =        0.6035550691
-
- one-center local charge defect =        -0.00031004
-
- LMCC local dipole, |dip|=        0.6633664193
- Using LMCC treatment of supercell electrostatics
- DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024216       -0.0000329474
- LMCC esns total grid integral=        0.0328001914
-  
- grid-integrated valence-density total =        7.0003649421
-  
- ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6953634607
-    Full spherical atom trace ENERGY =           -8.6842211140
-    Spherical-atom-Vxc trace ENERGY =            11.8242224352
-    non-spherical es ENERGY =                     0.0327792198
-    Total Exc ENERGY =                           -7.4605193102
-
-    total kinetic trace ENERGY =           23.8613120234
-    non-local ps-pot trace ENERGY =         3.8971407196
-    total electrostatic ENERGY =          -53.2810356627
-    Total Vxc ENERGY =                     -9.6701431994
-
-    TOTAL ENERGY (Rydberg) =                    -32.9831022300
-
- ################################################################
-  
- rms,max scfchange=  1.6956D-04  9.6761D-04 for component#        81
-
- After blending   +    0.18 =       6.2 seconds used (    0.16 usr    0.02 sys)
-  
- >>>>> self-consistency achieved, iteration   1
-
-
- Final GAP(eV)=  0.0000
-
-         fermi level =   -0.593261 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
-
- k-vector:       1
-  weight:    1.000000
-            level    occup
-  
-    1    -1.825778  2.0000
-    2    -0.838770  2.0000
-    3    -0.596649  1.5114
-    4    -0.596466  1.4886
-    5     0.012346  0.0000
-    6     0.543687  0.0000
-    7     0.564960  0.0000
-    8     0.565052  0.0000
-    9     0.730213  0.0000
-   10     1.638816  0.0000
-   11     1.638910  0.0000
-   12     1.771030  0.0000
-             ...      ...
-   14     1.833141  0.0000
-  
- >>>>> grid delta-density saved to file
-
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9831022300
- Binding energy =        0.2743927700 Ry =              3.7333 eV
-
- AFTER ITERATIONS +    0.00 =       6.2 seconds used (    0.00 usr    0.00 sys)
-
- atom xc0frc stress term=        7.1347599947
- mat0frc: stripe-parallel, KPSTORE= F
-  
- total force contributions(Ry/bohr):
-        atom       x force          y force          z force
-          1     -0.0000011274    -0.0191099927    -0.0000010883
-          2     -0.0000020235     0.0012311795     0.0000000000
-      f-defect       -0.0000031508    -0.0178788132    -0.0000010883
-
- AFTER FORCE RTNS +    0.11 =       6.3 seconds used (    0.10 usr    0.00 sys)
-  
- >>>>> GSELECT begins, nslics=           0
- <<<<< GSELECT ends
- rms,max force=  1.2312D-03  1.2312D-03 for component#        1
- dynamics update step #           6
-ASD: min/max mass factors=   0.6300   0.6300
- >>>>> GUPDATE begins, nslics=           0
- GUPDATE: Largest relax: atom#, dr(au)=     2    0.000776
- <<<<< GUPDATE ends
-
- ###############################################################################
-   NEW GEOMETRY for step   7, of   7 total
-atom, type, position;  step#      7
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000112468    0.8448241178   -0.0000113959 
- ###############################################################################
-
- After geometry   +    0.00 =       6.3 seconds used (    0.00 usr    0.00 sys)
-  
- LATVEC: nlat1c,nlat2c,nlat =           1           1           1
-
-  Atom
-  Type  Shell  Min-alf     range
-    1        0.129289   8.279963
-    2        0.102474   9.300415
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     0     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     1
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- ***** WARNING: orbitals extend outside unit cell
- >>>>> atom,shell,direction=     1     3     3
- >>>>> Grid: irmn,irmx, limits=    -2    62     1    60
- >>>>> outside cell (dn/up) by:       0.900       0.600
- Turnover EF->DM npopdm, npop0k=          13           4
- DEV264h/wkmem: perlsolv dist-mem
- DEV/wkmem: KPSTORE= F
- DEV/wkmem: psolv version, input do_psolv= F
-
- Need        2375-length r*4 array to pack grid wfcns/box
- Need     1087750-length r*4 array to pack all grid wfcns
- Need        2376-length r*4 array for grid wfcns scratch
- WKMEM: using stripe-parallel+Merge  setup
- Minimum maxwkd for scf to complete=     4536884
- All grid wfcns stored in    543875 of 216111088 available
- WKMEM: in-core Broyden! uses      6498 out of 215567213 available
- >>>>> geom/basis data saved to file
-  
- Atom type   1  radial valence charge =    5.999995363882
- Atom type   1      xc valence charge =    6.499995360087
-  
- Atom type   2  radial valence charge =    0.999999985299
- mat0set: stripe-parallel, KPSTORE= F
- NLOCMAT: Max neqilat=           1
-
- After mat0set    +    0.00 =       6.3 seconds used (    0.00 usr    0.00 sys)
-
-
- AFTER SETUP PHASE+    0.11 =       6.4 seconds used (    0.08 usr    0.03 sys)
+ AFTER SETUP PHASE+    0.08 =       5.8 seconds used (    0.06 usr    0.02 sys)
 
   
  *************************  iteration   0 begins here  *************************
 
 
- Before iterations+    0.01 =       6.4 seconds used (    0.01 usr    0.00 sys)
+ Before iterations+    0.00 =       5.8 seconds used (    0.00 usr    0.00 sys)
   
- grid-integrated valence-density total =        7.0004944367
- Harris Fcnal XC piece=        2.2580268595
+ grid-integrated valence-density total =        7.9893048022
+ Harris Fcnal XC piece=        2.5574408948
   
   
 
- After 0 iteration+    0.03 =       6.4 seconds used (    0.03 usr    0.00 sys)
+ After 0 iteration+    0.02 =       5.9 seconds used (    0.02 usr    0.00 sys)
  *************************  iteration   1 begins here  *************************
 
 
-         fermi level =   -0.593180 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263383 Ry,   gap(0K)= 0.523765 Ry = 7.126 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.825498  2.0000
-    2    -0.838619  2.0000
-    3    -0.596567  1.5114
-    4    -0.596385  1.4886
-    5     0.012230  0.0000
-    6     0.543789  0.0000
-    7     0.564980  0.0000
-    8     0.565073  0.0000
-    9     0.729792  0.0000
-   10     1.638813  0.0000
-   11     1.638907  0.0000
-   12     1.771067  0.0000
+    1    -1.845867  2.0000
+    2    -0.961221  2.0000
+    3    -0.693206  2.0000
+    4    -0.525266  2.0000
+    5    -0.001500  0.0000
+    6     0.124667  0.0000
+    7     0.538583  0.0000
+    8     0.586005  0.0000
+    9     0.599639  0.0000
+   10     0.866559  0.0000
+   11     0.910788  0.0000
+   12     1.581000  0.0000
              ...      ...
-   14     1.832943  0.0000
+   14     1.712267  0.0000
   
- delta movement in electrons =        0.6035603406
+ delta movement in electrons =        0.9922724260
 
- one-center local charge defect =        -0.00030975
+ one-center local charge defect =         0.01458083
 
- LMCC local dipole, |dip|=        0.6634780788
+ LMCC local dipole, |dip|=        0.7921672324
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024206       -0.0000329336
- LMCC esns total grid integral=        0.0328250553
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011084       -0.0000150808
+ LMCC esns total grid integral=        0.0655683873
   
- grid-integrated valence-density total =        7.0003649971
+ grid-integrated valence-density total =        7.9862940072
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6964610340
-    Full spherical atom trace ENERGY =           -8.6816423852
-    Spherical-atom-Vxc trace ENERGY =            11.8222459895
-    non-spherical es ENERGY =                     0.0328040542
-    Total Exc ENERGY =                           -7.4600654552
+    Spherical-atom es ENERGY correction =       -28.6810934592
+    Full spherical atom trace ENERGY =          -13.1542022540
+    Spherical-atom-Vxc trace ENERGY =            15.8041548101
+    non-spherical es ENERGY =                     0.0654087586
+    Total Exc ENERGY =                           -8.4621792852
 
-    total kinetic trace ENERGY =           23.8592409871
-    non-local ps-pot trace ENERGY =         3.8971853409
-    total electrostatic ENERGY =          -53.2794797036
-    Total Vxc ENERGY =                     -9.6695495168
+    total kinetic trace ENERGY =           25.8260079395
+    non-local ps-pot trace ENERGY =         3.6172339397
+    total electrostatic ENERGY =          -55.4089740236
+    Total Vxc ENERGY =                    -10.8917719621
 
-    TOTAL ENERGY (Rydberg) =                    -32.9831188308
+    TOTAL ENERGY (Rydberg) =                    -34.4279114296
 
  ################################################################
   
- rms,max scfchange=  1.8601D-04  1.1114D-03 for component#        81
+ rms,max scfchange=  4.6579D-05  3.1168D-04 for component#       157
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden: first step (elec) simple blend ratio= 0.300000
 <<<<< Broyden step complete, scf step=     1
 
- After blending   +    0.18 =       6.6 seconds used (    0.17 usr    0.02 sys)
+ After blending   +    0.16 =       6.0 seconds used (    0.14 usr    0.02 sys)
   
  *************************  iteration   2 begins here  *************************
 
 
-         fermi level =   -0.593293 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263344 Ry,   gap(0K)= 0.523712 Ry = 7.126 eV
   
- delta movement in electrons =        0.6046881914
+ delta movement in electrons =        0.9922456532
 
- one-center local charge defect =        -0.00030970
+ one-center local charge defect =         0.01457998
 
- LMCC local dipole, |dip|=        0.6635171665
+ LMCC local dipole, |dip|=        0.7921330184
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024121       -0.0000328184
- LMCC esns total grid integral=        0.0328554129
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011084       -0.0000150809
+ LMCC esns total grid integral=        0.0655548302
   
- grid-integrated valence-density total =        7.0003649202
+ grid-integrated valence-density total =        7.9862949227
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6964610340
-    Full spherical atom trace ENERGY =           -8.6817110720
-    Spherical-atom-Vxc trace ENERGY =            11.8226321008
-    non-spherical es ENERGY =                     0.0328344108
-    Total Exc ENERGY =                           -7.4603935165
+    Spherical-atom es ENERGY correction =       -28.6810934592
+    Full spherical atom trace ENERGY =          -13.1541050818
+    Spherical-atom-Vxc trace ENERGY =            15.8038929694
+    non-spherical es ENERGY =                     0.0653950234
+    Total Exc ENERGY =                           -8.4620000866
 
-    total kinetic trace ENERGY =           23.8607435844
-    non-local ps-pot trace ENERGY =         3.8974404843
-    total electrostatic ENERGY =          -53.2808896631
-    Total Vxc ENERGY =                     -9.6699462326
+    total kinetic trace ENERGY =           25.8250463871
+    non-local ps-pot trace ENERGY =         3.6171787226
+    total electrostatic ENERGY =          -55.4081356578
+    Total Vxc ENERGY =                    -10.8915439020
 
-    TOTAL ENERGY (Rydberg) =                    -32.9830991109
+    TOTAL ENERGY (Rydberg) =                    -34.4279106348
 
  ################################################################
   
- rms,max scfchange=  2.1958D-04  1.4097D-03 for component#       143
+ rms,max scfchange=  1.6903D-05  1.0989D-04 for component#       495
  electronic meth_bl(BROYDEN)=           1
 >>>>> Broyden blend to get next step - elec
 <<<<< Broyden step complete, scf step=     2
 
- After blending   +    0.18 =       6.8 seconds used (    0.17 usr    0.01 sys)
+ After blending   +    0.16 =       6.2 seconds used (    0.13 usr    0.02 sys)
   
  *************************  iteration   3 begins here  *************************
 
 
-         fermi level =   -0.593304 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+         fermi level =   -0.263337 Ry,   gap(0K)= 0.523697 Ry = 7.125 eV
   
- delta movement in electrons =        0.6032090484
+ delta movement in electrons =        0.9922500807
 
- one-center local charge defect =        -0.00030969
+ one-center local charge defect =         0.01458004
 
- LMCC local dipole, |dip|=        0.6634951442
+ LMCC local dipole, |dip|=        0.7921701119
  Using LMCC treatment of supercell electrostatics
  DBG/LMCCINT, esns diagnostics redone
- LMCC chemical potential shift(Ry,eV)=       -0.0000024217       -0.0000329496
- LMCC esns total grid integral=        0.0327871890
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011085       -0.0000150823
+ LMCC esns total grid integral=        0.0655556706
   
- grid-integrated valence-density total =        7.0003648994
+ grid-integrated valence-density total =        7.9862950311
   
  ######################  ENERGY ANALYSIS  #######################
-    Spherical-atom es ENERGY correction =       -28.6964610340
-    Full spherical atom trace ENERGY =           -8.6817230359
-    Spherical-atom-Vxc trace ENERGY =            11.8226922636
-    non-spherical es ENERGY =                     0.0327661894
-    Total Exc ENERGY =                           -7.4604005852
+    Spherical-atom es ENERGY correction =       -28.6810934592
+    Full spherical atom trace ENERGY =          -13.1540752645
+    Spherical-atom-Vxc trace ENERGY =            15.8038140162
+    non-spherical es ENERGY =                     0.0653958047
+    Total Exc ENERGY =                           -8.4619515350
 
-    total kinetic trace ENERGY =           23.8609260911
-    non-local ps-pot trace ENERGY =         3.8974969727
-    total electrostatic ENERGY =          -53.2811486807
-    Total Vxc ENERGY =                     -9.6700443084
+    total kinetic trace ENERGY =           25.8248193311
+    non-local ps-pot trace ENERGY =         3.6171701159
+    total electrostatic ENERGY =          -55.4079483497
+    Total Vxc ENERGY =                    -10.8914848225
 
-    TOTAL ENERGY (Rydberg) =                    -32.9831262021
+    TOTAL ENERGY (Rydberg) =                    -34.4279104377
 
  ################################################################
   
- rms,max scfchange=  8.4338D-05  5.6215D-04 for component#        81
+ rms,max scfchange=  5.8021D-06  5.0687D-05 for component#       313
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     3
 
- After blending   +    0.18 =       7.0 seconds used (    0.15 usr    0.02 sys)
+ After blending   +    0.15 =       6.3 seconds used (    0.13 usr    0.03 sys)
   
- >>>>> self-consistency achieved, iteration   3
+ *************************  iteration   4 begins here  *************************
 
 
- Final GAP(eV)=  0.0000
+         fermi level =   -0.263342 Ry,   gap(0K)= 0.523695 Ry = 7.125 eV
+  
+ delta movement in electrons =        0.9922590437
 
-         fermi level =   -0.593304 Ry,   gap(0K)= 0.000000 Ry = 0.000 eV
+ one-center local charge defect =         0.01458032
+
+ LMCC local dipole, |dip|=        0.7922115908
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011086       -0.0000150829
+ LMCC esns total grid integral=        0.0655593427
+  
+ grid-integrated valence-density total =        7.9862944622
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.6810934592
+    Full spherical atom trace ENERGY =          -13.1540694808
+    Spherical-atom-Vxc trace ENERGY =            15.8037995433
+    non-spherical es ENERGY =                     0.0653994614
+    Total Exc ENERGY =                           -8.4619467454
+
+    total kinetic trace ENERGY =           25.8248265101
+    non-local ps-pot trace ENERGY =         3.6171793121
+    total electrostatic ENERGY =          -55.4079697573
+    Total Vxc ENERGY =                    -10.8914825748
+
+    TOTAL ENERGY (Rydberg) =                    -34.4279106805
+
+ ################################################################
+  
+ rms,max scfchange=  1.7496D-06  1.9271D-05 for component#       313
+
+ After blending   +    0.15 =       6.5 seconds used (    0.12 usr    0.04 sys)
+  
+ >>>>> self-consistency achieved, iteration   4
+
+
+ Final GAP(eV)=  7.1253
+
+         fermi level =   -0.263342 Ry,   gap(0K)= 0.523695 Ry = 7.125 eV
 
  k-vector:       1
   weight:    1.000000
             level    occup
   
-    1    -1.825654  2.0000
-    2    -0.838800  2.0000
-    3    -0.596639  1.5048
-    4    -0.596561  1.4952
-    5     0.012223  0.0000
-    6     0.543632  0.0000
-    7     0.565027  0.0000
-    8     0.565053  0.0000
-    9     0.729376  0.0000
-   10     1.638763  0.0000
-   11     1.638803  0.0000
-   12     1.771068  0.0000
+    1    -1.845748  2.0000
+    2    -0.961130  2.0000
+    3    -0.693132  2.0000
+    4    -0.525189  2.0000
+    5    -0.001494  0.0000
+    6     0.124704  0.0000
+    7     0.538350  0.0000
+    8     0.586068  0.0000
+    9     0.599628  0.0000
+   10     0.866651  0.0000
+   11     0.910914  0.0000
+   12     1.581026  0.0000
              ...      ...
-   14     1.832883  0.0000
+   14     1.712310  0.0000
   
  >>>>> grid delta-density saved to file
 
- FINAL CONVERGED ENERGY (Rydberg) =      -32.9831262021
- Binding energy =        0.2743687979 Ry =              3.7330 eV
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4279106805
+ Binding energy =       -0.0048606805 Ry =             -0.0661 eV
 
- AFTER ITERATIONS +    0.00 =       7.0 seconds used (    0.00 usr    0.00 sys)
+ AFTER ITERATIONS +    0.00 =       6.5 seconds used (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029143625   core=  0.0000000000
+     vxc(afs ):   -0.81590390  -0.79054873  -0.02535518
+     exc(afs ):   -0.63551865  -0.61332100  -0.02219765
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029145272   core=  0.0000000000
+     vxc(afs ):   -0.81590457  -0.79054940  -0.02535517
+     exc(afs ):   -0.63551891  -0.61332126  -0.02219765
 
- atom xc0frc stress term=        7.1347599947
+ atom xc0frc stress term=        7.7240448753
  mat0frc: stripe-parallel, KPSTORE= F
   
  total force contributions(Ry/bohr):
         atom       x force          y force          z force
-          1     -0.0000012266    -0.0183773125    -0.0000012285
-          2     -0.0000027519     0.0004559790    -0.0000021564
-      f-defect       -0.0000039785    -0.0179213335    -0.0000033849
+          1      0.0002568805     0.0004293367     0.0000740890
+          2      0.0000040413     0.1467684856    -0.0000051111
+          3     -0.0002512466     0.0004256324    -0.0000560560
+      f-defect        0.0000096752     0.1476234547     0.0000129219
 
- AFTER FORCE RTNS +    0.10 =       7.1 seconds used (    0.10 usr    0.00 sys)
+ AFTER FORCE RTNS +    0.07 =       6.6 seconds used (    0.06 usr    0.00 sys)
   
  >>>>> GSELECT begins, nslics=           0
  <<<<< GSELECT ends
- rms,max force=  4.5599D-04  4.5599D-04 for component#        1
+ rms,max force=  5.0162D-04  5.0577D-04 for component#        1
 
  ###############################################################################
- FINAL GEOMETRY for step   7, of   7 total
-atom, type, position;  step#      7
- ATmeH1       H                 0.0000000000   -1.0000000000    0.0000000000 
- ATmeH2       O                -0.0000112468    0.8448241178   -0.0000113959 
+ FINAL GEOMETRY for step   6, of   6 total
+atom, type, position;  step#      6
+ ATmeH1       H                 1.3972312040   -1.1615473653    0.0002429068 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.3972353369   -1.1615372469   -0.0001799718 
  ###############################################################################
 
- FINAL RELAXED ENERGY =      -32.9831262021
+ FINAL RELAXED ENERGY =      -34.4279106805
 
 
- AFTER GEOMETRY   +    0.00 =       7.1 seconds used (    0.00 usr    0.00 sys)
+ AFTER GEOMETRY   +    0.00 =       6.6 seconds used (    0.00 usr    0.00 sys)
  Normal exit: RELAX DONE
- Total TIME used=       7.1 seconds (user=       6.2  sys=       0.9)
+ Total TIME used=       6.6 seconds (user=       5.5  sys=       1.1)
