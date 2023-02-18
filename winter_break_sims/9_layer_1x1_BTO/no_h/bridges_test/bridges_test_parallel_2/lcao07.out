@@ -1,0 +1,42 @@
+ MPINFO::: Global Communicator        :::
+ MPINFO::: Global Context = ****      :::
+ MPINFO::: Global Size =      23      :::
+ MPINFO::: Global Root =       0      :::
+ MPINFO::: Global Rank =       7      :::
+ version 2.68: slics foundation version
+ ========================================================================
+    Program: SEQQUEST - LCAO-PS-DFT electronic structure code
+    Version:  2.68e     Last revised: 29Mar20-PAS
+    Copyright 2007 Sandia Corporation.
+
+    Written by Peter A. Schultz (Sandia National Laboratories)
+    Based on a code originally written by Peter J. Feibelman
+
+    Documentation:  http://www.cs.sandia.gov/~paschul/Quest/
+               and  http://dft.sandia.gov/Quest/
+    Questions, comments to:  paschul@sandia.gov
+ ========================================================================
+  Maximum dimension parameters for this run are:
+  
+   maxwkd (r8 workspace)   = 220000000
+   maxr1d (grid dimension) =       600
+  
+   norbd (basis fcns) =      8500
+   natmd (atoms)      =       650     ntypd (atom types) =         7
+   nshld (shell/atm)  =         7     noad  (bf/atm)     =        21
+   nald  (gauss/shell)=         6     nrd   (rad pts/atm)=       200
+   nkd   (kpts/ibz)   =      2000     nsymd (sym/group)  =        48
+   nimgd (NEB images) =        12
+  
+   nlatd (lattice images)=      2000
+   neq3d (do not ask) =        14
+   Default record length (r8) for i/o=   1000000
+ ------------------------------------------------------------------------
+
+ Before input     +    2.35 =       2.3 seconds wall (    0.09 usr    1.55 sys)
+  
+ ***** ERROR *****
+ File open failed: unit number=           5
+   file=lcao.in                                                                                                                         
+ ***** ERROR: FLOPENF: file open failed
+ Total TIME=       2.3 seconds (usr=       0.1  sys=       1.5  lost=       0.7)
