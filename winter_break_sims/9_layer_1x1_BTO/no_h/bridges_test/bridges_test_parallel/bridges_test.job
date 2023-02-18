@@ -1,3 +1,12 @@
 #!/bin/bash
-# use the bash shell
-/ocean/projects/mat220020p/pangreka/SeqQuest/Rbuild/allintel/dynamic_link/quest_268e_intelDY.x -> oututFile
+#SBATCH -p RM-shared
+#SBATCH -n 23
+#SBATCH -t 00:10:00
+
+#load the modules
+module load intel/20.4
+module load intelmpi/20.4-intel20.4 
+module load mkl/2020.4.304
+
+# Start the job by running the mpi parallel executable
+mpirun /ocean/projects/mat220020p/pangreka/SeqQuest/Rbuild/allintel/usempif77/quest_268e.x -> outputFile
