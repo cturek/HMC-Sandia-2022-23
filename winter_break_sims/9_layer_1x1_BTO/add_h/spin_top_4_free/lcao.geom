@@ -1,39 +1,3 @@
-do setup
-do iters
-do force
-do relax
-do post
-setup data
-title
-title2
-functional
-PBE-SP
-spin polarization
-1.0
-dimension of system (0=cluster ... 3=bulk)
- 2
-coordinates
-CARTESIAN
-scale
-7.62074
-primitive lattice vectors
-  1.0000000000      0.0000000000      0.0000000000
-  0.0000000000      1.0000000000      0.0000000000
-  0.0000000000      0.0000000000     80.0000000000
-grid dimensions
-       36   36  400
-atom types
- 4 
-atom file
- Ba = Ba.atm
-atom file
- Ti = Ti.atm
-atom file
- O  = O.atm
-atom file 
- H = H.atm
-number of atoms in unit cell
-  24
 atom, type, position;  step#     12
  ATOm_H       H                 0.0000056143    0.7550071702   -2.2022519075 
  AT0m09       Ti                0.5000043050    0.4681619442   -2.0059099752 
@@ -58,26 +22,4 @@ atom, type, position;  step#     12
  AT0014       O                 0.5000000000    0.5000000000    1.5041008908 
  AT0011       Ti                0.5000000000    0.5000000000    1.9704983581 
  AT0012       O                 0.0000000000    0.5000000000    1.9971387538 
- AT0013       O                 0.5000000000    0.0000000000    1.9971387538  
-origin offset 
-0.0 0.0 0.0
-kgrid
- 6 6 0
-end setup phase data
-run phase input data
-no ges
-iterations
- 100
-blend ratio
-0.200
-convergence criterion
-  0.000500
-geometry relaxation
-gfixed
- 12 12
-gmethod
-asd
-gsteps
-50
-end geometry relaxation
-end run phase data
+ AT0013       O                 0.5000000000    0.0000000000    1.9971387538 
