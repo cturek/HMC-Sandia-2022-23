@@ -2,7 +2,7 @@
  MPINFO::: Global Context = ****      :::
  MPINFO::: Global Size =      23      :::
  MPINFO::: Global Root =       0      :::
- MPINFO::: Global Rank =       0      :::
+ MPINFO::: Global Rank =      13      :::
  version 2.68: slics foundation version
  ========================================================================
     Program: SEQQUEST - LCAO-PS-DFT electronic structure code
@@ -33,7 +33,7 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +    2.29 =       2.3 seconds wall (    0.11 usr    1.49 sys)
+ Before input     +    2.52 =       2.5 seconds wall (    0.10 usr    0.00 sys)
   
 ##### Run options:
  do setup                                                                        
@@ -651,6 +651,576 @@ cutXXX for code (grd,slo,ii,1c)
 cutall for code (s,t,nl,loc;frc)
    3.00000000D-09  3.00000000D-09  1.50000000D-07  6.00000000D-08
    3.00000000D-07  3.00000000D-07  5.00000000D-06  6.00000000D-06
-
+ 
  ##### output #####
+ 
+ MPINFO::: Local Communicator         :::
+ MPINFO::: Local Context = ****       :::
+ MPINFO::: Local Size =      23       :::
+ MPINFO::: Local Root =       0       :::
+ MPINFO::: Local Rank =      13       :::
+ Maximum record length (r8) for i/o=     1000000
+ Flavor of dft that will be used for this run=PBE   
+ ***** Note: basis transformed to split basis form
+ Number of symmetry generators       =           1
+ Expands to number of elements(w/id) =           4
+ Size of output symmetry group (w/id)=           4
+ IBZ Bloch vectors, total=           9          36
+   K#       wt               k-vector:(r);(g)
+     1    4.000000    0.068707  0.068707  0.000000    0.0833  0.0833  0.0000
+     2    4.000000    0.206121  0.068707  0.000000    0.2500  0.0833  0.0000
+     3    4.000000    0.343535  0.068707  0.000000    0.4167  0.0833  0.0000
+     4    4.000000    0.480950  0.068707  0.000000    0.5833  0.0833  0.0000
+     5    4.000000    0.618364  0.068707  0.000000    0.7500  0.0833  0.0000
+     6    4.000000    0.206121  0.206121  0.000000    0.2500  0.2500  0.0000
+     7    4.000000    0.343535  0.206121  0.000000    0.4167  0.2500  0.0000
+     8    4.000000    0.480950  0.206121  0.000000    0.5833  0.2500  0.0000
+     9    4.000000    0.343535  0.343535  0.000000    0.4167  0.4167  0.0000
+  
+ LATVEC: nlat1c,nlat2c,nlat =          22          61          61
+ 
+  Atom
+  Type  Shell  Min-alf     range
+    1        0.060634  12.090689
+    2        0.080000  10.526019
+    3        0.129289   8.279963
+ Turnover EF->DM npopdm, npop0k=         120          83
+ DEV264h/wkmem: perlsolv dist-mem
+ DEV/wkmem: KPSTORE= T
+ DEV/wkmem: psolv version, input do_psolv= F
 
+ Need       43200-length r*4 array to pack grid wfcns/box
+ Need    21246336-length r*4 array to pack all grid wfcns
+ Need       43200-length r*4 array for grid wfcns scratch
+ WKMEM: using stripe-parallel+Merge  setup
+ WKMEM: Use serial complex solver in PSCHROED2
+ Minimum maxwkd for scf to complete=     7349985
+ All grid wfcns stored in  10623168 of 213685141 available
+ WKMEM: in-core Broyden! uses    349920 out of 203061973 available
+ >>>>> geom/basis data saved to file
+  
+ Atom type   1  radial valence charge =    7.999999861627
+ Atom type   1    core charge =    1.826156845234
+  
+ Atom type   2  radial valence charge =    9.999999869126
+ Atom type   2    core charge =    5.362408557932
+  
+ Atom type   3  radial valence charge =    5.999995363882
+ Atom type   3      xc valence charge =    6.499995360087
+ mat0set: stripe-parallel, KPSTORE= T
+
+   sij compute    +    0.41 =       2.9 seconds wall (    0.02 usr    0.00 sys)
+
+   sij/nlat-bcast +    0.00 =       2.9 seconds wall (    0.00 usr    0.00 sys)
+
+   vlocmat compute+    0.38 =       3.3 seconds wall (    0.35 usr    0.00 sys)
+
+   vlocmii compute+    0.02 =       3.3 seconds wall (    0.02 usr    0.00 sys)
+
+   nlocmat compute+    0.35 =       3.7 seconds wall (    0.34 usr    0.00 sys)
+ NLOCMAT: Max neqilat=           8
+
+ After mat0set    +    0.08 =       3.8 seconds wall (    0.08 usr    0.00 sys)
+
+ grid0xc compute+    0.73 =       4.5 seconds wall (    0.68 usr    0.00 sys)
+
+ grid0xc Merge  +    0.02 =       4.5 seconds wall (    0.02 usr    0.00 sys)
+
+ grid0xc Bcast  +    0.04 =       4.6 seconds wall (    0.04 usr    0.00 sys)
+ 
+
+ AFTER SETUP PHASE+    0.02 =       4.6 seconds wall (    0.02 usr    0.00 sys)
+ 
+  
+ *************************  iteration   0 begins here  *************************
+
+
+ Before iterations+    0.75 =       5.3 seconds wall (    0.73 usr    0.00 sys)
+  
+ grid-integrated valence-density total =      165.9997677489
+ grid-int core charge  =       34.1240218824
+ Harris Fcnal XC piece=      -15.2509195851
+  
+  
+
+ After 0 iteration+    0.39 =       5.7 seconds wall (    0.37 usr    0.00 sys)
+ *************************  iteration   1 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =       5.7 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.20 =       5.9 seconds wall (    0.20 usr    0.00 sys)
+
+ eigsolv/pop        +    0.02 =       5.9 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.02 =       6.0 seconds wall (    0.02 usr    0.00 sys)
+ 
+         fermi level =   -0.450003 Ry,   gap(0K)= 0.214382 Ry = 2.917 eV
+
+ k-vector:       1                    2                    3                    4
+  weight:    0.111111             0.111111             0.111111             0.111111
+            level    occup       level    occup       level    occup       level    occup
+  
+    1    -2.870345  2.0000    -2.870315  2.0000    -2.870857  2.0000    -2.870857  2.0000
+    2    -2.869198  2.0000    -2.869164  2.0000    -2.870276  2.0000    -2.870276  2.0000
+    3    -2.868095  2.0000    -2.868941  2.0000    -2.869749  2.0000    -2.869749  2.0000
+    4    -2.867014  2.0000    -2.868049  2.0000    -2.869745  2.0000    -2.869745  2.0000
+             ...      ...         ...      ...         ...      ...         ...      ...
+   64    -0.674171  2.0000    -0.688702  2.0000    -0.701364  2.0000    -0.701364  2.0000
+   65    -0.672340  2.0000    -0.686596  2.0000    -0.691517  2.0000    -0.691517  2.0000
+   66    -0.669300  2.0000    -0.677305  2.0000    -0.683087  2.0000    -0.683087  2.0000
+   67    -0.661569  2.0000    -0.676133  2.0000    -0.680247  2.0000    -0.680247  2.0000
+   68    -0.660848  2.0000    -0.663777  2.0000    -0.675875  2.0000    -0.675876  2.0000
+   69    -0.660490  2.0000    -0.660899  2.0000    -0.673838  2.0000    -0.673838  2.0000
+   70    -0.652392  2.0000    -0.652005  2.0000    -0.659876  2.0000    -0.659876  2.0000
+   71    -0.640979  2.0000    -0.649741  2.0000    -0.655753  2.0000    -0.655752  2.0000
+   72    -0.633887  2.0000    -0.648438  2.0000    -0.653466  2.0000    -0.653466  2.0000
+   73    -0.629483  2.0000    -0.644251  2.0000    -0.652503  2.0000    -0.652503  2.0000
+   74    -0.628186  2.0000    -0.637087  2.0000    -0.648113  2.0000    -0.648113  2.0000
+   75    -0.628164  2.0000    -0.635001  2.0000    -0.647575  2.0000    -0.647575  2.0000
+   76    -0.621552  2.0000    -0.630775  2.0000    -0.644291  2.0000    -0.644291  2.0000
+   77    -0.621543  2.0000    -0.628381  2.0000    -0.631913  2.0000    -0.631913  2.0000
+   78    -0.616517  2.0000    -0.624094  2.0000    -0.629327  2.0000    -0.629327  2.0000
+   79    -0.609782  2.0000    -0.620452  2.0000    -0.629201  2.0000    -0.629201  2.0000
+   80    -0.607786  2.0000    -0.618816  2.0000    -0.621269  2.0000    -0.621269  2.0000
+   81    -0.605590  2.0000    -0.618168  2.0000    -0.610147  2.0000    -0.610147  2.0000
+   82    -0.592978  2.0000    -0.608460  2.0000    -0.602123  2.0000    -0.602123  2.0000
+   83    -0.592485  2.0000    -0.608080  2.0000    -0.597725  2.0000    -0.597725  2.0000
+   84    -0.342812  0.0000    -0.335634  0.0000    -0.329187  0.0000    -0.329187  0.0000
+   85    -0.340331  0.0000    -0.313105  0.0000    -0.307883  0.0000    -0.307883  0.0000
+   86    -0.336979  0.0000    -0.290774  0.0000    -0.277140  0.0000    -0.277140  0.0000
+   87    -0.331040  0.0000    -0.288370  0.0000    -0.248868  0.0000    -0.248868  0.0000
+   88    -0.326342  0.0000    -0.284270  0.0000    -0.241645  0.0000    -0.241645  0.0000
+   89    -0.318853  0.0000    -0.280917  0.0000    -0.240970  0.0000    -0.240970  0.0000
+   90    -0.317510  0.0000    -0.280162  0.0000    -0.238065  0.0000    -0.238064  0.0000
+   91    -0.317050  0.0000    -0.278941  0.0000    -0.237318  0.0000    -0.237318  0.0000
+             ...      ...         ...      ...         ...      ...         ...      ...
+   93    -0.284963  0.0000    -0.271939  0.0000    -0.233990  0.0000    -0.233991  0.0000
+
+ k-vector:       5                    6                    7                    8
+  weight:    0.111111             0.111111             0.111111             0.111111
+            level    occup       level    occup       level    occup       level    occup
+  
+    1    -2.870315  2.0000    -2.870262  2.0000    -2.870802  2.0000    -2.870802  2.0000
+    2    -2.869164  2.0000    -2.869107  2.0000    -2.870199  2.0000    -2.870199  2.0000
+    3    -2.868941  2.0000    -2.868880  2.0000    -2.869692  2.0000    -2.869692  2.0000
+    4    -2.868049  2.0000    -2.868869  2.0000    -2.869685  2.0000    -2.869685  2.0000
+             ...      ...         ...      ...         ...      ...         ...      ...
+   64    -0.688703  2.0000    -0.730637  2.0000    -0.734495  2.0000    -0.734495  2.0000
+   65    -0.686596  2.0000    -0.719844  2.0000    -0.734319  2.0000    -0.734319  2.0000
+   66    -0.677305  2.0000    -0.706344  2.0000    -0.719361  2.0000    -0.719361  2.0000
+   67    -0.676134  2.0000    -0.702257  2.0000    -0.718312  2.0000    -0.718312  2.0000
+   68    -0.663777  2.0000    -0.700337  2.0000    -0.705411  2.0000    -0.705411  2.0000
+   69    -0.660900  2.0000    -0.693589  2.0000    -0.701508  2.0000    -0.701508  2.0000
+   70    -0.652005  2.0000    -0.656663  2.0000    -0.680477  2.0000    -0.680477  2.0000
+   71    -0.649741  2.0000    -0.645344  2.0000    -0.656359  2.0000    -0.656359  2.0000
+   72    -0.648438  2.0000    -0.640017  2.0000    -0.648392  2.0000    -0.648392  2.0000
+   73    -0.644251  2.0000    -0.638258  2.0000    -0.640289  2.0000    -0.640289  2.0000
+   74    -0.637087  2.0000    -0.632039  2.0000    -0.625911  2.0000    -0.625911  2.0000
+   75    -0.635001  2.0000    -0.631704  2.0000    -0.625823  2.0000    -0.625823  2.0000
+   76    -0.630775  2.0000    -0.626326  2.0000    -0.619510  2.0000    -0.619510  2.0000
+   77    -0.628381  2.0000    -0.626235  2.0000    -0.618545  2.0000    -0.618545  2.0000
+   78    -0.624094  2.0000    -0.619110  2.0000    -0.613423  2.0000    -0.613423  2.0000
+   79    -0.620453  2.0000    -0.618708  2.0000    -0.612838  2.0000    -0.612838  2.0000
+   80    -0.618816  2.0000    -0.614093  2.0000    -0.606130  2.0000    -0.606130  2.0000
+   81    -0.618168  2.0000    -0.613555  2.0000    -0.597380  2.0000    -0.597380  2.0000
+   82    -0.608460  2.0000    -0.590161  2.0000    -0.581258  2.0000    -0.581259  2.0000
+   83    -0.608080  2.0000    -0.590013  2.0000    -0.581051  2.0000    -0.581052  2.0000
+   84    -0.335634  0.0000    -0.291314  0.0000    -0.283901  0.0000    -0.283901  0.0000
+   85    -0.313105  0.0000    -0.283469  0.0000    -0.270712  0.0000    -0.270712  0.0000
+   86    -0.290775  0.0000    -0.277933  0.0000    -0.249552  0.0000    -0.249552  0.0000
+   87    -0.288370  0.0000    -0.271364  0.0000    -0.240226  0.0000    -0.240226  0.0000
+   88    -0.284270  0.0000    -0.262215  0.0000    -0.231789  0.0000    -0.231789  0.0000
+   89    -0.280916  0.0000    -0.257046  0.0000    -0.227375  0.0000    -0.227375  0.0000
+   90    -0.280162  0.0000    -0.254317  0.0000    -0.225958  0.0000    -0.225958  0.0000
+   91    -0.278941  0.0000    -0.252520  0.0000    -0.221462  0.0000    -0.221462  0.0000
+             ...      ...         ...      ...         ...      ...         ...      ...
+   93    -0.271938  0.0000    -0.244027  0.0000    -0.217730  0.0000    -0.217730  0.0000
+
+ k-vector:       9
+  weight:    0.111111
+            level    occup
+  
+    1    -2.870740  2.0000
+    2    -2.870737  2.0000
+    3    -2.870108  2.0000
+    4    -2.869625  2.0000
+             ...      ...
+   64    -0.742641  2.0000
+   65    -0.739449  2.0000
+   66    -0.727116  2.0000
+   67    -0.715109  2.0000
+   68    -0.713273  2.0000
+   69    -0.713221  2.0000
+   70    -0.709560  2.0000
+   71    -0.652130  2.0000
+   72    -0.644249  2.0000
+   73    -0.631586  2.0000
+   74    -0.627493  2.0000
+   75    -0.610404  2.0000
+   76    -0.607795  2.0000
+   77    -0.597696  2.0000
+   78    -0.593651  2.0000
+   79    -0.593364  2.0000
+   80    -0.588011  2.0000
+   81    -0.587689  2.0000
+   82    -0.557267  2.0000
+   83    -0.557195  2.0000
+   84    -0.240278  0.0000
+   85    -0.238319  0.0000
+   86    -0.230590  0.0000
+   87    -0.227949  0.0000
+   88    -0.215530  0.0000
+   89    -0.212964  0.0000
+   90    -0.202328  0.0000
+   91    -0.199833  0.0000
+             ...      ...
+   93    -0.196080  0.0000
+  
+ delta movement in electrons =       11.7392062692
+ 
+ one-center local charge defect =         0.00023038
+  
+ grid-integrated valence-density total =      165.9997025192
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -226.8772356664
+  
+ electronic meth_bl(BROYDEN)=           1
+ EBROYDDJ: in-core history
+>>>>> Broyden: first step (elec) simple blend ratio= 0.200000
+<<<<< Broyden step complete, scf step=     1
+
+ After blending   +    0.93 =       6.9 seconds wall (    0.92 usr    0.00 sys)
+  
+ *************************  iteration   2 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =       6.9 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.41 =       7.3 seconds wall (    0.41 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =       7.3 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.17 =       7.5 seconds wall (    0.17 usr    0.00 sys)
+ 
+         fermi level =   -0.432129 Ry,   gap(0K)= 0.082286 Ry = 1.120 eV
+  
+ delta movement in electrons =        6.7249240429
+ 
+ one-center local charge defect =         0.00029251
+  
+ grid-integrated valence-density total =      165.9996691444
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -222.8982899152
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     2
+
+ After blending   +    0.93 =       8.4 seconds wall (    0.92 usr    0.00 sys)
+  
+ *************************  iteration   3 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =       8.4 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.14 =       8.6 seconds wall (    0.15 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =       8.6 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.04 =       8.6 seconds wall (    0.03 usr    0.00 sys)
+ 
+         fermi level =   -0.434777 Ry,   gap(0K)= 0.058903 Ry = 0.801 eV
+  
+ delta movement in electrons =        6.6307348624
+ 
+ one-center local charge defect =         0.00029578
+  
+ grid-integrated valence-density total =      165.9996652982
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -223.4879428297
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     3
+
+ After blending   +    0.92 =       9.5 seconds wall (    0.91 usr    0.00 sys)
+  
+ *************************  iteration   4 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =       9.5 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.12 =       9.6 seconds wall (    0.12 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =       9.6 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.04 =       9.7 seconds wall (    0.03 usr    0.00 sys)
+ 
+         fermi level =   -0.429315 Ry,   gap(0K)= 0.057688 Ry = 0.785 eV
+  
+ delta movement in electrons =        6.6152299869
+ 
+ one-center local charge defect =         0.00029687
+  
+ grid-integrated valence-density total =      165.9996633471
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -222.5626952277
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     4
+
+ After blending   +    1.02 =      10.7 seconds wall (    1.01 usr    0.00 sys)
+  
+ *************************  iteration   5 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =      10.7 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.07 =      10.8 seconds wall (    0.06 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =      10.8 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.04 =      10.8 seconds wall (    0.03 usr    0.00 sys)
+ 
+         fermi level =   -0.408323 Ry,   gap(0K)= 0.054126 Ry = 0.736 eV
+  
+ delta movement in electrons =        6.6342689933
+ 
+ one-center local charge defect =         0.00029960
+  
+ grid-integrated valence-density total =      165.9996539838
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -219.3002782589
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+<<<<< Broyden step complete, scf step=     5
+
+ After blending   +    0.92 =      11.7 seconds wall (    0.92 usr    0.00 sys)
+  
+ *************************  iteration   6 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =      11.7 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.08 =      11.8 seconds wall (    0.08 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =      11.8 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.06 =      11.9 seconds wall (    0.07 usr    0.00 sys)
+ 
+         fermi level =   -0.403950 Ry,   gap(0K)= 0.052538 Ry = 0.715 eV
+  
+ delta movement in electrons =        6.6299229787
+ 
+ one-center local charge defect =         0.00030048
+  
+ grid-integrated valence-density total =      165.9996511019
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -218.6218811316
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=     6
+
+ After blending   +    0.93 =      12.8 seconds wall (    0.92 usr    0.00 sys)
+  
+ *************************  iteration   7 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =      12.8 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.29 =      13.1 seconds wall (    0.29 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =      13.1 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.03 =      13.1 seconds wall (    0.03 usr    0.00 sys)
+ 
+         fermi level =   -0.401293 Ry,   gap(0K)= 0.052159 Ry = 0.710 eV
+  
+ delta movement in electrons =        6.6399492938
+ 
+ one-center local charge defect =         0.00030074
+  
+ grid-integrated valence-density total =      165.9996492175
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -218.2563133551
+  
+ electronic meth_bl(BROYDEN)=           1
+>>>>> Broyden blend to get next step - elec
+ Broyden: limit-history, dropping oldest
+<<<<< Broyden step complete, scf step=     7
+
+ After blending   +    0.93 =      14.0 seconds wall (    0.92 usr    0.00 sys)
+  
+ *************************  iteration   8 begins here  *************************
+
+ PEIGSOLV: do_eigvecs,do_eigpops,do_kppsolve,do_psolv= T T F F
+ DEV/PEIGSOLV: smaller PRHOIJ stripe/transpose
+ PEIGSOLV0: do_psolv,do_eigvecs,do_eigpops= F T T
+
+ eigsolv/begin      +    0.00 =      14.0 seconds wall (    0.00 usr    0.00 sys)
+ PEIGSOLV: single-proc solves
+ PSCHROED2: k-parallel single-processor solver, nk=           9
+
+ eigsolv/schroedkp  +    0.18 =      14.2 seconds wall (    0.18 usr    0.00 sys)
+
+ eigsolv/pop        +    0.00 =      14.2 seconds wall (    0.00 usr    0.00 sys)
+
+ eigsolv/rhoij      +    0.04 =      14.2 seconds wall (    0.03 usr    0.00 sys)
+ 
+         fermi level =   -0.401165 Ry,   gap(0K)= 0.052050 Ry = 0.708 eV
+  
+ delta movement in electrons =        6.6422209482
+ 
+ one-center local charge defect =         0.00030074
+  
+ grid-integrated valence-density total =      165.9996489451
+ grid-int core charge  =       34.1240218824
+  
+ TOTAL single particle eigenvalue sum=      -218.2529249353
+  
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =      -778.1914173459
+    Full spherical atom trace ENERGY =         -239.6536313003
+    Spherical-atom-Vxc trace ENERGY =           249.2047789969
+    non-spherical es ENERGY =                     0.1662880687
+    Total Exc ENERGY =                         -251.6429135755
+ 
+    total kinetic trace ENERGY =          582.9975007916
+    non-local ps-pot trace ENERGY =       123.0138395205
+    total electrostatic ENERGY =        -1474.4853218927
+    Total Vxc ENERGY =                   -236.5044320333
+ 
+    TOTAL ENERGY (Rydberg) =                  -1020.1168951561
+ 
+ ################################################################
+
+ After blending   +    0.96 =      15.2 seconds wall (    0.94 usr    0.00 sys)
+  
+ >>>>> self-consistency achieved, iteration   8
+
+ 
+ FINAL CONVERGED ENERGY (Rydberg) =    -1020.1168951561
+ Binding energy =       -2.3895141561 Ry =            -32.5113 eV
+
+ AFTER ITERATIONS +    0.00 =      15.2 seconds wall (    0.00 usr    0.00 sys)
+
+ After ggastress  +    0.45 =      15.7 seconds wall (    0.42 usr    0.00 sys)
+ 
+ atom xc0frc stress term=      152.2827568715
+ atom xc0core stress term=       73.1755706257
+ mat0frc: stripe-parallel, KPSTORE= T
+  
+ total stress tensor, in Rydberg and in 10+2 N/m
+           0.525727     -0.000005          0.704697     -0.000006
+           0.000005      0.525727          0.000006      0.704697
+ pressure=Tr(stress)/ndim=      0.525727 Ry=      0.704697 10+2 N/m
+ total force contributions(Ry/bohr):
+        atom       x force          y force          z force
+          1      0.0000000000     0.0000000000     0.0006180228
+          2      0.0000000000     0.0000000000     0.0000285897
+          3      0.0000000000     0.0000000000     0.0000285897
+          4      0.0000000000     0.0000000000     0.0004895812
+          5      0.0000000000     0.0000000000     0.0005672312
+          6      0.0000000000     0.0000000000     0.0001201671
+          7      0.0000000000     0.0000000000     0.0001201671
+          8      0.0000000000     0.0000000000    -0.0001357803
+          9      0.0000000000     0.0000000000     0.0001797950
+         10      0.0000000000     0.0000000000     0.0000016949
+         11      0.0000000000     0.0000000000     0.0000010036
+         12      0.0000000000     0.0000000000     0.0000010036
+         13      0.0000000000     0.0000000000    -0.0000022303
+         14      0.0000000000     0.0000000000    -0.0001796728
+         15      0.0000000000     0.0000000000    -0.0005666075
+         16      0.0000000000     0.0000000000    -0.0001192626
+         17      0.0000000000     0.0000000000    -0.0001192626
+         18      0.0000000000     0.0000000000     0.0000000000
+         19      0.0000000000     0.0000000000    -0.0004889561
+         20      0.0000000000     0.0000000000    -0.0006201519
+         21      0.0000000000     0.0000000000    -0.0000294471
+         22      0.0000000000     0.0000000000    -0.0000294471
+         23      0.0000000000     0.0000000000     0.0001368417
+      f-defect        0.0000000000     0.0000000000     0.0000018694
+
+ AFTER FORCE RTNS +    4.82 =      20.5 seconds wall (    4.75 usr    0.00 sys)
+  
+ 
+ ###############################################################################
+ FINAL GEOMETRY for step   1, of   1 total
+ AT0m09       Ti                0.5000000000    0.5000000000   -1.9704972452 
+ AT0m08       O                 0.0000000000    0.5000000000   -1.9971379537 
+ AT0m07       O                 0.5000000000    0.0000000000   -1.9971379537 
+ AT0m05       Ba                0.0000000000    0.0000000000   -1.5261388694 
+ AT0m04       Ti                0.5000000000    0.5000000000   -0.9945756786 
+ AT0m03       O                 0.0000000000    0.5000000000   -0.9987995952 
+ AT0m02       O                 0.5000000000    0.0000000000   -0.9987995952 
+ AT0m01       O                 0.5000000000    0.5000000000   -1.5041005275 
+ AT0000       Ba                0.0000000000    0.0000000000   -0.5037462655 
+ AT0001       Ti                0.5000000000    0.5000000000    0.0000000000 
+ AT0002       O                 0.0000000000    0.5000000000    0.0000002457 
+ AT0003       O                 0.5000000000    0.0000000000    0.0000002457 
+ AT0004       O                 0.5000000000    0.5000000000   -0.5005608276 
+ AT0005       Ba                0.0000000000    0.0000000000    0.5037469551 
+ AT0006       Ti                0.5000000000    0.5000000000    0.9945756879 
+ AT0007       O                 0.0000000000    0.5000000000    0.9987995269 
+ AT0008       O                 0.5000000000    0.0000000000    0.9987995269 
+ AT0009       O                 0.5000000000    0.5000000000    0.5005611904 
+ AT0010       Ba                0.0000000000    0.0000000000    1.5261391117 
+ AT0011       Ti                0.5000000000    0.5000000000    1.9704983581 
+ AT0012       O                 0.0000000000    0.5000000000    1.9971387538 
+ AT0013       O                 0.5000000000    0.0000000000    1.9971387538 
+ AT0014       O                 0.5000000000    0.5000000000    1.5041008908 
+ ###############################################################################
+
+ FINAL RELAXED ENERGY =    -1020.1168951561
+
+
+ AFTER GEOMETRY   +    0.00 =      20.5 seconds wall (    0.00 usr    0.00 sys)
+ Normal exit: RELAX DONE
+ Total TIME=      20.5 seconds (usr=      17.3  sys=       0.0  lost=       3.2)

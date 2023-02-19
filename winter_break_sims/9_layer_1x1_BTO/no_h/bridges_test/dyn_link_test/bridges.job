@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -p RM-shared
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=23
+#SBATCH -t 00:45:00
+
+#load the modules
+
+module load intel/20.4
+module load intelmpi/20.4-intel20.4
+module load mkl/2020.4.304
+module load allocations/1.0
+
+cd /ocean/projects/mat220020p/pangreka/HMC-Sandia-2022-23/winter_break_sims/9_layer_1x1_BTO/no_h/bridges_test/dyn_link_test 
+mpirun  /ocean/projects/mat220020p/pangreka/SeqQuest/Rbuild/allintel/dynamic_link/quest_268e.x

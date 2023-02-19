@@ -33,7 +33,7 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +    2.35 =       2.3 seconds wall (    0.13 usr    1.42 sys)
+ Before input     +    2.29 =       2.3 seconds wall (    0.12 usr    1.37 sys)
   
  ***** ERROR *****
  File open failed: unit number=           5

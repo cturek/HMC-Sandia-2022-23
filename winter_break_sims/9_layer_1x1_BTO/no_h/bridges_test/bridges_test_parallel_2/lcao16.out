@@ -33,10 +33,10 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +    2.35 =       2.3 seconds wall (    0.09 usr    1.46 sys)
+ Before input     +    2.29 =       2.3 seconds wall (    0.11 usr    1.38 sys)
   
  ***** ERROR *****
  File open failed: unit number=           5
    file=lcao.in                                                                                                                         
  ***** ERROR: FLOPENF: file open failed
- Total TIME=       2.3 seconds (usr=       0.1  sys=       1.5  lost=       0.8)
+ Total TIME=       2.3 seconds (usr=       0.1  sys=       1.4  lost=       0.8)
