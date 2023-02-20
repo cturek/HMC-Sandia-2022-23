@@ -1,0 +1,10 @@
+Last updated 2/13 after gstep 120 of 5x1x1 top 3 layers free with OH
+
+First H is roughly above AT0m08
+Second H is roughly above AT0m07
+Recalibrate atoms as necessary before starting the sim (make sure first H is in relaxed position and move second H to similarly relaxed position, but on a different O)
+
+Jessica on 2/15:
+shifted the starting coordinates a bit
+changed which atoms are frozen (11-15 changed to 12-16)
+removed space in front of [atom, type, position: step# 0] line
