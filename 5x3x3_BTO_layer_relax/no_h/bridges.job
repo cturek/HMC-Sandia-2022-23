@@ -2,7 +2,7 @@
 #SBATCH -p RM-shared
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=117
-#SBATCH -t 23:59:59
+#SBATCH -t 12:00:00
 
 #load the modules
 
