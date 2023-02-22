@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -p RM-shared
-#SBATCH -N 2
-#SBATCH --ntasks-per-node=58
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=117
 #SBATCH -t 12:00:00
 
 #load the modules
