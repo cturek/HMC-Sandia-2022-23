@@ -34,7 +34,7 @@ atom file
  H = H.atm
 number of atoms in unit cell
   16
- atom, type, position; step#      0
+atom, type, position; step#      0
  ATOm_H       H                -0.0122508702    0.5124861696   -2.2800974397 
  ATOmH        H                 0.4808354623    0.0067260020   -2.2802522739 
  ATOmO        O                 0.4863243412    0.5096769644   -2.4722844985 

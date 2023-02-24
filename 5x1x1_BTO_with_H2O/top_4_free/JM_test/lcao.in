@@ -1,0 +1,75 @@
+do setup
+do iters
+do force
+do relax
+do post
+setup data
+title
+title2
+functional
+PBE-SP
+spin polarization
+1.0
+dimension of system (0=cluster ... 3=bulk)
+ 2
+coordinates
+CARTESIAN
+scale
+7.62074
+primitive lattice vectors
+  1.0000000000      0.0000000000      0.0000000000
+  0.0000000000      1.0000000000      0.0000000000
+  0.0000000000      0.0000000000     80.0000000000
+grid dimensions
+       36   36  400
+atom types
+ 4
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom filec
+ O  = O.atm
+atom file
+ H = H.atm
+number of atoms in unit cell
+  16
+atom, type, position; step#      0
+ ATOm_H       H                -0.0122508702    0.5124861696   -2.2800974397 
+ ATOmH        H                 0.4808354623    0.0067260020   -2.2802522739 
+ ATOmO        O                 0.4863243412    0.5096769644   -2.4722844985 
+ AT0m09       Ti                0.4880607814    0.5080675304   -2.0553461023 
+ AT0m08       O                -0.0127430472    0.5093002624   -2.0337255552 
+ AT0m07       O                 0.4853630779    0.0085255651   -2.0338143064 
+ AT0m05       Ba               -0.0052199836    0.0073579707   -1.5090715813 
+ AT0m01       O                 0.4900196371    0.5018648097   -1.5023698107 
+ AT0m04       Ti                0.5086645383    0.5157506279   -1.0185093883 
+ AT0m03       O                -0.0138014198    0.4960362578   -1.0102690997 
+ AT0m02       O                 0.4897387820   -0.0077807910   -1.0100585571 
+ AT0000       Ba                0.0000000000    0.0000000000   -0.5037462655 
+ AT0004       O                 0.5000000000    0.5000000000   -0.5005608276 
+ AT0001       Ti                0.5000000000    0.5000000000    0.0000000000 
+ AT0002       O                 0.0000000000    0.5000000000    0.0000002457 
+ AT0003       O                 0.5000000000    0.0000000000    0.0000002457
+origin offset 
+ 0.0 0.0 0.0
+kgrid
+ 6 6 0
+end setup phase data
+run phase input data
+no ges
+iterations
+ 250
+blend ratio
+0.200
+convergence criterion
+  0.000500
+geometry relaxation
+gfixed
+14 16
+gmethod
+asd
+gsteps
+240
+end geometry relaxation
+end run phase data
