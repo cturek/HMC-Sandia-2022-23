@@ -33,9 +33,8 @@ atom filec
 atom file
  H = H.atm
 number of atoms in unit cell
-  210
+  209
 atom, type, position;  step#    0
- AT0m001    O    0.5000056025    -0.4607972103    -2.520808283
  AT0m002    H    0.0003244796    -0.3074621648    -2.262444495
  AT0m003    Ti    -0.4995007513    0.4847304202    -2.100743235
  AT0m004    Ti    0.5004992487    0.4847304202    -2.100743235
@@ -260,7 +259,7 @@ convergence criterion
   0.000500
 geometry relaxation
 gfixed
-131 210
+130 209
 gmethod
 asd
 gsteps
