@@ -1,12 +1,18 @@
 # Ignored file types for GitHub
 #
 # Cedar Turek cturek@hmc.edu 20 Nov 2022
+# Modified 2/26/2023
 
 #########################
 # Compiled Source Files #
 #########################
 *.o
 *.s
+
+########################
+# Massive Output Files #
+########################
+*.out
 
 ###############################################
 # Strange SeqQuest Intermediate Binary Files  #
