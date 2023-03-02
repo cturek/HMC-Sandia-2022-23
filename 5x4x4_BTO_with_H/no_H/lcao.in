@@ -19,7 +19,7 @@ scale
 primitive lattice vectors
   4.0000000000      0.0000000000      0.0000000000
   0.0000000000      4.0000000000      0.0000000000
-  0.0000000000      0.0000000000     80.0000000000
+  0.0000000000      0.0000000000     100.0000000000
 grid dimensions
        144   144  400
 atom types
@@ -244,16 +244,18 @@ atom, type, position;  step#    0
 origin offset 
  0.0 0.0 0.0
 kgrid
- 6 6 0
+ 2 2 0
 end setup phase data
 run phase input data
 no ges
 iterations
- 150
+ 500
 blend ratio
 0.200
 convergence criterion
   0.000500
+states
+ 2000
 geometry relaxation
 gmethod
 asd
