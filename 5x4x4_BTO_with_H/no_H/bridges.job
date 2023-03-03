@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -p RM
-#SBATCH -N 2
-#SBATCH --ntasks-per-node=104
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=128
 #SBATCH -t 12:00:00
 
 #load the modules
