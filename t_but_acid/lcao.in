@@ -1,0 +1,80 @@
+do setup
+do iters
+do force
+do relax
+do post
+setup data
+title
+title2
+functional
+PBE
+dimension of system (0=cluster ... 3=bulk)
+ 2
+coordinates
+CARTESIAN
+scale
+7.620740
+primitive lattice vectors
+  4.0000000000      0.0000000000      0.0000000000
+  0.0000000000      4.0000000000      0.0000000000
+  0.0000000000      0.0000000000     100.0000000000
+grid dimensions
+       144   144  400
+atom types
+ 6
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom file
+ O  = O.atm
+atom file
+ H = H.atm
+atom file
+ C = C.atm
+atom file
+ P = P.atm
+number of atoms in unit cell
+  19 
+atom, type, position;  step#      6
+ AT0mH1       H                 1.7499832140    1.7502881903   -3.5129593844 
+ AT0mH2       H                 1.3982687426    1.2169371226   -3.5331347377 
+ AT0mH3       H                 1.1158674258    1.7818312028   -3.5082727218 
+ AT0m1C       C                 1.7463122487    1.7401364272   -3.2404012229 
+ AT0m2C       C                 1.4090026818    1.2087833429   -3.2605846791 
+ AT0m3C       C                 1.1195416137    1.7655360204   -3.2360221001 
+ AT0mH4       H                 1.9684881851    1.6060486429   -3.1582086466 
+ AT0mH5       H                 0.8892418083    1.6444006983   -3.1560913591 
+ AT0mH6       H                 1.6282783546    1.0641431380   -3.1891649540 
+ AT0mH7       H                 1.1872324603    1.0787894260   -3.1709539781 
+ AT0mH8       H                 1.1240376140    2.0183205040   -3.1351023544 
+ AT0mH9       H                 1.7590329403    1.9950728761   -3.1455169914 
+ AT00CC       C                 1.4262960712    1.5658966566   -3.1267156232 
+ AT0P01       P                 1.4286821329    1.5743048798   -2.6725375764 
+ AT0dPO       O                 1.4489900608    1.9070859030   -2.5081402906 
+ AT0ox1       O                 1.7356910359    1.3245908832   -2.5731847012 
+ AT0ox2       O                 1.0936375060    1.3637882243   -2.5708132273 
+ ATpoh1       H                 1.8472244821    1.4169514993   -2.3791315806 
+ ATpoh2       H                 0.9928889624    1.4735249643   -2.3798298374 
+origin offset 
+0.0 0.0 0.0
+kgrid
+ 2 2 0
+end setup phase data
+run phase input data
+no ges
+iterations
+ 55
+blend ratio
+0.200
+convergence criterion
+  0.001900
+geometry relaxation
+gmethod
+asd
+gfixed
+13 17
+gsteps
+10
+end geometry relaxation
+end run phase data
