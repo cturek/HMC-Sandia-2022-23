@@ -12,7 +12,7 @@
 ########################
 # Massive Output Files #
 ########################
-*.out
+# *.out
 
 ###############################################
 # Strange SeqQuest Intermediate Binary Files  #
