@@ -1,0 +1,109 @@
+do setup
+do iters
+do force
+do relax
+do post
+setup data
+title
+title2
+functional
+PBE
+dimension of system (0=cluster ... 3=bulk)
+ 2
+coordinates
+CARTESIAN
+scale
+7.62074
+primitive lattice vectors
+  2.0000000000      0.0000000000      0.0000000000
+  0.0000000000      2.0000000000      0.0000000000
+  0.0000000000      0.0000000000     80.0000000000
+grid dimensions
+       72   72  400
+atom types
+ 3
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom file
+ O  = O.atm
+number of atoms in unit cell
+  54
+atom, type, position;  step#     0
+ AT0m01     O     0.4935095     0.5114613362     -2.429548516
+ AT0m02     H     0.0033454666     0.5051278554     -2.243197774
+ AT0m03     O     0.5     0     -1.996952736
+ AT0m04     O     0     0.5     -1.996952736
+ AT0m05     O     0     -0.5     -1.996952736
+ AT0m06     O     -0.5     0     -1.996952736
+ AT0m07     O     1     0.5     -1.996952736
+ AT0m08     O     0.5     1     -1.996952736
+ AT0m09     O     1     -0.5     -1.996952736
+ AT0m10     O     -0.5     1     -1.996952736
+ AT0m11     Ti     0.5     0.5     -1.970033691
+ AT0m12     Ti     0.5     -0.5     -1.970033691
+ AT0m13     Ti     -0.5     0.5     -1.970033691
+ AT0m14     Ti     -0.5     -0.5     -1.970033691
+ AT0m15     Ba     0     0     -1.524635244
+ AT0m16     Ba     1     0     -1.524635244
+ AT0m17     Ba     0     1     -1.524635244
+ AT0m18     Ba     1     1     -1.524635244
+ AT0m19     O     0.5     0.5     -1.50329965
+ AT0m20     O     0.5     -0.5     -1.50329965
+ AT0m21     O     -0.5     0.5     -1.50329965
+ AT0m22     O     -0.5     -0.5     -1.50329965
+ AT0m23     O     0.5     0     -1.000439559
+ AT0m24     O     0     0.5     -1.000439559
+ AT0m25     O     0     -0.5     -1.000439559
+ AT0m26     O     -0.5     0     -1.000439559
+ AT0m27     O     1     0.5     -1.000439559
+ AT0m28     O     0.5     1     -1.000439559
+ AT0m29     O     1     -0.5     -1.000439559
+ AT0m30     O     -0.5     1     -1.000439559
+ AT0m31     Ti     0.5     0.5     -0.9966469491
+ AT0m32     Ti     0.5     -0.5     -0.9966469491
+ AT0m33     Ti     -0.5     0.5     -0.9966469491
+ AT0m34     Ti     -0.5     -0.5     -0.9966469491
+ AT0m35     Ba     0     0     -0.5037462655
+ AT0m36     Ba     1     0     -0.5037462655
+ AT0m37     Ba     0     1     -0.5037462655
+ AT0m38     Ba     1     1     -0.5037462655
+ AT0m39     O     0.5     0.5     -0.5005608276
+ AT0m40     O     0.5     -0.5     -0.5005608276
+ AT0m41     O     -0.5     0.5     -0.5005608276
+ AT0m42     O     -0.5     -0.5     -0.5005608276
+ AT0m43     Ti     0.5     0.5     0
+ AT0m44     Ti     0.5     -0.5     0
+ AT0m45     Ti     -0.5     0.5     0
+ AT0m46     Ti     -0.5     -0.5     0
+ AT0m47     O     0.5     0     0.0000002457
+ AT0m48     O     0     0.5     0.0000002457
+ AT0m49     O     0     -0.5     0.0000002457
+ AT0m50     O     -0.5     0     0.0000002457
+ AT0m51     O     1     0.5     0.0000002457
+ AT0m52     O     0.5     1     0.0000002457
+ AT0m53     O     1     -0.5     0.0000002457
+ AT0m54     O     -0.5     1     0.0000002457
+origin offset
+0.0 0.0 0.0
+kgrid
+ 6 6 0
+end setup phase data
+run phase input data
+no ges
+iterations
+ 250
+blend ratio
+0.200
+convergence criterion
+  0.000500
+geometry relaxation
+gfixed
+3 54
+gmethod
+asd
+gsteps
+50
+end geometry relaxation
+end run phase data
