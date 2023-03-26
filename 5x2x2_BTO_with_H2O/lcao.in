@@ -28,6 +28,8 @@ atom file
  Ti = Ti.atm
 atom file
  O  = O.atm
+atom file
+ H = H.atm
 number of atoms in unit cell 
   55
 atom, type, position;  step#  0
