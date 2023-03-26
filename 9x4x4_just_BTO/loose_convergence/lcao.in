@@ -32,12 +32,8 @@ atom filec
  O  = O.atm
 atom file
  H = H.atm
-primitive lattice vectors  4  4  1
-  4.00000000  0.00000000  0.00000000
-  0.00000000  4.00000000  0.00000000
-  0.00000000  0.00000000 80.00000000
 number of atoms in unit cell
-368
+ 368
 atom, type, position;  step#      1
       1       Ba                0.0000000000    0.0000000000   -1.5261388694
       2       Ba                0.0000000000    0.0000000000   -0.5037462655
