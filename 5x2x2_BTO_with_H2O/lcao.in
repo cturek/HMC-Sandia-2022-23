@@ -21,7 +21,7 @@ primitive lattice vectors
 grid dimensions
        72   72  400
 atom types
- 3
+ 4
 atom file
  Ba = Ba.atm
 atom file
