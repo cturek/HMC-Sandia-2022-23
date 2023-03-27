@@ -1,0 +1,633 @@
+
+Usage: ./mpiexec [global opts] [local opts for exec1] [exec1] [exec1 args] : [local opts for exec2] [exec2] [exec2 args] : ...
+
+Global options (passed to all executables):
+
+  Global environment options:
+    -genv {name} {value}             environment variable name and value
+    -genvlist {env1,env2,...}        environment variable list to pass
+    -genvnone                        do not pass any environment variables
+    -genvall                         pass all environment variables not managed
+                                          by the launcher (default)
+
+  Other global options:
+    -f {name}                        file containing the host names
+    -hosts {host list}               comma separated host list
+
+
+Local options (passed to individual executables):
+
+  Other local options:
+    -n/-np {value}                   number of processes
+    {exec_name} {args}               executable name and arguments
+
+
+Hydra specific options (treated as global):
+
+  Launch options:
+    -launcher                        launcher to use (ssh slurm rsh ll sge pbsdsh pdsh srun lsf blaunch qrsh fork)
+    -launcher-exec                   executable to use to launch processes
+    -enable-x/-disable-x             enable or disable X forwarding
+
+  Resource management kernel options:
+    -rmk                             resource management kernel to use (slurm ll lsf sge pbs cobalt)
+
+  Processor topology options:
+    -bind-to                         process binding
+    -map-by                          process mapping
+    -membind                         memory binding policy
+
+  Other Hydra options:
+    -verbose                         verbose mode
+    -info                            build information
+    -print-all-exitcodes             print exit codes of all processes
+    -ppn                             processes per node
+    -prepend-rank                    prepend rank to output
+    -prepend-pattern                 prepend pattern to output
+    -outfile-pattern                 direct stdout to file
+    -errfile-pattern                 direct stderr to file
+    -nameserver                      name server information (host:port format)
+    -disable-auto-cleanup            don't cleanup processes on error
+    -disable-hostname-propagation    let MPICH auto-detect the hostname
+    -localhost                       local hostname for the launching node
+    -usize                           universe size (SYSTEM, INFINITE, <value>)
+
+Intel(R) MPI Library specific options:
+
+  <option> -help                     show help message for the specific option
+
+  Global options:
+    -aps                             Intel(R) Application Performance Snapshot profile
+    -mps                             Intel(R) Application Performance Snapshot profile (MPI, OpenMP only)
+    -gtool                           tool and rank set
+    -gtoolfile                       file containing tool and rank set
+    -hosts-group {groups of hosts}   allows to set node ranges (like in Slurm* Workload Manager)
+
+  Other Hydra options:
+    -iface                           network interface to use
+    -s <spec>                        redirect stdin to all or 1,2 or 2-4,6 MPI processes (0 by default)
+    -silent-abort                    do not print abort warning message
+    -nolocal                         avoid running the application processes on the node where mpiexec.hydra started
+    -tune {binary file}              defines the name of binary tuning file
+    -print-rank-map                  print rank mapping
+
+Intel(R) MPI Library, Version 2019 Update 9  Build 20200923 (id: abd58e492)
+Copyright 2003-2020 Intel Corporation.
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+ MPINFO::: Global Communicator        :::
+ MPINFO::: Global Context = ****      :::
+ MPINFO::: Global Size =       1      :::
+ MPINFO::: Global Root =       0      :::
+ MPINFO::: Global Rank =       0      :::
+ version 2.68: slics foundation version
+ ========================================================================
+    Program: SEQQUEST - LCAO-PS-DFT electronic structure code
+    Version:  2.68e     Last revised: 29Mar20-PAS
+    Copyright 2007 Sandia Corporation.
+
+    Written by Peter A. Schultz (Sandia National Laboratories)
+    Based on a code originally written by Peter J. Feibelman
+
+    Documentation:  http://www.cs.sandia.gov/~paschul/Quest/
+               and  http://dft.sandia.gov/Quest/
+    Questions, comments to:  paschul@sandia.gov
+ ========================================================================
+  Maximum dimension parameters for this run are:
+  
+   maxwkd (r8 workspace)   = 220000000
+   maxr1d (grid dimension) =       600
+  
+   norbd (basis fcns) =      8500
+   natmd (atoms)      =       650     ntypd (atom types) =         7
+   nshld (shell/atm)  =         7     noad  (bf/atm)     =        21
+   nald  (gauss/shell)=         6     nrd   (rad pts/atm)=       200
+   nkd   (kpts/ibz)   =      2000     nsymd (sym/group)  =        48
+   nimgd (NEB images) =        12
+  
+   nlatd (lattice images)=      2000
+   neq3d (do not ask) =        14
+   Default record length (r8) for i/o=   1000000
+ ------------------------------------------------------------------------
+
+ Before input     +    0.72 =       0.7 seconds wall (    0.02 usr    0.00 sys)
+  
+##### Run options:
+ do setup                                                                        
+ do iters                                                                        
+ do force                                                                        
+ do relax                                                                        
+ do post                                                                         
+ setup data                                                                      
+ >>>>> Options (set/scf/frc/relax/cell/neb/md)= T T T T F F F
+ >>>>> use blas3= T
+ >>>>> split basis = T
+ >>>>> Output level set =           2
+ >>>> do_bands, do_optic, do_nonscf= F F F
+setup data:
+title
+ Title line(s) for this run:
+title2
+functional
+PBE
+ vdw_potential type, default=OFF 
+   OFF   
+dimension of system (0=cluster ... 3=bulk)
+  0
+coordinates
+CARTESIAN
+ scalep: scale factor for problem
+   1.00000000
+ scalez factor: scale z-direction
+   1.00000000
+primitive lattice vectors
+  30.00000000  0.00000000  0.00000000
+   0.00000000 30.00000000  0.00000000
+   0.00000000  0.00000000 30.00000000
+ > Input Cell volume{bohr^3)=    27000.000000
+grid dimensions
+   60  90  60
+ nearby option: 0=0,1=pt,2=wt
+  2
+atom types
+  2
+atom file
+ O  = O.atm
+>>>>> atom type name=O           
+type number, label:
+  1 O                      
+notes6
+ notes for this atom file:
+ Constructed by Peter A. Schultz, 17-January-2007
+ Troullier/Martins-type ppot [N.Troullier,J.L.Martins, PRB 43,8861(1991)]
+ generated by fhi98PP [M.Fuchs,M.Scheffler, Comput.Phys.Commun. 119,67(1999)]
+ ppot: [He-core]s2p4, l=1; Rs=1.15, Rp=1.15
+   NB: a middlin' hard T-M potential, without partial core correction
+ basis: refined in H2O
+mass
+   1.59994000D+01
+energy = E(H2O) - E(H2)
+  -3.20919400D+01
+effective nuclear charge (s2p4 to  9.0)
+   6.00000000D+00
+pseudopotentials: Lmax, and effective gaussian range
+  1   5.87000000
+functional type used in generating potential:
+ PBE    = dft fcnal used to generate pot
+radial mesh: number of points for local and non-local pot integrals
+  80  59
+mesh points for nuclear potential;  tm91fh
+      0.01666667  0.01804829  0.01954444  0.02116462  0.02291911  0.02481905
+      0.02687648  0.02910446  0.03151714  0.03412983  0.03695910  0.04002291
+      0.04334070  0.04693352  0.05082419  0.05503737  0.05959982  0.06454048
+      0.06989072  0.07568447  0.08195850  0.08875264  0.09610999  0.10407725
+      0.11270497  0.12204790  0.13216534  0.14312149  0.15498587  0.16783378
+      0.18174674  0.19681305  0.21312832  0.23079608  0.24992845  0.27064683
+      0.29308272  0.31737848  0.34368829  0.37217912  0.40303175  0.43644199
+      0.47262184  0.51180091  0.55422781  0.60017179  0.64992440  0.70380136
+      0.76214458  0.82532429  0.89374143  0.96783016  1.04806065  1.13494203
+      1.22902564  1.33090852  1.44123721  1.56071186  1.69009063  1.83019454
+      1.98191269  2.14620786  2.32412265  2.51678610  2.72542082  2.95135079
+      3.19600974  3.46095025  3.74785362  4.05854048  4.39498245  4.75931454
+      5.15384877  5.58108881  6.04374589  6.54475598  7.08729845  7.67481621
+      8.31103759  9.00000000
+radwts: weights for radial points
+      0.00132734  0.00143737  0.00155652  0.00168555  0.00182528  0.00197659
+      0.00214045  0.00231788  0.00251003  0.00271810  0.00294343  0.00318743
+      0.00345166  0.00373779  0.00404764  0.00438318  0.00474654  0.00514001
+      0.00556610  0.00602752  0.00652718  0.00706827  0.00765421  0.00828872
+      0.00897584  0.00971991  0.01052566  0.01139821  0.01234309  0.01336630
+      0.01447433  0.01567421  0.01697356  0.01838063  0.01990433  0.02155435
+      0.02334114  0.02527606  0.02737138  0.02964039  0.03209750  0.03475829
+      0.03763966  0.04075988  0.04413877  0.04779775  0.05176005  0.05605082
+      0.06069728  0.06572892  0.07117767  0.07707811  0.08346767  0.09038691
+      0.09787974  0.10599371  0.11478030  0.12429527  0.13459901  0.14575690
+      0.15783976  0.17092424  0.18509340  0.20043714  0.21705283  0.23504592
+      0.25453058  0.27563048  0.29847949  0.32322263  0.35001691  0.37903236
+      0.41045311  0.44447856  0.48132462  0.52122512  0.56443327  0.61122325
+      0.66189199  0.71676104
+non-local potential: l,potential*integration weight
+  0   0.93730511  0.93554052  0.93361839  0.93153365  0.92928327  0.92686634
+      0.92428390  0.92153850  0.91863349  0.91557199  0.91235563  0.90898303
+      0.90544833  0.90173964  0.89783801  0.89371685  0.88934220  0.88467387
+      0.87966724  0.87427564  0.86845278  0.86215507  0.85534357  0.84798554
+      0.84005562  0.83153648  0.82241863  0.81269851  0.80237370  0.79143391
+      0.77984650  0.76753677  0.75436432  0.74009742  0.72438611  0.70673257
+      0.68645949  0.66269421  0.63442591  0.60072027  0.56103450  0.51518157
+      0.46260034  0.40186561  0.33154312  0.25174338  0.16543037  0.07940357
+      0.00465384 -0.04517076 -0.05908610 -0.03875595 -0.00829872  0.00001909
+      0.00000545  0.00000199  0.00000064  0.00000018  0.00000004  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000
+non-local potential: l,potential*integration weight
+  1   0.90370413  0.89915413  0.89421569  0.88886460  0.88307711  0.87682988
+      0.87009965  0.86286267  0.85509381  0.84676537  0.83784560  0.82829704
+      0.81807474  0.80712459  0.79538197  0.78277097  0.76920439  0.75458466
+      0.73880543  0.72175375  0.70331247  0.68336251  0.66178511  0.63846390
+      0.61328705  0.58614966  0.55695625  0.52562300  0.49207935  0.45626822
+      0.41814517  0.37767819  0.33485145  0.28967777  0.24222327  0.19264571
+      0.14124931  0.08857314  0.03556416 -0.01609767 -0.06361358 -0.10313288
+     -0.13071331 -0.14337790 -0.13932187 -0.11803667 -0.08124130 -0.03422899
+      0.01331497  0.04813719  0.05745893  0.03806545  0.00846852  0.00000828
+      0.00000560  0.00000199  0.00000064  0.00000018  0.00000004  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+      0.00000000  0.00000000
+
+ For atom type  1, l= 1 potential used as local nuclear potential
+number of radial functions  ****  O/pbe   - by Peter Schultz / 17Jan07 ****
+  5
+angular momentum, number of alphas
+  0  5
+alphas - s - 5s/2/5s284 Eopt(flat) + check (c1)
+   2.40227000D-01  6.83348000D-01  1.98182200D+00  3.96390000D+00
+   7.92780000D+00
+wave function coefficients
+   3.33034000D-01  1.10004600D+00  1.16492600D+00 -1.95149900D+00
+   6.44755000D-01
+angular momentum, number of alphas
+  1  4
+alphas - p - 4p/2/4p563 Eopt + reopt(c1)
+   1.29289000D-01  4.02185000D-01  1.18213300D+00  3.84037500D+00
+wave function coefficients
+   5.93100000D-02  3.75369000D-01  1.45605400D+00  3.86770800D+00
+angular momentum, number of alphas
+  0  1
+alphas - s - second zeta s polarization
+   2.40227000D-01
+wave function coefficients
+   1.00000000D+00
+angular momentum, number of alphas
+  1  1
+alphas - p - second zeta p polarization
+   1.29289000D-01
+wave function coefficients
+   1.00000000D+00
+angular momentum, number of alphas
+  2  2
+alphas
+   2.50000000D-01  1.20000000D+00
+wave function coefficients
+   1.17200000D-01  1.00000000D+00
+shell occupancies for oxygen, O s(2.0)p(4.5)p'(-0.5), -0.5 pseudoion (H2O)
+      2.00000000  4.50000000  0.00000000 -0.50000000  0.00000000
+end atom file
+atom file
+H = H.atm
+>>>>> atom type name=H           
+type number, label:
+  2 H                      
+notes3
+ notes for this atom file:
+ bare nuclear potential
+ generated March-2001, by Peter A. Schultz
+ Changed to triple-zeta s (to recover double-zeta, remove third zeta)
+mass
+   1.00079000D+00
+energy = E(H2)/2
+  -1.16555500D+00
+effective nuclear charge (s1 to 10.0)
+   1.00000000D+00
+pseudopotentials: Lmax, and effective gaussian range
+ -1   1.71000000
+radial mesh: number of points for local and non-local pot integrals
+ 100  80
+mesh points for nuclear potential
+      0.00200000  0.00217968  0.00237551  0.00258893  0.00282152  0.00307501
+      0.00335127  0.00365236  0.00398049  0.00433810  0.00472785  0.00515260
+      0.00561552  0.00612003  0.00666986  0.00726909  0.00792215  0.00863389
+      0.00940957  0.01025494  0.01117626  0.01218036  0.01327466  0.01446727
+      0.01576703  0.01718357  0.01872736  0.02040986  0.02224351  0.02424190
+      0.02641983  0.02879343  0.03138027  0.03419952  0.03727205  0.04062063
+      0.04427005  0.04824734  0.05258195  0.05730599  0.06245444  0.06806544
+      0.07418054  0.08084503  0.08810827  0.09602405  0.10465099  0.11405299
+      0.12429968  0.13546694  0.14763749  0.16090146  0.17535709  0.19111143
+      0.20828116  0.22699345  0.24738688  0.26961248  0.29383487  0.32023343
+      0.34900367  0.38035868  0.41453067  0.45177272  0.49236064  0.53659505
+      0.58480355  0.63734316  0.69460302  0.75700718  0.82501783  0.89913865
+      0.97991859  1.06795593  1.16390267  1.26846941  1.38243058  1.50663019
+      1.64198808  1.78950672  1.95027865  2.12549457  2.31645214  2.52456563
+      2.75137635  2.99856407  3.26795950  3.56155782  3.88153345  4.23025616
+      4.61030863  5.02450558  5.47591460  5.96787887  6.50404194  7.08837469
+      7.72520477  8.41924860  9.17564635 10.00000000
+radwts: weights for radial points
+      0.00017206  0.00018752  0.00020437  0.00022273  0.00024274  0.00026455
+      0.00028832  0.00031422  0.00034245  0.00037322  0.00040675  0.00044329
+      0.00048312  0.00052652  0.00057382  0.00062538  0.00068156  0.00074279
+      0.00080953  0.00088226  0.00096152  0.00104790  0.00114205  0.00124465
+      0.00135647  0.00147834  0.00161116  0.00175591  0.00191366  0.00208559
+      0.00227296  0.00247716  0.00269972  0.00294226  0.00320660  0.00349468
+      0.00380865  0.00415083  0.00452374  0.00493016  0.00537310  0.00585582
+      0.00638192  0.00695528  0.00758015  0.00826117  0.00900336  0.00981224
+      0.01069378  0.01165453  0.01270159  0.01384272  0.01508637  0.01644175
+      0.01791890  0.01952876  0.02128325  0.02319537  0.02527928  0.02755040
+      0.03002557  0.03272311  0.03566301  0.03886703  0.04235890  0.04616448
+      0.05031197  0.05483207  0.05975826  0.06512703  0.07097814  0.07735492
+      0.08430461  0.09187866  0.10013317  0.10912928  0.11893362  0.12961879
+      0.14126394  0.15395530  0.16778687  0.18286109  0.19928960  0.21719407
+      0.23670711  0.25797323  0.28114992  0.30640885  0.33393707  0.36393847
+      0.39663525  0.43226954  0.47110528  0.51343007  0.55955739  0.60982886
+      0.66461678  0.72432694  0.78940154  0.86032254
+number of radial functions  **** H PBE bare-core basis 11Apr01-PAS ****
+  4
+angular momentum, number of alphas
+  0  5
+alphas - s - Ham-II/PBE/4s408 + a5(19.22) + full recontract in H2
+   1.02474000D-01  3.72304000D-01  1.23085800D+00  4.78332400D+00
+   1.92200000D+01
+wave function coefficients
+   1.04060000D-01  4.80100000D-01  5.85350000D-01  3.97563000D-01
+   2.69130000D-01
+angular momentum, number of alphas
+  0  2
+alphas - s - second zeta s polarization (H2O Eopt)
+   1.02474000D-01  3.72304000D-01
+wave function coefficients
+   7.52810000D-02  1.20939000D-01
+angular momentum, number of alphas
+  0  1
+alphas - s - third zeta s polarization (H2O Eopt)
+   1.02474000D-01
+wave function coefficients
+   1.00000000D+00
+angular momentum, number of alphas
+  1  1
+alphas - p - angular polarization (dzp Eopt H2)
+   1.10000000D+00
+wave function coefficients
+   1.00000000D+00
+shell occupancies for hydrogen, H: s(1.00)p(0.00)
+      1.00000000  0.00000000  0.00000000  0.00000000
+end atom file
+ ionopt (0=none,2=gaussian lmcc,3=dble layer):
+    2
+ charge state for system
+   0.00000000
+number of atoms in unit cell
+    3
+atom, type, position vector
+ ATmeH1       H                1.44    -1.13    0.00                            
+ ATmeH2       O                0.00     0.00    0.00                            
+ ATmeH3       H               -1.44    -1.13    0.00                            
+origin offset
+   0.00000000  0.00000000  0.00000000
+ symmetry center
+   0.00000000  0.00000000  0.00000000
+end setup phase data
+ >>>> Total number of electrons=               8.0000000000
+ >>>> Minimum number of occupied states=           4
+ >>>> Number of basis functions, norb=          25
+ ************** VERSION 2.65 CHANGE: ***************
+ **** grid range default changed from 2.d-7 to 2.d-8
+ **** This will cause numerical changes in results
+ **** To recover pre-2.65, use input cutgrd/2.d-7
+ ***************************************************
+run phase input data
+iterations
+  125
+blend ratio
+   0.40000000
+history
+    8
+convergence criterion
+   0.00005000
+geometry relaxation
+gmethod
+asd
+gfixed
+    2    2 => fixed atom sequence
+gsteps
+  450
+end geometry relaxation
+
+ >>>> Relax params (gstop,gblend,gconv,atoms-relaxd):
+ >>>>    450  1.5000000  0.000800000000      2
+
+end run phase data
+cutXXX for code (grd,slo,ii,1c)
+   2.00000000D-08  1.00000000D-01  1.00000000D-02  1.00000000D-04
+cutall for code (s,t,nl,loc;frc)
+   3.00000000D-09  3.00000000D-09  1.50000000D-07  6.00000000D-08
+   3.00000000D-07  3.00000000D-07  5.00000000D-06  6.00000000D-06
+ 
+ ##### output #####
+ 
+ >>>>> FOUND RESTART FILE - loading data
+ GLINES                                                                         
+  
+           6
+ IGSTEP                                                                         
+  
+ Restarting from geometry#           6
+ COORDINATES                                                                    
+  
+     1.3972318080   -1.1615467713    0.0002416641
+     0.0000000000    0.0000000000    0.0000000000
+    -1.3972364644   -1.1615358329   -0.0001798372
+ END STATUS FILE                                                                
+  
+ Restart file ended
+ 
+ Maximum record length (r8) for i/o=     1000000
+ Flavor of dft that will be used for this run=PBE   
+ ***** Note: basis transformed to split basis form
+ SCF guessing turned on, option=           2
+  
+ LATVEC: nlat1c,nlat2c,nlat =           1           1           1
+ 
+  Atom
+  Type  Shell  Min-alf     range
+    1        0.129289   8.279963
+    2        0.102474   9.300415
+ Turnover EF->DM npopdm, npop0k=          15           4
+ DEV264h/wkmem: perlsolv dist-mem
+ DEV/wkmem: KPSTORE= F
+ DEV/wkmem: psolv version, input do_psolv= F
+
+ Need        3125-length r*4 array to pack grid wfcns/box
+ Need      549875-length r*4 array to pack all grid wfcns
+ Need        3126-length r*4 array for grid wfcns scratch
+ WKMEM: using stripe-parallel+Merge  setup
+ Minimum maxwkd for scf to complete=     4537325
+ All grid wfcns stored in    274938 of 216110647 available
+ WKMEM: in-core Broyden! uses     11250 out of 215835709 available
+ >>>>> geom/basis data saved to file
+  
+ Atom type   1  radial valence charge =    5.999995363882
+ Atom type   1      xc valence charge =    6.499995360087
+  
+ Atom type   2  radial valence charge =    0.999999985299
+ mat0set: stripe-parallel, KPSTORE= F
+ NLOCMAT: Max neqilat=           1
+
+ After mat0set    +    0.64 =       1.4 seconds wall (    0.01 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029143853   core=  0.0000000000
+     vxc(afsw):   -0.81590399  -0.79054882  -0.02535518   0.00004076
+     exc(afsw):   -0.63551869  -0.61332103  -0.02219765   0.00003434
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afsw):   -9.03199708  -8.76440889  -0.26758819  -0.00041348
+     exc(afsw):   -6.94542590  -6.71673143  -0.22869447  -0.00033216
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029145698   core=  0.0000000000
+     vxc(afsw):   -0.81590475  -0.79054957  -0.02535517   0.00004076
+     exc(afsw):   -0.63551898  -0.61332133  -0.02219765   0.00003434
+ ***** CAUTION: grid fineness questionable
+ 
+
+ AFTER SETUP PHASE+    0.52 =       1.9 seconds wall (    0.10 usr    0.00 sys)
+ 
+  
+ *************************  iteration   0 begins here  *************************
+
+
+ Before iterations+    0.02 =       1.9 seconds wall (    0.01 usr    0.00 sys)
+  
+ grid-integrated valence-density total =        7.9893048676
+ Harris Fcnal XC piece=        2.5574410365
+  
+  
+
+ After 0 iteration+    0.06 =       2.0 seconds wall (    0.02 usr    0.00 sys)
+ *************************  iteration   1 begins here  *************************
+
+
+ erlsolv/begin  +    0.02 =       2.0 seconds wall (    0.00 usr    0.00 sys)
+ PERLSOLV: kpp-copmatible version
+
+ erlsolv/schroed+    0.01 =       2.0 seconds wall (    0.00 usr    0.00 sys)
+
+ erlsolv/pop    +    0.00 =       2.0 seconds wall (    0.00 usr    0.00 sys)
+
+ erlsolv/dmat compute+    0.01 =       2.0 seconds wall (    0.00 usr    0.00 sys)
+
+ erlsolv/rhoij  +    0.02 =       2.0 seconds wall (    0.00 usr    0.00 sys)
+ 
+         fermi level =   -0.263342 Ry,   gap(0K)= 0.523695 Ry = 7.125 eV
+
+ k-vector:       1
+  weight:    1.000000
+            level    occup
+  
+    1    -1.845748  2.0000
+    2    -0.961131  2.0000
+    3    -0.693132  2.0000
+    4    -0.525189  2.0000
+    5    -0.001495  0.0000
+    6     0.124702  0.0000
+    7     0.538350  0.0000
+    8     0.586067  0.0000
+    9     0.599628  0.0000
+   10     0.866651  0.0000
+   11     0.910913  0.0000
+   12     1.581026  0.0000
+             ...      ...
+   14     1.712311  0.0000
+  
+ delta movement in electrons =        0.9922592692
+ 
+ one-center local charge defect =         0.01458030
+ 
+ LMCC local dipole, |dip|=        0.7922113509
+ Using LMCC treatment of supercell electrostatics
+ DBG/LMCCINT, esns diagnostics redone
+ LMCC chemical potential shift(Ry,eV)=       -0.0000011086       -0.0000150832
+ LMCC esns total grid integral=        0.0655593636
+  
+ grid-integrated valence-density total =        7.9862947517
+  
+ TOTAL single particle eigenvalue sum=        -8.0503994467
+  
+ rms,max scfchange=  1.7092D-06  1.8323D-05 for component#       313
+ ######################  ENERGY ANALYSIS  #######################
+    Spherical-atom es ENERGY correction =       -28.6810936031
+    Full spherical atom trace ENERGY =          -13.1540685664
+    Spherical-atom-Vxc trace ENERGY =            15.8037982381
+    non-spherical es ENERGY =                     0.0653994788
+    Total Exc ENERGY =                           -8.4619461497
+ 
+    total kinetic trace ENERGY =           25.8248245955
+    non-local ps-pot trace ENERGY =         3.6171790656
+    total electrostatic ENERGY =          -55.4079681136
+    Total Vxc ENERGY =                    -10.8914820361
+ 
+    TOTAL ENERGY (Rydberg) =                    -34.4279106023
+ 
+ ################################################################
+
+ After blending   +    0.33 =       2.4 seconds wall (    0.15 usr    0.00 sys)
+  
+ >>>>> self-consistency achieved, iteration   1
+
+
+ Final GAP(eV)=  7.1253
+ 
+         fermi level =   -0.263342 Ry,   gap(0K)= 0.523695 Ry = 7.125 eV
+
+ k-vector:       1
+  weight:    1.000000
+            level    occup
+  
+    1    -1.845748  2.0000
+    2    -0.961131  2.0000
+    3    -0.693132  2.0000
+    4    -0.525189  2.0000
+    5    -0.001495  0.0000
+    6     0.124702  0.0000
+    7     0.538350  0.0000
+    8     0.586067  0.0000
+    9     0.599628  0.0000
+   10     0.866651  0.0000
+   11     0.910913  0.0000
+   12     1.581026  0.0000
+             ...      ...
+   14     1.712311  0.0000
+  
+ >>>>> grid delta-density saved to file
+ 
+ FINAL CONVERGED ENERGY (Rydberg) =      -34.4279106023
+ Binding energy =       -0.0048606023 Ry =             -0.0661 eV
+
+ AFTER ITERATIONS +    0.01 =       2.4 seconds wall (    0.00 usr    0.00 sys)
+ Atom   1   Z=  1.0   occ=  1.00   rho=  1.0029143853   core=  0.0000000000
+     vxc(afs ):   -0.81590399  -0.79054882  -0.02535518
+     exc(afs ):   -0.63551869  -0.61332103  -0.02219765
+ Atom   2   Z=  6.0   occ=  6.00   rho=  5.9834759125   core=  0.0000000000
+                               rho(xc)=  6.4834758244
+     vxc(afs ):   -9.03199708  -8.76440889  -0.26758819
+     exc(afs ):   -6.94542590  -6.71673143  -0.22869447
+ Atom   3   Z=  1.0   occ=  1.00   rho=  1.0029145698   core=  0.0000000000
+     vxc(afs ):   -0.81590475  -0.79054957  -0.02535517
+     exc(afs ):   -0.63551898  -0.61332133  -0.02219765
+ 
+ atom xc0frc stress term=        7.7240448753
+ mat0frc: stripe-parallel, KPSTORE= F
+  
+ total force contributions(Ry/bohr):
+        atom       x force          y force          z force
+          1      0.0002567408     0.0004290337     0.0000737412
+          2      0.0000047881     0.1467689160    -0.0000053751
+          3     -0.0002511639     0.0004252953    -0.0000560127
+      f-defect        0.0000103651     0.1476232450     0.0000123534
+
+ AFTER FORCE RTNS +    0.09 =       2.5 seconds wall (    0.09 usr    0.00 sys)
+  
+ >>>>> GSELECT begins, nslics=           0
+ <<<<< GSELECT ends
+ rms,max force=  5.0126D-04  5.0539D-04 for component#        1
+ 
+ ###############################################################################
+ FINAL GEOMETRY for step   6, of   1 total
+atom, type, position;  step#      6
+ ATmeH1       H                 1.3972318080   -1.1615467713    0.0002416641 
+ ATmeH2       O                 0.0000000000    0.0000000000    0.0000000000 
+ ATmeH3       H                -1.3972364644   -1.1615358329   -0.0001798372 
+ ###############################################################################
+
+ FINAL RELAXED ENERGY =      -34.4279106023
+
+
+ AFTER GEOMETRY   +    0.01 =       2.5 seconds wall (    0.00 usr    0.00 sys)
+ Normal exit: RELAX DONE
+ Total TIME=       2.5 seconds (usr=       0.4  sys=       0.0  lost=       2.1)
