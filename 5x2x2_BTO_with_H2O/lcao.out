@@ -33,7 +33,7 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +    5.68 =       5.7 seconds wall (    0.62 usr    0.00 sys)
+ Before input     +    5.73 =       5.7 seconds wall (    0.33 usr    0.00 sys)
   
 ##### Run options:
  do setup                                                                        
@@ -581,9 +581,8 @@ end atom file
     2
  charge state for system
    0.00000000
-number of atoms in unit cell
-   55
-atom, type, position;  step#  0
- ATOm_H       H                -0.0122508702    0.5124861696   -2.2800974397    
- ***** ERROR: atom type unknown
- Total TIME=       5.7 seconds (usr=       0.6  sys=       0.0  lost=       5.1)
+atom file
+ number of centers/atoms in system?
+ >>>>> Want label >number<, found >atom f<
+ ***** ERROR: inputlbl:  format error in input file
+ Total TIME=       5.7 seconds (usr=       0.3  sys=       0.0  lost=       5.4)
