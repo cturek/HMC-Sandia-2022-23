@@ -32,8 +32,7 @@ atom file
  H = H.atm
 number of atoms in unit cell 
   55
-atom, type, position;  step#  0
-
+atom, type, position;  step#  1
      ATH1       H                -0.0122508702    0.5124861696   -2.2800974397 
      ATH2       H                 0.4808354623    0.0067260020   -2.2802522739 
      ATO3       O                 0.4863243412    0.5096769644   -2.4722844985 
@@ -89,7 +88,6 @@ atom, type, position;  step#  0
      AT50       O                 0.5033676054    0.9914059055    0.0120210138 
      AT51       O                 0.9915076402   -0.4967286519    0.0120312590 
      AT52       O                -0.4963943634    0.9915650057    0.0120402094 
-
 origin offset
 0.0 0.0 0.0
 kgrid
