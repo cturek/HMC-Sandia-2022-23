@@ -261,7 +261,7 @@ iterations
 blend ratio
 0.400
 convergence criterion
-  0.005
+  0.019
 geometry relaxation
 gfixed
 131 210
