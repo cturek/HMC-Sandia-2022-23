@@ -1,6 +1,6 @@
  MPINFO::: Global Communicator        :::
  MPINFO::: Global Context = ****      :::
- MPINFO::: Global Size =      52      :::
+ MPINFO::: Global Size =      55      :::
  MPINFO::: Global Root =       0      :::
  MPINFO::: Global Rank =       0      :::
  version 2.68: slics foundation version
@@ -33,7 +33,7 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +    5.40 =       5.4 seconds wall (    0.34 usr    0.00 sys)
+ Before input     +    5.68 =       5.7 seconds wall (    0.52 usr    0.00 sys)
   
 ##### Run options:
  do setup                                                                        
@@ -671,9 +671,6 @@ end atom file
 number of atoms in unit cell
    55
 atom, type, position;  step#  0
- ATOm_H       H                -0.0122508702    0.5124861696   -2.2800974397    
- ATOmH        H                 0.4808354623    0.0067260020   -2.2802522739    
- ATOmO        O                 0.4863243412    0.5096769644   -2.4722844985    
-      1       O                 0.5033304202   -0.0088955112   -2.0015048881    
- ***** ERROR: atom out of sequence
- Total TIME=       5.4 seconds (usr=       0.3  sys=       0.0  lost=       5.1)
+                                                                                
+ ***** ERROR: no atom name found
+ Total TIME=       5.7 seconds (usr=       0.5  sys=       0.0  lost=       5.2)
