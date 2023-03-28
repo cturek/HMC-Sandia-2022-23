@@ -252,13 +252,17 @@ kgrid
  6 6 0
 end setup phase data
 run phase input data
+history
+ 8
 no ges
+states
+ 2000
 iterations
- 250
+ 350
 blend ratio
-0.200
+0.400
 convergence criterion
-  0.000500
+  0.002
 geometry relaxation
 gfixed
 132 211
