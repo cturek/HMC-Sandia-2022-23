@@ -268,7 +268,7 @@ gfixed
 gmethod
 asd
 gsteps
- 100
+ 250
 end geometry relaxation
 end run phase data
 
