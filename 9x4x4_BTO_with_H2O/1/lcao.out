@@ -33,7 +33,7 @@
    Default record length (r8) for i/o=   1000000
  ------------------------------------------------------------------------
 
- Before input     +   16.88 =      16.9 seconds wall (    1.45 usr    0.00 sys)
+ Before input     +   15.91 =      15.9 seconds wall (    1.38 usr    0.00 sys)
   
 ##### Run options:
  do setup                                                                        
@@ -676,6 +676,7 @@ atom, type, position;  step#      1
       Ox      O                 0.5731108190   -0.5526322533   -2.5689385570    
       Hy      H                 0.2414977763   -0.0063936968   -2.2161650005    
       Hy2     H                -0.0218914139   -0.7612351440   -2.2187340210    
-      1       Ba               -0.0000021491   -0.0000010402   -1.5251115000    
+      A1      Ba               -0.0000021491   -0.0000010402   -1.5251115000    
+      2       Ba               -0.0000026625   -0.0000013554   -0.5034516375    
  ***** ERROR: atom out of sequence
- Total TIME=      16.9 seconds (usr=       1.4  sys=       0.0  lost=      15.4)
+ Total TIME=      15.9 seconds (usr=       1.4  sys=       0.0  lost=      14.5)
