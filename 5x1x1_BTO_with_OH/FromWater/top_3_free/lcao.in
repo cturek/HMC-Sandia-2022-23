@@ -34,9 +34,9 @@ atom file
  H = H.atm
 number of atoms in unit cell
   15
-atom, type, position;  step#    121
- ATOm_H       H                 0.0000959782    0.6935627726   -2.2600279094 
- ATOmO        O                 0.4995382154    0.5410665328   -2.5115158388 
+atom, type, position;  step#    0
+ ATOmH        H                 0.4394455920    0.1709797452   -2.4426664110
+ ATOmO        O                 0.4065605650    0.4085369014   -2.4968873656
  AT0m09       Ti                0.5002146514    0.4924208812   -2.0883332846 
  AT0m08       O                 0.0001075418    0.5787426432   -2.0435891826 
  AT0m07       O                 0.5004047169    0.0398985504   -2.0323760111 
@@ -62,7 +62,7 @@ iterations
 blend ratio
 0.200
 convergence criterion
-  0.000500
+  0.019
 geometry relaxation
 gfixed
 11 15
