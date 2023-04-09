@@ -13,10 +13,12 @@
 # Massive Output Files #
 ########################
 # *.out
+lcao1*
+lcao0*
 
-###############################################
-# Strange SeqQuest Intermediate Binary Files  #
-###############################################
+#######################################
+# SeqQuest Intermediate Binary Files  #
+########################################
 
 *.broy0_elec
 *.data
