@@ -36,6 +36,7 @@ lcao0*
 *.grd0
 *.grho
 *.h0*
+*.post
 *.set0
 *.stat
 *.vec
