@@ -1,0 +1,4 @@
+/var/spool/slurm/d/job15545085/slurm_script: line 14: cd: /home/flora/HMC-Sandia-2022-23/5x4x4_BTO_with_acid/start_1/rigid_slab_check: No such file or directory
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** STEP 15545085.0 ON r317 CANCELLED AT 2023-04-12T08:33:03 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 15545085 ON r317 CANCELLED AT 2023-04-12T08:33:03 DUE TO TIME LIMIT ***
