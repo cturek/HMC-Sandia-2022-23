@@ -281,13 +281,13 @@ blend ratio
 history 
  8
 convergence criterion
-  0.0500
+  0.0200
 geometry relaxation
 gfixed
 129 208
 gmethod
 asd
 gsteps
- 100
+ 200
 end geometry relaxation
 end run phase data

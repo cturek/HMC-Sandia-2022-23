@@ -37,7 +37,7 @@ atom file
 atom file
  C = C.atm
 number of atoms in unit cell
-  227
+  226
 atom, type, position;  step#    101
  AT2          O                -1.0130314849    0.5123668207   -1.9920866846
  AT3          O                -1.0017904444   -1.4992606481   -2.0005654337
@@ -264,7 +264,6 @@ atom, type, position;  step#    101
  AT0dPO       O                 1.4730176664    1.7613424821   -2.4796630290
  AT0ox1       O                 1.7636358050    1.2336915685   -2.6658682775
  AT0ox2       O                 1.1039808135    1.2706125263   -2.6345242390
- ATpoh1       H                 1.8702896023    1.2882030768   -2.4476284624
  ATpoh2       H                 1.0355937904    1.3271187832   -2.3954101179
 origin offset 
  0.0 0.0 0.0
@@ -282,13 +281,13 @@ blend ratio
 history 
  8
 convergence criterion
-  0.0500
+  0.0200
 geometry relaxation
 gfixed
 129 208
 gmethod
 asd
 gsteps
- 100
+ 200
 end geometry relaxation
 end run phase data

@@ -1,0 +1,4 @@
+/var/spool/slurm/d/job15600941/slurm_script: line 14: cd: /home/flora/HMC-Sandia-2022-23/5x4x4_BTO_with_acid/start_11/v_1: No such file or directory
+slurmstepd: error: *** STEP 15600941.0 ON r273 CANCELLED AT 2023-04-15T10:51:29 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** JOB 15600941 ON r273 CANCELLED AT 2023-04-15T10:51:29 DUE TO TIME LIMIT ***
