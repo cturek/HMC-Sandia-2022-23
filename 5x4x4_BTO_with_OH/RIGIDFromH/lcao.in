@@ -268,6 +268,6 @@ asd
 gfixed
 131 210
 gsteps
- 200
+ 500
 end geometry relaxation
 end run phase data
