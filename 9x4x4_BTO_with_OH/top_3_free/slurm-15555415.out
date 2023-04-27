@@ -1,0 +1,4 @@
+srun: error: Node failure on r251
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** JOB 15555415 ON r224 CANCELLED AT 2023-04-12T21:18:59 DUE TO NODE FAILURE, SEE SLURMCTLD LOG FOR DETAILS ***
+slurmstepd: error: *** STEP 15555415.0 ON r224 CANCELLED AT 2023-04-12T21:18:59 DUE TO NODE FAILURE, SEE SLURMCTLD LOG FOR DETAILS ***
