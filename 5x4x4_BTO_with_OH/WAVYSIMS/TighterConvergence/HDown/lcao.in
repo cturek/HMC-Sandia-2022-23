@@ -34,7 +34,6 @@ atom file
  H = H.atm
 number of atoms in unit cell
   210
-
 atom, type, position;  step#     0
  ATOmH        H                 0.5288434758    0.2567826634   -2.5733838685 
  ATOmO        O                 0.5123854399    0.4913271280   -2.5149630332 
