@@ -1,3 +1,0 @@
-/var/spool/slurm/d/job15054834/slurm_script: line 14: /ocean/projects/mat220020p/pangreka/HMC-Sandia-2022-23/2x2_slab_with_water/9_layer/start_2: Is a directory
-srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
-slurmstepd: error: *** JOB 15054834 ON r015 CANCELLED AT 2023-03-11T14:42:21 ***
