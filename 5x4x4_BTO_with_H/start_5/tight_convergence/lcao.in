@@ -260,7 +260,7 @@ blend ratio
 history 
  8
 convergence criterion
-  0.0200
+  0.00200
 geometry relaxation
 gfixed
 130 209
