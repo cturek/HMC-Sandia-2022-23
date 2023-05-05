@@ -1,0 +1,11 @@
+﻿#!/bin/bash
+#SBATCH -N 1
+#SBATCH -t 0:10:00
+#SBATCH -p GPU-shared
+#SBATCH --gpus=1
+#SBATCH --mail-type=ALL
+
+
+module load gcc/10.2.0
+module load openmpi/4.0.5-gcc10.2.0
+$ ../bin/lcao.x -> outputFile

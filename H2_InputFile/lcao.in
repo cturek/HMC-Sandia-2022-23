@@ -1,0 +1,31 @@
+do setup
+do iters
+setup data
+notes 
+ H2 molecule, R(H-H) = 8.0 bohr
+ Example: modifying the cell to accomodate a molecule.
+end_notes
+functional
+ LDA
+dimension of system (0=cluster ... 3=bulk)
+ 0
+primitive lattice vectors    Second: adjust the supercell to the atoms
+  27.00   0.00   0.00
+   0.00  18.00   0.00
+   0.00   0.00  18.00      
+grid dimensions              Third: adjust the grid to the cell
+  90  60  60               
+atom types
+   1
+atom file
+ H.atm
+number of atoms in unit cell
+   2
+atom, type, position vector  First: place the atoms
+   1     1    4.0   0.0   0.0
+   2     1   -4.0   0.0   0.0  
+end setup phase data
+run phase input data
+convergence criterion
+ 0.00050
+end run phase data
