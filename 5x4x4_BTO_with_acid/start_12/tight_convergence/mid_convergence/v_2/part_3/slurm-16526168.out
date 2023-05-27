@@ -1,0 +1,4 @@
+/var/spool/slurm/d/job16526168/slurm_script: line 14: cd: /ocean/projects/mat220020p/pangreka/HMC-Sandia-2022-23/5x4x4_BTO_with_acid/start_12/tight_convergence/mid_convergence/v_2/part_4: No such file or directory
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** STEP 16526168.0 ON r021 CANCELLED AT 2023-05-25T16:54:47 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 16526168 ON r021 CANCELLED AT 2023-05-25T16:54:47 DUE TO TIME LIMIT ***
