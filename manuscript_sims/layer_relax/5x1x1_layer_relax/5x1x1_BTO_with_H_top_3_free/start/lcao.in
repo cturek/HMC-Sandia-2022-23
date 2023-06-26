@@ -1,0 +1,73 @@
+do setup
+do iters
+do force
+do relax
+do post
+setup data
+title
+title2
+functional
+PBE-SP
+spin polarization
+1.0
+dimension of system (0=cluster ... 3=bulk)
+ 2
+coordinates
+CARTESIAN
+scale
+7.62074
+primitive lattice vectors
+  1.0000000000      0.0000000000      0.0000000000
+  0.0000000000      1.0000000000      0.0000000000
+  0.0000000000      0.0000000000     80.0000000000
+grid dimensions
+       36   36  400
+atom types
+ 4
+atom file
+ Ba = Ba.atm
+atom file
+ Ti = Ti.atm
+atom file
+ O  = O.atm
+atom file
+ H = H.atm
+number of atoms in unit cell
+  14
+atom, type, position;  step#     61
+ ATOm00       H                 0.0000249160    0.5133094790   -2.3130431233 
+ AT0m09       Ti                0.5000231403    0.4704436613   -1.9820972982 
+ AT0m08       O                 0.0000179304    0.5024703937   -2.0708912399 
+ AT0m07       O                 0.5000193513    0.0093385916   -2.0457003790 
+ AT0m05       Ba                0.0000298788   -0.0076077536   -1.4867776442 
+ AT0m01       O                 0.5000513733    0.4957351748   -1.5348961537 
+ AT0m04       Ti                0.5000183674    0.4969952205   -0.9793815258 
+ AT0m03       O                 0.0000199801    0.4987212243   -1.0212544576 
+ AT0m02       O                 0.5000264553   -0.0019150648   -1.0155952534 
+ AT0000       Ba                0.0000000000    0.0000000000   -0.5037462655 
+ AT0001       Ti                0.5000000000    0.5000000000    0.0000000000 
+ AT0002       O                 0.0000000000    0.5000000000    0.0000002457 
+ AT0003       O                 0.5000000000    0.0000000000    0.0000002457 
+ AT0004       O                 0.5000000000    0.5000000000   -0.5005608276 
+origin offset 
+0.0 0.0 0.0
+kgrid
+ 6 6 0
+end setup phase data
+run phase input data
+no ges
+iterations
+ 250
+blend ratio
+0.200
+convergence criterion
+  0.000500
+geometry relaxation
+gfixed
+10 14
+gmethod
+asd
+gsteps
+120
+end geometry relaxation
+end run phase data
